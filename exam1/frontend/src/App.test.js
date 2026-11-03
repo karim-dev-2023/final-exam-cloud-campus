@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Shipping from './components/ShippingMethodSelection';
 import Payment from './components/handlePaymentChange';
+import { API_BASE_URL } from './services/apiConfig';
 jest.mock('axios', () => ({ get: jest.fn(), post: jest.fn(), put: jest.fn(), delete: jest.fn() }));
 beforeEach(() => { jest.clearAllMocks(); localStorage.clear(); window.alert = jest.fn(); });
 const wrap = child => <MemoryRouter><CartProvider>{child}</CartProvider></MemoryRouter>;
@@ -56,6 +57,30 @@ test('server confirmed admin can access the interface', async () => {
   localStorage.setItem('token','synthetic');axios.get.mockResolvedValue({data:{role:'admin'}});
   render(wrap(<AdminRoute><p>Données privées</p></AdminRoute>));
   expect(await screen.findByText('Données privées')).toBeInTheDocument();
+  expect(axios.get).toHaveBeenCalledWith(`${API_BASE_URL}/auth/me`, { headers: { Authorization: 'Bearer synthetic' } });
+});
+
+test('successful login uses the configured backend and preserves session identity', async () => {
+  axios.post.mockResolvedValue({data:{token:'synthetic-session',role:'client',username:'test_user'}});
+  render(wrap(<Login/>));
+  fireEvent.change(screen.getByPlaceholderText("Nom d'utilisateur"),{target:{value:'test_user'}});
+  fireEvent.change(screen.getByPlaceholderText('Mot de passe'),{target:{value:'Synthetic-password-2026'}});
+  fireEvent.submit(screen.getByRole('form', {name:'Connexion'}));
+  await waitFor(()=>expect(localStorage.getItem('token')).toBe('synthetic-session'));
+  expect(localStorage.getItem('role')).toBe('client');
+  expect(localStorage.getItem('username')).toBe('test_user');
+  expect(axios.post).toHaveBeenCalledWith(`${API_BASE_URL}/auth/login`, {username:'test_user',password:'Synthetic-password-2026'});
+});
+
+test('registration uses the configured backend without sending a privileged role', async () => {
+  axios.post.mockResolvedValue({data:{}});
+  render(wrap(<Register/>));
+  fireEvent.change(screen.getByPlaceholderText("Nom d'utilisateur"),{target:{value:'test_user'}});
+  fireEvent.change(screen.getByPlaceholderText('Adresse email'),{target:{value:'test@example.com'}});
+  fireEvent.change(screen.getByPlaceholderText('Mot de passe'),{target:{value:'Synthetic-password-2026'}});
+  fireEvent.submit(screen.getByRole('form', {name:'Inscription'}));
+  await waitFor(()=>expect(window.alert).toHaveBeenCalled());
+  expect(axios.post).toHaveBeenCalledWith(`${API_BASE_URL}/auth/register`, {username:'test_user',email:'test@example.com',password:'Synthetic-password-2026'});
 });
 test('admin validation and terminal deletion follow the server result', async () => {
   axios.get.mockImplementation(url=>Promise.resolve({data:url.endsWith('/orders')?[{_id:'order',status:'En attente',items:[]}]:[]}));

@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
+# Public build configuration only; local overrides remain ignored.
+!/.env.production
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

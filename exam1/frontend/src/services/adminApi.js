@@ -1,5 +1,5 @@
 import axios from 'axios';
-const base = 'http://localhost:5000/api';
+import { API_BASE_URL as base } from './apiConfig';
 const config = () => ({ headers: { Authorization: 'Bearer ' + localStorage.getItem('token') } });
 export const getOrders = () => axios.get(base + '/orders', config());
 export const getProducts = () => axios.get(base + '/products', config());
