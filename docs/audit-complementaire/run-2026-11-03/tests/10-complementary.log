@@ -1,0 +1,117 @@
+TAP version 13
+# Subtest: Complement: DELETE requires admin and terminal orders are archived, never resurrected by replay
+not ok 1 - Complement: DELETE requires admin and terminal orders are archived, never resurrected by replay
+  ---
+  duration_ms: 446.9159
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\complementary.test.cjs:87:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    400 !== 200
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 200
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\complementary.test.cjs:94:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: Complement: validation persists URL id; invalid ids and missing orders never report success
+ok 2 - Complement: validation persists URL id; invalid ids and missing orders never report success
+  ---
+  duration_ms: 199.3439
+  ...
+# Subtest: Complement: enum, forward transitions and terminal states are enforced atomically
+not ok 3 - Complement: enum, forward transitions and terminal states are enforced atomically
+  ---
+  duration_ms: 198.5984
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\complementary.test.cjs:113:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    400 !== 200
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 200
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\complementary.test.cjs:117:81)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: Complement: database read and update failures return sanitized JSON and process stays alive
+ok 4 - Complement: database read and update failures return sanitized JSON and process stays alive
+  ---
+  duration_ms: 216.725
+  ...
+# Subtest: Complement: malformed and oversized JSON never expose Express stacks
+not ok 5 - Complement: malformed and oversized JSON never expose Express stacks
+  ---
+  duration_ms: 217.2157
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\complementary.test.cjs:133:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    +   message: 'Requête invalide.'
+    -   message: 'Requ?te invalide.'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    message: 'Requ?te invalide.'
+  actual:
+    message: 'Requête invalide.'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\complementary.test.cjs:137:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: Complement: CORS allows the local frontend and never grants unknown origins
+ok 6 - Complement: CORS allows the local frontend and never grants unknown origins
+  ---
+  duration_ms: 214.5775
+  ...
+# Subtest: Complement: JWT signature, expiration, algorithm, claims and admin authorization
+ok 7 - Complement: JWT signature, expiration, algorithm, claims and admin authorization
+  ---
+  duration_ms: 228.7839
+  ...
+# Subtest: Complement: source/account rate limits return 429 and recover after expiry
+ok 8 - Complement: source/account rate limits return 429 and recover after expiry
+  ---
+  duration_ms: 212.6917
+  ...
+# Subtest: Complement: stock validates ids, integer boundaries and returns proper client errors
+ok 9 - Complement: stock validates ids, integer boundaries and returns proper client errors
+  ---
+  duration_ms: 317.2289
+  ...
+# Subtest: Complement: notification timeout bounds an unresponsive transport
+ok 10 - Complement: notification timeout bounds an unresponsive transport
+  ---
+  duration_ms: 10250.2484
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 7
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13585.5424

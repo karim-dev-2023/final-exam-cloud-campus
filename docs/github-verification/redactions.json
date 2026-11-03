@@ -1,0 +1,79 @@
+{
+  "text": [
+    {
+      "file": "docs/audit-initial/logs/run_backend.log",
+      "jwtCount": 23,
+      "emailCount": 10,
+      "passwordCount": 0,
+      "originalSha256": "58fbc7d84b1c6085d7936cd569deb18bae13d6546b65df53f6f3e8d106d3326a",
+      "redactedSha256": "bca69aa9a6dd7049a515f7a0a9495f85da44870734c52a160f7f0784157c6e87",
+      "sameLineCount": true
+    },
+    {
+      "file": "docs/audit-initial/logs/run_notifications.log",
+      "jwtCount": 0,
+      "emailCount": 5,
+      "passwordCount": 0,
+      "originalSha256": "7cdc2a9b59e9523898d1e527986460b8a65cbf70955a3bc64505083fad3d9caf",
+      "redactedSha256": "9192f1e3104b0973f2fb1521f7a49f31ae76aa4553510d48243b7082bf9a2378",
+      "sameLineCount": true
+    },
+    {
+      "file": "docs/audit-initial/logs/tests_api.log",
+      "jwtCount": 0,
+      "emailCount": 0,
+      "passwordCount": 13,
+      "originalSha256": "9b4e5b7e7e2de2440093d2fdb7b4ea4bd0c1b567dc448513716a548ba68f99f2",
+      "redactedSha256": "d6357d600b51382362dcaf7fcaa64c12ed60aa95fec9ed72742606afa8f27c92",
+      "sameLineCount": true
+    }
+  ],
+  "pdf": [
+    {
+      "file": "docs/exams/CONSIGNE EXAMEN.pdf",
+      "pages": 35,
+      "masked": [
+        {
+          "page": 14,
+          "rectangles": 1
+        },
+        {
+          "page": 15,
+          "rectangles": 4
+        },
+        {
+          "page": 16,
+          "rectangles": 1
+        },
+        {
+          "page": 17,
+          "rectangles": 6
+        }
+      ],
+      "personalMetadataRemoved": true,
+      "flattened": true,
+      "originalSha256": "e2827dfb6cd5bf4359555308c47402e60837938d17484cbc9a01f05b2eb19d1c",
+      "redactedSha256": "66ef0646d9bfad57175435e1e05473de03e923964e8d7a9403b8e81a9b2cafdf",
+      "bytes": 8635230
+    },
+    {
+      "file": "docs/exams/Formulaire examen _ pdf a remplir.pdf",
+      "pages": 7,
+      "masked": [
+        {
+          "page": 1,
+          "rectangles": 1
+        },
+        {
+          "page": 5,
+          "rectangles": 1
+        }
+      ],
+      "personalMetadataRemoved": true,
+      "flattened": true,
+      "originalSha256": "8b875bd7c0fd8eb28392cccbd1664416a2ab3e9855361c373e2f56dec4fcad06",
+      "redactedSha256": "f17a98e464a8536c9aacfb2c3b9646e272ce41fbbc35d9a111be343200a5bd76",
+      "bytes": 537472
+    }
+  ]
+}

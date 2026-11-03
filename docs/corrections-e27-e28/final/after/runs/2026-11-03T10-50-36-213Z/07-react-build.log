@@ -1,0 +1,27 @@
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  77.07 kB  react-build\static\js\main.02cb10af.js
+  2.83 kB   react-build\static\css\main.d8b37c20.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ..\..\..\..\..\AppData\Local\Temp\e27-final-run-J1MuOx\react-build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ..\..\..\..\..\AppData\Local\Temp\e27-final-run-J1MuOx\react-build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+Browserslist: browsers data (caniuse-lite) is 25 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 25 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme

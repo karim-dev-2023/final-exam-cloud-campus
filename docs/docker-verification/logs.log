@@ -1,0 +1,15 @@
+stock-management-1  | Service de gestion des stocks démarré.
+backend-1           | Serveur en écoute sur le port 5000
+backend-1           | MongoDB connecté
+gateway-1           | Gateway opérationnel sur le port 8000
+notifications-1     | Service de notification démarré.
+mongo-1     | {"t":{"$date":"2026-11-03T13:06:06.613+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn97","msg":"Connection ended","attr":{"remote":"127.0.0.1:41774","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"ac9eea38-8181-415a-9b6c-e118757284e1"}},"connectionId":97,"connectionCount":15}}
+mongo-1     | {"t":{"$date":"2026-11-03T13:06:06.613+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn101","msg":"Connection ended","attr":{"remote":"127.0.0.1:41804","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"b391b4fc-3590-48ae-b9c7-3be6cf5d0037"}},"connectionId":101,"connectionCount":14}}
+mongo-1     | {"t":{"$date":"2026-11-03T13:06:06.613+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn99","msg":"Connection ended","attr":{"remote":"127.0.0.1:41786","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"6db232fb-8e0d-4088-936d-795a84529a23"}},"connectionId":99,"connectionCount":13}}
+mongo-1     | {"t":{"$date":"2026-11-03T13:06:06.613+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn100","msg":"Connection ended","attr":{"remote":"127.0.0.1:41800","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"c552069d-21d2-414f-aaa8-ead54289252e"}},"connectionId":100,"connectionCount":12}}
+frontend-1  | 2026/11/03 13:04:36 [notice] 1#1: start worker process 38
+mongo-1     | {"t":{"$date":"2026-11-03T13:06:06.613+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn98","msg":"Connection ended","attr":{"remote":"127.0.0.1:41778","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"67763cf0-3075-44cd-99c9-c5188f3b3765"}},"connectionId":98,"connectionCount":11}}
+frontend-1  | 2026/11/03 13:04:36 [notice] 1#1: start worker process 39
+frontend-1  | 2026/11/03 13:04:36 [notice] 1#1: start worker process 40
+frontend-1  | 172.20.0.1 - - [03/Nov/2026:13:04:58 +0000] "GET / HTTP/1.1" 200 644 "-" "curl/8.11.0" "-"
+frontend-1  | 172.20.0.1 - - [03/Nov/2026:13:04:58 +0000] "GET /admin HTTP/1.1" 200 644 "-" "curl/8.11.0" "-"

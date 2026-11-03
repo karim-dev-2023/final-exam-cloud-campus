@@ -1,0 +1,10 @@
+ESLint: 14 files, 2 errors, 0 warnings
+
+C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js
+  28:34  error  'res' is defined but never used  no-unused-vars
+
+C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\run-final-e27-e28.cjs
+  82:5  error  Unsafe usage of ThrowStatement  no-unsafe-finally
+
+✖ 2 problems (2 errors, 0 warnings)
+

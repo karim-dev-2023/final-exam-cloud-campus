@@ -1,0 +1,20 @@
+ok 1 - P0-01: real startup does not log credentials; SMTP debugging is disabled
+ok 2 - P1-03: missing/short service configuration fails closed before startup
+ok 3 - P1-03: service and Gateway reject unauthorized requests without mail generation
+ok 4 - P0-02: authorized malicious payloads are rejected before Nodemailer, directly and through Gateway
+ok 5 - P0-02: malformed JSON and oversized request have controlled HTTP errors
+ok 6 - P0-02: actual Nodemailer refuses file and URL access even if validation is bypassed
+ok 7 - P1-03: authorized notifications work directly, through Gateway and through the real backend client
+ok 8 - P1-03: Gateway does not bypass a different service credential
+ok 9 - Gateway: unavailable notifications return a generic 502 without credential disclosure
+ok 10 - P1-03: backend refuses missing configuration without making an HTTP call
+ok 11 - P1-03: backend client bounds time and refuses redirects that could leak its credential
+ok 12 - P1-03: rate limiter rejects excess authorized sends and reopens after its window
+ok 13 - Notifications: SMTP failure is controlled without leaking secret/body/error details
+ok 14 - Gateway: stock proxy contract is preserved
+# tests 56
+# pass 56
+# fail 0
+# skipped 0
+# todo 0
+# duration_ms 713.5919

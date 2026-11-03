@@ -1,0 +1,50 @@
+[
+  {
+    "file": "shared/notificationAuth.js",
+    "exitCode": 0
+  },
+  {
+    "file": "microservices/notifications/index.js",
+    "exitCode": 0
+  },
+  {
+    "file": "microservices/notifications/app.js",
+    "exitCode": 0
+  },
+  {
+    "file": "gateway/server.js",
+    "exitCode": 0
+  },
+  {
+    "file": "gateway/app.js",
+    "exitCode": 0
+  },
+  {
+    "file": "gateway/routes/notifi.js",
+    "exitCode": 0
+  },
+  {
+    "file": "backend/server.js",
+    "exitCode": 0
+  },
+  {
+    "file": "backend/app.js",
+    "exitCode": 0
+  },
+  {
+    "file": "backend/services/notificationService.js",
+    "exitCode": 0
+  },
+  {
+    "file": "backend/controllers/orderController.js",
+    "exitCode": 0
+  },
+  {
+    "file": "tests/notifications.test.cjs",
+    "exitCode": 0
+  },
+  {
+    "file": "tests/run-notifications.cjs",
+    "exitCode": 0
+  }
+]

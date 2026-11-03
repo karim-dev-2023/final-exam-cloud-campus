@@ -1,0 +1,137 @@
+{
+  "executedAtUtc": "2026-11-03T11:29:19.470Z",
+  "results": [
+    {
+      "name": "01-notifications-P0-01-P0-02-P1-03",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 56,
+      "pass": 56,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "02-prices-P1-01",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "03-stock-P1-02",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 13,
+      "pass": 13,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "04-nosql-P1-06",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "05-registration-P1-07",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "10-complementary",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 11,
+      "pass": 11,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "06-react-regression",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "11-frontend-usual",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "07-react-build",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 0,
+      "pass": 0,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "08-eslint-server",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 0,
+      "pass": 0,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "12-eslint-frontend",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 0,
+      "pass": 0,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "09-syntax",
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "tests": 0,
+      "pass": 0,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "file": "exam1\\backend\\config\\db.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\adminController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\authController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\orderController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\productController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\middlewares\\authMiddleware.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\Order.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\Product.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\User.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\adminRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\authRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\orderRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\productRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\seeder.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\server.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\auth.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notif.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notifi.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\stock.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\server.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\auth-gateway\\index.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\index.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\index.js",
+    "exit": 0
+  }
+]

@@ -1,0 +1,2227 @@
+url de la page dans les var env mongodb://127.0.0.1:27017/exam1Db
+(node:10008) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10008) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+Serveur en écoute sur le port 5000
+MongoDB connecté
+Erreur lors de l'inscription MongoServerError: E11000 duplicate key error collection: exam1Db.users index: username_1 dup key: { username: "audit_user" }
+    at InsertOneOperation.execute (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongodb\lib\operations\execute_operation.js:199:20)
+    at async executeOperation (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongodb\lib\operations\execute_operation.js:69:16)
+    at async Collection.insertOne (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongodb\lib\collection.js:154:16) {
+  errorResponse: {
+    index: 0,
+    code: 11000,
+    errmsg: 'E11000 duplicate key error collection: exam1Db.users index: username_1 dup key: { username: "audit_user" }',
+    keyPattern: { username: 1 },
+    keyValue: { username: 'audit_user' }
+  },
+  index: 0,
+  code: 11000,
+  keyPattern: { username: 1 },
+  keyValue: { username: 'audit_user' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+Erreur lors de l'inscription Error: User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required.
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.register (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\authController.js:67:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    username: ValidatorError: Path `username` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'username',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    email: ValidatorError: Path `email` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'email',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    password: ValidatorError: Path `password` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'User validation failed'
+}
+Erreur lors de l'inscription Error: User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required.
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.register (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\authController.js:67:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    username: ValidatorError: Path `username` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'username',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    email: ValidatorError: Path `email` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'email',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    password: ValidatorError: Path `password` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'User validation failed'
+}
+token is undefined
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is abc.def.ghi
+Erreur de vérification du token upd
+token is eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJ1c2VySWQiOiJ4Iiwicm9sZSI6ImFkbWluIn0.
+Erreur de vérification du token upd
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":1000}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1, Price 1000
+Commande sauvegardée : {
+  userId: new ObjectId('6ae99fdde47b39dc36674c7d'),
+  items: [
+    {
+      productId: new ObjectId('6ae99f6ba648388f8ea0ba30'),
+      quantity: 1,
+      price: 1000,
+      _id: new ObjectId('6ae99fe2e47b39dc36674cb9')
+    }
+  ],
+  total: 1000,
+  status: 'En attente',
+  shippingAddress: {
+    street: '1 rue du Test',
+    city: 'Testville',
+    postalCode: '75000',
+    country: 'France'
+  },
+  paymentMethod: 'PayPal',
+  shippingMethod: 'colissimo',
+  _id: new ObjectId('6ae99fe2e47b39dc36674cb8'),
+  createdAt: 2026-11-03T08:48:34.485Z,
+  updatedAt: 2026-11-03T08:48:34.485Z,
+  __v: 0
+}
+Erreur lors de l'envoi de la notification AxiosError: Request failed with status code 500
+    at settle (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:2019:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:3135:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:4287:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:61:7) {
+  code: 'ERR_BAD_RESPONSE',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.7',
+      'Content-Length': '196',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'http://localhost:8000/notify',
+    data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1"}'
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: '196',
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /notify HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.7\r\n' +
+      'Content-Length: 196\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/notify',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://localhost:8000/notify',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 196,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/notify',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(async_id_symbol)]: 1715,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 107207,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1714,
+        [Symbol(triggerId)]: 0,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: Object [AxiosHeaders] {
+      'x-powered-by': 'Express',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '313',
+      etag: 'W/"139-NQP9Id6RlZhrEQrh2gY0L2G6wyA"',
+      date: 'Tue, 03 Nov 2026 08:48:34 GMT',
+      connection: 'close'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'http://localhost:8000/notify',
+      data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1"}'
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: '196',
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /notify HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/1.7.7\r\n' +
+        'Content-Length: 196\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/notify',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: { message: "Erreur lors de l'envoi de l'email.", error: [Object] }
+  },
+  status: 500
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":2,"price":1}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 2, Price 1
+Commande sauvegardée : {
+  userId: new ObjectId('6ae99fdde47b39dc36674c7d'),
+  items: [
+    {
+      productId: new ObjectId('6ae99f6ba648388f8ea0ba30'),
+      quantity: 2,
+      price: 1,
+      _id: new ObjectId('6ae99fe2e47b39dc36674cbc')
+    }
+  ],
+  total: 2,
+  status: 'En attente',
+  shippingAddress: {
+    street: '1 rue du Test',
+    city: 'Testville',
+    postalCode: '75000',
+    country: 'France'
+  },
+  paymentMethod: 'PayPal',
+  shippingMethod: 'colissimo',
+  _id: new ObjectId('6ae99fe2e47b39dc36674cbb'),
+  createdAt: 2026-11-03T08:48:34.911Z,
+  updatedAt: 2026-11-03T08:48:34.911Z,
+  __v: 0
+}
+Erreur lors de l'envoi de la notification AxiosError: Request failed with status code 500
+    at settle (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:2019:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:3135:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:4287:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:61:7) {
+  code: 'ERR_BAD_RESPONSE',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.7',
+      'Content-Length': '196',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'http://localhost:8000/notify',
+    data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 2"}'
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: '196',
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /notify HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.7\r\n' +
+      'Content-Length: 196\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/notify',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://localhost:8000/notify',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 196,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/notify',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(async_id_symbol)]: 1796,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 107334,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1795,
+        [Symbol(triggerId)]: 0,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: Object [AxiosHeaders] {
+      'x-powered-by': 'Express',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '314',
+      etag: 'W/"13a-6qvdmPs0H7snzAxuC2d7kSYgOPs"',
+      date: 'Tue, 03 Nov 2026 08:48:35 GMT',
+      connection: 'close'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'http://localhost:8000/notify',
+      data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 2"}'
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: '196',
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /notify HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/1.7.7\r\n' +
+        'Content-Length: 196\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/notify',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: { message: "Erreur lors de l'envoi de l'email.", error: [Object] }
+  },
+  status: 500
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":-500}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1, Price -500
+Commande sauvegardée : {
+  userId: new ObjectId('6ae99fdde47b39dc36674c7d'),
+  items: [
+    {
+      productId: new ObjectId('6ae99f6ba648388f8ea0ba30'),
+      quantity: 1,
+      price: -500,
+      _id: new ObjectId('6ae99fe3e47b39dc36674cbf')
+    }
+  ],
+  total: -500,
+  status: 'En attente',
+  shippingAddress: {
+    street: '1 rue du Test',
+    city: 'Testville',
+    postalCode: '75000',
+    country: 'France'
+  },
+  paymentMethod: 'PayPal',
+  shippingMethod: 'colissimo',
+  _id: new ObjectId('6ae99fe3e47b39dc36674cbe'),
+  createdAt: 2026-11-03T08:48:35.034Z,
+  updatedAt: 2026-11-03T08:48:35.034Z,
+  __v: 0
+}
+Erreur lors de l'envoi de la notification AxiosError: Request failed with status code 500
+    at settle (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:2019:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:3135:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:4287:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:61:7) {
+  code: 'ERR_BAD_RESPONSE',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.7',
+      'Content-Length': '196',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'http://localhost:8000/notify',
+    data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1"}'
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: '196',
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /notify HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.7\r\n' +
+      'Content-Length: 196\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/notify',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://localhost:8000/notify',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 196,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/notify',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(async_id_symbol)]: 1878,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 107415,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1877,
+        [Symbol(triggerId)]: 0,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: Object [AxiosHeaders] {
+      'x-powered-by': 'Express',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '314',
+      etag: 'W/"13a-wfB8kWFIqeRtSUSbd/QuoWF/+tk"',
+      date: 'Tue, 03 Nov 2026 08:48:35 GMT',
+      connection: 'close'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'http://localhost:8000/notify',
+      data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1"}'
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: '196',
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /notify HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/1.7.7\r\n' +
+        'Content-Length: 196\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/notify',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: { message: "Erreur lors de l'envoi de l'email.", error: [Object] }
+  },
+  status: 500
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":100000,"price":1000}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 100000, Price 1000
+Commande sauvegardée : {
+  userId: new ObjectId('6ae99fdde47b39dc36674c7d'),
+  items: [
+    {
+      productId: new ObjectId('6ae99f6ba648388f8ea0ba30'),
+      quantity: 100000,
+      price: 1000,
+      _id: new ObjectId('6ae99fe3e47b39dc36674cc2')
+    }
+  ],
+  total: 100000000,
+  status: 'En attente',
+  shippingAddress: {
+    street: '1 rue du Test',
+    city: 'Testville',
+    postalCode: '75000',
+    country: 'France'
+  },
+  paymentMethod: 'PayPal',
+  shippingMethod: 'colissimo',
+  _id: new ObjectId('6ae99fe3e47b39dc36674cc1'),
+  createdAt: 2026-11-03T08:48:35.116Z,
+  updatedAt: 2026-11-03T08:48:35.116Z,
+  __v: 0
+}
+Erreur lors de l'envoi de la notification AxiosError: Request failed with status code 500
+    at settle (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:2019:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:3135:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:4287:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:61:7) {
+  code: 'ERR_BAD_RESPONSE',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.7',
+      'Content-Length': '201',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'http://localhost:8000/notify',
+    data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 100000"}'
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: '201',
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /notify HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.7\r\n' +
+      'Content-Length: 201\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/notify',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://localhost:8000/notify',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 201,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/notify',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(async_id_symbol)]: 1959,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 107579,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1958,
+        [Symbol(triggerId)]: 0,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: Object [AxiosHeaders] {
+      'x-powered-by': 'Express',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '312',
+      etag: 'W/"138-BT6RrJc8E3uh80ZJTNI2GiLT1xo"',
+      date: 'Tue, 03 Nov 2026 08:48:35 GMT',
+      connection: 'close'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'http://localhost:8000/notify',
+      data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 100000"}'
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: '201',
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /notify HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/1.7.7\r\n' +
+        'Content-Length: 201\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/notify',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: { message: "Erreur lors de l'envoi de l'email.", error: [Object] }
+  },
+  status: 500
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[{"productId":"abc","quantity":1,"price":10}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+Produit ID : abc, Quantité : 1, Price 10
+Erreur lors de la création de la commande Error: Order validation failed: items.0.productId: Cast to ObjectId failed for value "abc" (type string) at path "productId" because of "BSONError"
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:89:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    'items.0.productId': CastError: Cast to ObjectId failed for value "abc" (type string) at path "productId" because of "BSONError"
+        at SchemaObjectId.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+        at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at EmbeddedDocument.$set (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at EmbeddedDocument.$set (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:1128:16)
+        at EmbeddedDocument.Document (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:177:12)
+        at EmbeddedDocument.Subdocument (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\types\subdocument.js:34:12)
+        at EmbeddedDocument.ArraySubdocument [as constructor] (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\types\arraySubdocument.js:44:15)
+        at new EmbeddedDocument (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\documentArray.js:130:17)
+        at SchemaDocumentArray.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\documentArray.js:495:22)
+        at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12) {
+      stringValue: '"abc"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'abc',
+      path: 'productId',
+      reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+          at new ObjectId (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\bson\lib\bson.cjs:2388:23)
+          at castObjectId (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at SchemaObjectId.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+          at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at EmbeddedDocument.$set (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at EmbeddedDocument.$set (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:1128:16)
+          at EmbeddedDocument.Document (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:177:12)
+          at EmbeddedDocument.Subdocument (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\types\subdocument.js:34:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\types\arraySubdocument.js:44:15)
+          at new EmbeddedDocument (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\documentArray.js:130:17),
+      valueType: 'string'
+    }
+  },
+  _message: 'Order validation failed'
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":1000}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"}}
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1, Price 1000
+Erreur lors de la création de la commande Error: Order validation failed: paymentMethod: Path `paymentMethod` is required., shippingMethod: Path `shippingMethod` is required.
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:89:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    paymentMethod: ValidatorError: Path `paymentMethod` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'paymentMethod',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    shippingMethod: ValidatorError: Path `shippingMethod` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'shippingMethod',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Order validation failed'
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae99fdde47b39dc36674c7d","role":"user","iat":1793695711,"exp":1793699311}
+items are {"items":[]}
+token is undefined
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+orderId to delete is undefined
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+dump console log order id => 6ae99fe2e47b39dc36674cbb status = PIRATÉ
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+dump console log order id => abc status = Expédiée
+Erreur lors de la mise à jour de la commande : CastError: Cast to ObjectId failed for value "abc" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:4918:12)
+    at Query._castConditions (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:2309:10)
+    at model.Query._findOneAndUpdate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:3406:8)
+    at model.Query.exec (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:4458:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.updateOrderStatus (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:179:19) {
+  stringValue: '"abc"',
+  messageFormat: undefined,
+  kind: 'ObjectId',
+  value: 'abc',
+  path: '_id',
+  reason: BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+      at new ObjectId (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\bson\lib\bson.cjs:2388:23)
+      at castObjectId (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at SchemaObjectId.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\objectId.js:248:12)
+      at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+      at SchemaType.castForQuery (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1653:17)
+      at cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\cast.js:390:32)
+      at Query.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:4918:12)
+      at Query._castConditions (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:2309:10)
+      at model.Query._findOneAndUpdate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:3406:8)
+      at model.Query.exec (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\query.js:4458:80),
+  valueType: 'string'
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+Erreur lors de la mise à jour du stock : Error: Product validation failed: stock: Cast to Number failed for value "abc" (type string) at path "stock"
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.updateProductStock (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\productController.js:30:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    stock: CastError: Cast to Number failed for value "abc" (type string) at path "stock"
+        at SchemaNumber.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\number.js:380:11)
+        at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+        at model.$set (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:1432:22)
+        at model.set [as stock] (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+        at exports.updateProductStock (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\productController.js:23:21)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+      stringValue: '"abc"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: 'abc',
+      path: 'stock',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schema\number.js:378:12)
+          at SchemaType.applySetters (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1236:12)
+          at model.$set (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:1432:22)
+          at model.set [as stock] (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\helpers\document\compile.js:205:19)
+          at exports.updateProductStock (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\productController.js:23:21)
+          at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'Product validation failed'
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+Erreur lors de la mise à jour du stock : Error: Product validation failed: stock: Path `stock` is required.
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.updateProductStock (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\productController.js:30:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    stock: ValidatorError: Path `stock` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'stock',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Product validation failed'
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Erreur lors de l'inscription Error: User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required.
+    at ValidationError.inspect (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:850:19)
+    at inspect (node:internal/util/inspect:387:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2366:40)
+    at formatWithOptions (node:internal/util/inspect:2228:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.register (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\authController.js:67:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    username: ValidatorError: Path `username` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'username',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    email: ValidatorError: Path `email` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'email',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    },
+    password: ValidatorError: Path `password` is required.
+        at validate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1385:13)
+        at SchemaType.doValidate (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\schemaType.js:1369:7)
+        at C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\mongoose\lib\document.js:3071:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'User validation failed'
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+user is in createOrder {"userId":"6ae9a043e47b39dc36674cd7","role":"user","iat":1793695814,"exp":1793699414}
+items are {"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":1000}],"total":1000,"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"chronopost"}
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1, Price 1000
+Commande sauvegardée : {
+  userId: new ObjectId('6ae9a043e47b39dc36674cd7'),
+  items: [
+    {
+      productId: new ObjectId('6ae99f6ba648388f8ea0ba30'),
+      quantity: 1,
+      price: 1000,
+      _id: new ObjectId('6ae9a04ae47b39dc36674cde')
+    }
+  ],
+  total: 1000,
+  status: 'En attente',
+  shippingAddress: {
+    street: '1 rue du Test',
+    city: 'Testville',
+    postalCode: '75000',
+    country: 'France'
+  },
+  paymentMethod: 'PayPal',
+  shippingMethod: 'chronopost',
+  _id: new ObjectId('6ae9a04ae47b39dc36674cdd'),
+  createdAt: 2026-11-03T08:50:18.931Z,
+  updatedAt: 2026-11-03T08:50:18.931Z,
+  __v: 0
+}
+Erreur lors de l'envoi de la notification AxiosError: Request failed with status code 500
+    at settle (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:2019:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:3135:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\axios\dist\node\axios.cjs:4287:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.createOrder (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\controllers\orderController.js:61:7) {
+  code: 'ERR_BAD_RESPONSE',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.7',
+      'Content-Length': '196',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'http://localhost:8000/notify',
+    data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1"}'
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: '196',
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    _header: 'POST /notify HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.7\r\n' +
+      'Content-Length: 196\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/notify',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://localhost:8000/notify',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 196,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/notify',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(async_id_symbol)]: 2775,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 211311,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 2774,
+        [Symbol(triggerId)]: 0,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: Object [AxiosHeaders] {
+      'x-powered-by': 'Express',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '312',
+      etag: 'W/"138-sU69sNQKfgiXUz4SuybJfkeywKY"',
+      date: 'Tue, 03 Nov 2026 08:50:19 GMT',
+      connection: 'close'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'http://localhost:8000/notify',
+      data: '{"to":"adresse-masquee-1@example.invalid","subject":"Nouvelle Commande Créée","text":"Une commande a été créée avec succès pour les produits suivants : \\nProduit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1"}'
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: '196',
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /notify HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/1.7.7\r\n' +
+        'Content-Length: 196\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/notify',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: { message: "Erreur lors de l'envoi de l'email.", error: [Object] }
+  },
+  status: 500
+}
+token is [JWT_MASQUE_AVANT_PUBLICATION]
+token is [JWT_MASQUE_AVANT_PUBLICATION]

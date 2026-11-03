@@ -1,0 +1,12 @@
+Package                      Current  Wanted  Latest  Location                                  Depended by
+@testing-library/jest-dom     5.17.0  5.17.0   7.0.1  node_modules/@testing-library/jest-dom    frontend
+@testing-library/react        13.4.0  13.4.0  16.3.3  node_modules/@testing-library/react       frontend
+@testing-library/user-event   13.5.0  13.5.0  14.6.8  node_modules/@testing-library/user-event  frontend
+autoprefixer                 10.4.20  10.6.2  10.6.2  node_modules/autoprefixer                 frontend
+axios                          1.7.7  1.21.0  1.21.0  node_modules/axios                        frontend
+postcss                       8.4.49  8.5.32  8.5.32  node_modules/postcss                      frontend
+react                         18.3.1  18.3.1  19.3.1  node_modules/react                        frontend
+react-dom                     18.3.1  18.3.1  19.3.1  node_modules/react-dom                    frontend
+react-router-dom               6.4.5   6.4.5  7.18.5  node_modules/react-router-dom             frontend
+tailwindcss                   3.4.15  3.4.19   4.3.4  node_modules/tailwindcss                  frontend
+web-vitals                     2.1.4   2.1.4   6.2.3  node_modules/web-vitals                   frontend

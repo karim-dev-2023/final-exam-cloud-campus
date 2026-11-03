@@ -1,0 +1,17 @@
+ok 1 - Complement: DELETE requires admin and terminal orders are archived, never resurrected by replay
+ok 2 - Complement: validation persists URL id; invalid ids and missing orders never report success
+ok 3 - Complement: enum, forward transitions and terminal states are enforced atomically
+ok 4 - Complement: database read and update failures return sanitized JSON and process stays alive
+ok 5 - Complement: malformed and oversized JSON never expose Express stacks
+ok 6 - Complement: CORS allows the local frontend and never grants unknown origins
+ok 7 - Complement: JWT signature, expiration, algorithm, claims and admin authorization
+ok 8 - Complement: source/account rate limits return 429 and recover after expiry
+ok 9 - Complement: stock validates ids, integer boundaries and returns proper client errors
+ok 10 - Complement: notification timeout bounds an unresponsive transport
+ok 11 - Complement: synthetic passwords and JWT never appear in authentication logs
+# tests 11
+# pass 11
+# fail 0
+# skipped 0
+# todo 0
+# duration_ms 15609.0587

@@ -1,0 +1,69 @@
+
+[U01] Accueil + chargement des produits
+  produits affichés: 5 | titre onglet: "React App"
+  console: [error] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ProductList`.  
+    at li
+    at ProductList (http://loca
+
+[U02] Ajout au panier (Ordinateur x2 via 2 clics, Smartphone x1)
+  badge panier: "Panier 2" (3 articles, 2 produits distincts)
+
+[U03] Page panier: quantités, total, +, -, retirer
+  lignes: ["Ordinateur Portable | 1000 | 2 | 2000.00","Smartphone | 700 | 1 | 700.00"] | total: 2700.00
+  après "+" sur Ordinateur: ["Ordinateur Portable | 1000 | 3 | 3000.00","Smartphone | 700 | 1 | 700.00"] | total: 3700.00
+  après 3x "-" (plancher 1): ["Ordinateur Portable | 1000 | 1 | 1000.00","Smartphone | 700 | 1 | 700.00"] | total: 1700.00
+  après "Retirer" Smartphone: ["Ordinateur Portable | 1000 | 1 | 1000.00"] | total: 1000.00
+
+[U04] Routes protégées sans connexion
+  /order -> /login
+  /admin -> /
+  /shippig_payment (non protégée) -> /shippig_payment
+  console: [error] Warning: `value` prop on `%s` should not be null. Consider using an empty string to clear the component or `undefined` for uncontrolled components.%s select 
+    at select
+    at div
+    at ShippingMethodSelection (http:
+
+[U05] Inscription: formulaire vide
+  alertes: ["Une erreur est survenue."]
+  console: [error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+
+[U06] Inscription valide (ui_user)
+  url après inscription: /login
+  alertes: ["Inscription réussie ! Vous pouvez maintenant vous connecter."]
+
+[U07] Connexion: mauvais mot de passe puis formulaire vide
+  alertes: ["Mot de passe incorrect"]
+  console: [error] Failed to load resource: the server responded with a status of 400 (Bad Request)
+  alertes: ["Utilisateur non trouvé"]
+  console: [error] Failed to load resource: the server responded with a status of 400 (Bad Request)
+
+[U08] Connexion valide + mise à jour de la Navbar + stockage du token
+  url: / | navbar: "Mon Application Bonjour, ui_user Panier 1 Déconnexion"
+  localStorage: ["role","username","token"] (token JWT lisible par tout script JS de la page)
+
+[U09] Livraison/paiement: adresse saisie, listes déroulantes NON modifiées
+  valeurs affichées des listes: livraison="colissimo" paiement="Carte bancaire"
+  page synthèse: Non spécifiée / Non spécifiée
+  alertes: ["Informations manquantes pour la commande :\n• méthode de livraison\n• méthode de paiement"]
+
+[U10] Livraison/paiement: sélection explicite puis confirmation
+  adresse conservée après retour: rue="1 rue du Test"
+  après confirmation: url=/order | "panier vidé"
+  alertes: ["Commande confirmée avec succès !"]
+
+[U11] Déconnexion: contenu du localStorage
+  localStorage après déconnexion: {"role":"user"}
+
+[U12] Contournement du contrôle admin côté client (user + role=admin forcé dans localStorage)
+  url: /admin | texte: "Mon Application Bonjour, ui_user Panier Déconnexion Page d'administration Gestion des Commandes Gestion des Produits Nom Prix Stock Actions"
+  console: [error] Warning: Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s 
+
+Check the render method of `ProductList`.  
+    at li
+    at ProductList (http://loca
+           [error] Failed to load resource: the server responded with a status of 403 (Forbidden)
+  erreurs JS: AxiosError
+
+[U13] Page admin avec un vrai compte admin

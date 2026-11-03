@@ -1,0 +1,96 @@
+PASS ../../../../Documents/Project/final-exam-cloud/exam1/tests/ui-final-e27-e28.test.js
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 37 |[39m   [36mlet[39m complete[33m;[39m
+     [90m 38 |[39m   createOrder[33m.[39mmockImplementation(() [33m=>[39m [36mnew[39m [33mPromise[39m(resolve [33m=>[39m { complete [33m=[39m resolve[33m;[39m }))[33m;[39m
+    [31m[1m>[22m[39m[90m 39 |[39m   render([33mReact[39m[33m.[39mcreateElement([33mMemoryRouter[39m[33m,[39m [36mnull[39m[33m,[39m [33mReact[39m[33m.[39mcreateElement([33mCartProvider[39m[33m,[39m [36mnull[39m[33m,[39m [33mReact[39m[33m.[39mcreateElement([33mCheckoutHarness[39m))))[33m;[39m
+     [90m    |[39m   [31m[1m^[22m[39m
+     [90m 40 |[39m   [36mconst[39m button [33m=[39m [36mawait[39m screen[33m.[39mfindByText([32m'Confirmer la commande'[39m)[33m;[39m
+     [90m 41 |[39m   fireEvent[33m.[39mclick(button)[33m;[39m fireEvent[33m.[39mclick(button)[33m;[39m
+     [90m 42 |[39m   expect(createOrder)[33m.[39mtoHaveBeenCalledTimes([35m1[39m)[33m;[39m[0m
+
+      at printWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at exam1/frontend/node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (exam1/frontend/node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (exam1/frontend/node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (exam1/tests/ui-final-e27-e28.test.js:39:3)
+
+PASS ../../../../Documents/Project/final-exam-cloud/exam1/tests/ui-notifications.test.js
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 16 |[39m test([32m'Non-regression: products load and an article can be added to the real cart'[39m[33m,[39m [36masync[39m () [33m=>[39m {
+     [90m 17 |[39m   axios[33m.[39m[36mget[39m[33m.[39mmockResolvedValue({ data[33m:[39m [{ _id[33m:[39m [32m'synthetic-product'[39m[33m,[39m name[33m:[39m [32m'Produit factice'[39m[33m,[39m price[33m:[39m [35m20[39m[33m,[39m stock[33m:[39m [35m3[39m }] })[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m   render(wrap([33mReact[39m[33m.[39mcreateElement([33mReact[39m[33m.[39m[33mFragment[39m[33m,[39m [36mnull[39m[33m,[39m [33mReact[39m[33m.[39mcreateElement([33mProducts[39m)[33m,[39m [33mReact[39m[33m.[39mcreateElement([33mCart[39m))))[33m;[39m
+     [90m    |[39m   [31m[1m^[22m[39m
+     [90m 19 |[39m   fireEvent[33m.[39mclick([36mawait[39m screen[33m.[39mfindByText([32m'Ajouter au panier'[39m))[33m;[39m
+     [90m 20 |[39m   expect(screen[33m.[39mgetByRole([32m'spinbutton'[39m)[33m.[39mvalue)[33m.[39mtoBe([32m'1'[39m)[33m;[39m
+     [90m 21 |[39m   expect(screen[33m.[39mgetAllByText([32m'Produit factice'[39m))[33m.[39mtoHaveLength([35m2[39m)[33m;[39m[0m
+
+      at printWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at exam1/frontend/node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (exam1/frontend/node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (exam1/frontend/node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (exam1/tests/ui-notifications.test.js:18:3)
+      at TestScheduler.scheduleTests (exam1/frontend/node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (exam1/frontend/node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (exam1/frontend/node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (exam1/frontend/node_modules/@jest/core/build/cli/index.js:173:3)
+
+    console.error
+      Warning: An update to MemoryRouter inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at MemoryRouter (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\node_modules\react-router\lib\components.tsx:127:3)
+
+    [0m [90m 26 |[39m       [36mawait[39m axios[33m.[39mpost([32m'http://localhost:5000/api/auth/register'[39m[33m,[39m formData)[33m;[39m
+     [90m 27 |[39m       alert([32m'Inscription réussie ! Vous pouvez maintenant vous connecter.'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 28 |[39m       navigate([32m'/login'[39m)[33m;[39m
+     [90m    |[39m       [31m[1m^[22m[39m
+     [90m 29 |[39m     } [36mcatch[39m (err) {
+     [90m 30 |[39m       [90m//console.error('Erreur lors de l\'inscription', err);[39m
+     [90m 31 |[39m       [36mif[39m (err[33m.[39mresponse) {[0m
+
+      at printWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at listener (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at push (exam1/frontend/node_modules/@remix-run/router/history.ts:285:9)
+      at navigate (exam1/frontend/node_modules/react-router/lib/hooks.tsx:211:7)
+      at handleSubmit (exam1/frontend/src/pages/Register.js:28:7)
+
+
+Test Suites: 2 passed, 2 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        3.421 s
+Ran all test suites.
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  

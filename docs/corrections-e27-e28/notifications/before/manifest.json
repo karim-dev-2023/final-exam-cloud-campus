@@ -1,0 +1,610 @@
+[
+  {
+    "file": "docs\\audit-e27-e28\\jest-isolated.log",
+    "sha256": "6f9963901b275aa0a7d27551e919c72a8aaa5b950f25a32608a59f8c87b768e6"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-backend.json",
+    "sha256": "c7fb6a3ea843c072fe75e070e2dacd8854c0e09457b0656491db52793310309c"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-frontend.json",
+    "sha256": "1fef804fd35fcdeb0c1ac2c0c8493102d646448db1da53ca01750928e5b0ba24"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-gateway.json",
+    "sha256": "845e6858b6792337cc172639805dbc66a36ab18c07d1cdddd359b4e48fc9b916"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-microservices-auth-gateway.json",
+    "sha256": "8d102debd1245c733f0e8240537bdee3fdf6f07516d88d6f8baef45bd11f36ae"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-microservices-notifications.json",
+    "sha256": "26a231a678849bc6328e202b7cd0363b321106941f52f308db7179e8f114a37e"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-microservices-stock-management.json",
+    "sha256": "959353a4f83708a4439f62054f49e663a6b6254b34e9d4f0c4b23730aeb3c060"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-root.json",
+    "sha256": "fb75e515875ffd3baa67aafd895b1b752efe82e1f722c5a91c336b73b013ca0c"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\probes.cjs",
+    "sha256": "e76ba3be7210c051534741e2a8acee563d59e138c14579c578635f35c2f3df03"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\probes.json",
+    "sha256": "6d05507f4d7ff64645a3c75942337f83e3cb10f649dfde131fe685a8465d63c7"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\run-ui.cjs",
+    "sha256": "c455332f3a2973275f45fd48e34c8eca06766b539f8880c66cfc2116b57b3f0a"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\syntax.json",
+    "sha256": "1138ba1c23d450e1a80d0cebd926fed3d2f0de989d31e71dcf94bb1dc5794f36"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\ui.test.js",
+    "sha256": "91c5e1084ee436e1d69a46e0476c342a5aabf8c9192027226415391d4788fc8c"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_backend.json",
+    "sha256": "93347b29a55e57de438bc6a52709a793e5aacb461f3a3d6afa284bea90cab8f3"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_backend.txt",
+    "sha256": "bb0cdb78d44845a3d6ef50382c8845f5821c33f6d3dc330470967794fc0d9f0e"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_frontend.json",
+    "sha256": "531b7a755b90aac98094ce63741b085fef309ac0a4515f28493caa9925218a94"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_frontend.txt",
+    "sha256": "acb7a7b0dc1bac02cb258f66ba92d791d92ef41a5e00fda8b0713eeb39e92c3e"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_gateway.json",
+    "sha256": "917fbb84511870f2628bf55c39b5c06a71fd98898d585af8bcb3abe41174179a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_gateway.txt",
+    "sha256": "3d5bff64c9d951d281bc03ebc07e451371c8160008b50a4a3957bec96bf4f5d2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_auth-gateway.json",
+    "sha256": "391cc21798a3fe6ea50533fcdf5f62c2cb567028e19773e50da2941b94bc64fe"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_auth-gateway.txt",
+    "sha256": "3d5bff64c9d951d281bc03ebc07e451371c8160008b50a4a3957bec96bf4f5d2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_notifications.json",
+    "sha256": "1cbcf39ebe8a7fdef66cfebbb1f696d87284540a752656f7aae0cca8adb9c16b"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_notifications.txt",
+    "sha256": "d46b4072034595aac85569f690a201ed83727cfcba6995226442ab0d395937ac"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_stock-management.json",
+    "sha256": "391cc21798a3fe6ea50533fcdf5f62c2cb567028e19773e50da2941b94bc64fe"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_stock-management.txt",
+    "sha256": "3d5bff64c9d951d281bc03ebc07e451371c8160008b50a4a3957bec96bf4f5d2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\docker_compose_build.log",
+    "sha256": "76d6ee2c56e5c7cd70087675fb749258914df2c091452f2263c6a11001d3a191"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\docker_compose_config.log",
+    "sha256": "b97459c4e216a5ada2dc0f0e89c240f883e6b62663a9ff2d998f91a83538a097"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_backend.log",
+    "sha256": "c215c54b5e5b83a008b4bd7ab875e7c6d61d88b36ff07bb80bdb23039b4803fe"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_frontend.log",
+    "sha256": "fc4b41b133356231d21e1ba687bb90f588291c9ec0f699cb895e8af449dfa7ac"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_gateway.log",
+    "sha256": "e131cdb4f7c8cab17b79c172979fc646bee16ee0bc1cce9ed4c2178ec0838836"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_microservices_auth-gateway.log",
+    "sha256": "b19f446be338a7c5ab1543b020591d50f095af3e92df75a8d00af88463667a7a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_microservices_notifications.log",
+    "sha256": "d302d5d74fb17a92d99c3b844e20a92251e33241bfdd43437cdfeefc9a574d7c"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_microservices_stock-management.log",
+    "sha256": "2c2dee19fcdae17874622a9b631612013374ef6906edeacd003a349a7cee710d"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_backend.txt",
+    "sha256": "0707211f08b765a47d2adfd9a7550d710544b5011e1e7ea23061f7e8eaba6e73"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_frontend.txt",
+    "sha256": "2d018144625d22e7a34cc169a71f2b492e6e11a5b3253b2cbd28b5f7740040d0"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_gateway.txt",
+    "sha256": "0cdaf35fcd1ece7205d409a4634a7e2ae0d0c8b1c89a2d36b57abe58aae6f2c5"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_microservices_auth-gateway.txt",
+    "sha256": "03683a6fb8b9204637271a06c1f3e6baa190b39eac6726ec1e3cc4e464fefb84"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_microservices_notifications.txt",
+    "sha256": "d7eacddb965d0692cf651cf21bb7a5a9cb68f05526d52f483b982711e2bb4192"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_microservices_stock-management.txt",
+    "sha256": "4741904fec2b6087db3706173600e676ae6726d351e5cedfc587413633e941c9"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_backend.txt",
+    "sha256": "6c8b01e78ef1e633144058aff3f5affaeaee7c57ad66c2932da9dc51e844eeea"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_frontend.txt",
+    "sha256": "e053c87c7aa0075add20b4d69577cdb7b0feeac2677f2ffd5fb323a5709513fc"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_gateway.txt",
+    "sha256": "68b42bb086078b22cd1378121eaff122b5a52e53c90ccfa3a71080b1f5dd43d1"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_microservices_auth-gateway.txt",
+    "sha256": "59a208089ac6782b3b4537c2446d28394646f6e3c6c968da45b6248b35966dbf"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_microservices_notifications.txt",
+    "sha256": "ae53c0f4ce430de305af757048352a95718933e60037302360b20f521f8fc12d"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_microservices_stock-management.txt",
+    "sha256": "2ccc4374165298ac91e985c074722554cc6eea676b9d1e3cccee49428e4bd1e6"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_backend.log",
+    "sha256": "58fbc7d84b1c6085d7936cd569deb18bae13d6546b65df53f6f3e8d106d3326a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_frontend.log",
+    "sha256": "4c39a35cc9119ffd26018c25e9e9d4e31bd4dac8d71f4ba24db42856bdd4bc20"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_gateway.log",
+    "sha256": "9172bfbd3bd51525f0ff20cf5b50110d14b3bbcf09976be3550c515384542e39"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_notifications.log",
+    "sha256": "7cdc2a9b59e9523898d1e527986460b8a65cbf70955a3bc64505083fad3d9caf"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_stock.log",
+    "sha256": "114fb14e00f26c7b892d49d59d4f22f59695b772b2f12c4b3fd9020c8dd58405"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\start_all_racine.log",
+    "sha256": "3da9cada301dc28230cc2c95e55714b6b45c5435fde785d68efc70d5ae778c0a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\start_backend_npm.log",
+    "sha256": "eb124c77142747d4f08c3df4d41f261712d2b0e895e905dbad603ede74a04ab5"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\start_backend_sans_mongo.log",
+    "sha256": "ebd3efa8ada5085d6a86a558ac35a062cd1f09ca84041ac33cc6a6cb394f1fdc"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\tests_api.log",
+    "sha256": "9b4e5b7e7e2de2440093d2fdb7b4ea4bd0c1b567dc448513716a548ba68f99f2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\tests_ui.log",
+    "sha256": "8d212b2247ea8c1804ee05612d9996141a3efc2928c98a01de370c660f893b45"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U01_accueil_produits.png",
+    "sha256": "63f47464c7eaaa3b7d412caf01760bc745f4f0d7c42bdf925ff441b5cd9583f5"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U03a_panier_initial.png",
+    "sha256": "91f0d581b7e833afcb68c1849430d2587dc943ff6d18624d26fe9b5e379a9798"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U03b_panier_apres_modifs.png",
+    "sha256": "1ad901b5d633be5afa34f341c1579792eabc3ea44d290624eca1f635db6d25db"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U05_inscription_vide.png",
+    "sha256": "fc729c1d4ec38f1710f735be54d738e6b9258f17249802001d58315f77d0e6a7"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U07_connexion_erreur.png",
+    "sha256": "e4212f06873f06c639b0a4fa891ff249fa1b3e1bfb6288308d4ad49348620329"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U08_connecte_navbar.png",
+    "sha256": "33ef6c4379c1eb87e76c53a710608346cdaa20b3383b0d9402fd938596925936"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U09a_livraison_paiement.png",
+    "sha256": "ff5ceac8290e9add3de73e05e5acf1b605672133d2de8f01aaf197e94e2fec8b"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U09b_commande_refusee_listes.png",
+    "sha256": "32e1eea80b163512462a45f45c3053787549dd87157c6d274a914a5a0537c9aa"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U10_commande_confirmee.png",
+    "sha256": "04784b63d672f689532716b7a707c39ec492c3becdf2bee9b8ab7329ec225219"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U12_admin_role_falsifie.png",
+    "sha256": "b8af5536c6b6be45ef64b7ccf05a6d9613c8a7f0f10a6a67a6efd827184824e8"
+  },
+  {
+    "file": "exam1\\.gitignore",
+    "sha256": "381cde210715f6b20e8c5e8caf4da10929660ea7534aa655b7dd8a78cd53618a"
+  },
+  {
+    "file": "exam1\\backend\\config\\db.js",
+    "sha256": "962399210a739ecc0dcbc07d077f88d8af494e538f52b3aac851e0902c276eef"
+  },
+  {
+    "file": "exam1\\backend\\controllers\\adminController.js",
+    "sha256": "2aa93fd98a81a95045f9160988dae2a42b55176180fc74e45e1f594d7671306e"
+  },
+  {
+    "file": "exam1\\backend\\controllers\\authController.js",
+    "sha256": "54b211941206ff73d22e367c321335d73e5a3363617e397d4f5c162c72b4996b"
+  },
+  {
+    "file": "exam1\\backend\\controllers\\orderController.js",
+    "sha256": "e32ade9feb581e14ca1f9f865bf694ebc44ad97c8c9b82de6b393076fba958de"
+  },
+  {
+    "file": "exam1\\backend\\controllers\\productController.js",
+    "sha256": "46ec865941a205f026ed85051a27302ba4097bd3dcebb79be1cefe8924ea1311"
+  },
+  {
+    "file": "exam1\\backend\\middlewares\\authMiddleware.js",
+    "sha256": "b9b9449fe17aea16947c2edc4cbe9d1385866a01d0bdf560c9f3bbbb4b73a9d6"
+  },
+  {
+    "file": "exam1\\backend\\models\\Order.js",
+    "sha256": "d0196ee8429d3174bc4049704e694773cdb78072326fe22422fa1534e972adfc"
+  },
+  {
+    "file": "exam1\\backend\\models\\Product.js",
+    "sha256": "cbcddb0b2f4cc2f9172e99966d92a0bbf237d04f2e64048384ddfb3326a6203c"
+  },
+  {
+    "file": "exam1\\backend\\models\\User.js",
+    "sha256": "e89ea2eac22631a07379728ee3d83e652ecb8125021b9615d4e7f6a5f6e21b09"
+  },
+  {
+    "file": "exam1\\backend\\package-lock.json",
+    "sha256": "1933ab1ed05316fa281fef906a556b06ae999736ec611827f0cb45d241e8398c"
+  },
+  {
+    "file": "exam1\\backend\\package.json",
+    "sha256": "afffe9422b97ec7b30bdf20555c972eaa86737b39f251d7dc1a26ee3b67694b4"
+  },
+  {
+    "file": "exam1\\backend\\routes\\adminRoutes.js",
+    "sha256": "90b36edfa2d2ceed8f386716f045eb417214cbe3b9c4144dd4b2b3c99b7f4559"
+  },
+  {
+    "file": "exam1\\backend\\routes\\authRoutes.js",
+    "sha256": "2480239fde8c6cbcbf6f786d92ef5445e8e52c7994e8f5783167dc8489424217"
+  },
+  {
+    "file": "exam1\\backend\\routes\\orderRoutes.js",
+    "sha256": "dd4a4d13f28b135b35a4197984a4d49608bb66f80d485241169e1cde0ba7b36b"
+  },
+  {
+    "file": "exam1\\backend\\routes\\productRoutes.js",
+    "sha256": "bdbd50e091289452414d2688c7f5ceb50152ccd7e887f3cf98518164b5cdb767"
+  },
+  {
+    "file": "exam1\\backend\\seeder.js",
+    "sha256": "efe20e99224439456ec9f9121c3dc8499f8c71c211b7c57a290134d1e4056b46"
+  },
+  {
+    "file": "exam1\\backend\\server.js",
+    "sha256": "c337c07af3a21468253c1922b9c3ee45c679c14dfc59825c4633393bf5da7e47"
+  },
+  {
+    "file": "exam1\\docker-compose.yml",
+    "sha256": "8164001b0820bd0778eff6adf3fd718fc8d9fd84b3d504fbd8fb39c18466067a"
+  },
+  {
+    "file": "exam1\\frontend\\.gitignore",
+    "sha256": "d373417ea2a8844e3b7a1515aab123e90fbeb4b7225144d55d243d9f6f04f73a"
+  },
+  {
+    "file": "exam1\\frontend\\build\\asset-manifest.json",
+    "sha256": "f033f436d7a20f8e6f6e5f7fc87ca59444ced4d1d41eb67a0174ee50e1acab67"
+  },
+  {
+    "file": "exam1\\frontend\\build\\favicon.ico",
+    "sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd"
+  },
+  {
+    "file": "exam1\\frontend\\build\\index.html",
+    "sha256": "f33d9e8a87334ba67699f6fc54dc18dd69354e229e069a00c4026d534cb79456"
+  },
+  {
+    "file": "exam1\\frontend\\build\\logo192.png",
+    "sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00"
+  },
+  {
+    "file": "exam1\\frontend\\build\\logo512.png",
+    "sha256": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461"
+  },
+  {
+    "file": "exam1\\frontend\\build\\manifest.json",
+    "sha256": "50b3d8c3903af3f78d871b94557ab14f4e39ca192eaca3d2cfa863c867279a14"
+  },
+  {
+    "file": "exam1\\frontend\\build\\robots.txt",
+    "sha256": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2"
+  },
+  {
+    "file": "exam1\\frontend\\build\\static\\css\\main.d8b37c20.css",
+    "sha256": "f1cf6573d5768d3a9c2e66464e36fd599a4493e0cbd99bb9d25f5f924d698cac"
+  },
+  {
+    "file": "exam1\\frontend\\build\\static\\css\\main.d8b37c20.css.map",
+    "sha256": "b62499db5ca22a10b83bcd34e0e111f3688ca3b1515acabd5c54de7704f4b4f8"
+  },
+  {
+    "file": "exam1\\frontend\\build\\static\\js\\main.946db15c.js",
+    "sha256": "ef4601f6dc630f714bb1b2c9b689c7a8c4f9965ea71ff5399da32b6afee1a9a7"
+  },
+  {
+    "file": "exam1\\frontend\\build\\static\\js\\main.946db15c.js.LICENSE.txt",
+    "sha256": "d1fad358bb0781211483d3507e7b095e15a07c4046ed509a7bf17547c177aadb"
+  },
+  {
+    "file": "exam1\\frontend\\build\\static\\js\\main.946db15c.js.map",
+    "sha256": "b02e40402f524763e90a38a590f62cf520b5106a2fb1fa21553997db8107655a"
+  },
+  {
+    "file": "exam1\\frontend\\package-lock.json",
+    "sha256": "ac1d52817be4a50b762082fad1794f3c53056f97383aca6caec5b9673f04c23f"
+  },
+  {
+    "file": "exam1\\frontend\\package.json",
+    "sha256": "1e11b74b9687be1b47f00053042bc9dc5606edf9b10e1889a781c363275342b7"
+  },
+  {
+    "file": "exam1\\frontend\\postcss.config.js",
+    "sha256": "251ecddd4672c9cf467547e3dc535de00ad2129df26e7e7ae728fa4e5ac45fc5"
+  },
+  {
+    "file": "exam1\\frontend\\public\\favicon.ico",
+    "sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd"
+  },
+  {
+    "file": "exam1\\frontend\\public\\index.html",
+    "sha256": "20afc17b6358bfdf5d74513225cd4a73443fa0bd15b944af71e143f694a5cf7c"
+  },
+  {
+    "file": "exam1\\frontend\\public\\logo192.png",
+    "sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00"
+  },
+  {
+    "file": "exam1\\frontend\\public\\logo512.png",
+    "sha256": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461"
+  },
+  {
+    "file": "exam1\\frontend\\public\\manifest.json",
+    "sha256": "50b3d8c3903af3f78d871b94557ab14f4e39ca192eaca3d2cfa863c867279a14"
+  },
+  {
+    "file": "exam1\\frontend\\public\\robots.txt",
+    "sha256": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2"
+  },
+  {
+    "file": "exam1\\frontend\\README.md",
+    "sha256": "70eafbc7a5fd466aa3213b5a7e1b2a41383cbe5d4e6fc5f4582efc58bdb509d1"
+  },
+  {
+    "file": "exam1\\frontend\\src\\App.css",
+    "sha256": "c5ac42e56bf8c34eb741d752bc879144f186d7ca0a48fcbb73b967177f7a9240"
+  },
+  {
+    "file": "exam1\\frontend\\src\\App.js",
+    "sha256": "996837d33f34a97f2df156e5ff8045b47d560ce6104ce1717920d1ba725e6f1a"
+  },
+  {
+    "file": "exam1\\frontend\\src\\App.test.js",
+    "sha256": "f7784693194b8657d1bf70c37ea70f4a2d694c4566ec41550a8e650eb600aaa4"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\AdminRoute.js",
+    "sha256": "bff52a8df36c85655c02ad6ae62c0f46c18f1197cf7e5eac8bc29259d92e389b"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\handlePaymentChange.js",
+    "sha256": "8983a3e03e329b931c680210fffc3dfc882e9879ee6f7841bbe3d6c3e534e298"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\Navbar.js",
+    "sha256": "0d09b87a2f445e96a68c8da287ef82d1f64e1c9e023b10f2718abdbc3eaae50f"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\ProductList.js",
+    "sha256": "3187e6ca050084e1e6756d48ab17b7e1ab9ed7d7ddbc71696ff0c2c05c70e3b7"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\ProtectedRoute.js",
+    "sha256": "836c8b044524a3e81d1b77fa83ad9270f3310f0c6f78067c2015f3f84c51a67b"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\ShippingAddress.js",
+    "sha256": "1df105e5d87993124bbf5acdc2a1aa7f242684718c88c9e6455250c8b5b7b80c"
+  },
+  {
+    "file": "exam1\\frontend\\src\\components\\ShippingMethodSelection.js",
+    "sha256": "9ab5da71cd75b7d6ece489b79908905b6fd4b22710bf6e46ff90c84038ee8377"
+  },
+  {
+    "file": "exam1\\frontend\\src\\context\\CartContext.js",
+    "sha256": "2b1fd01cc6a0c17f5047400a6518c3739735a31d455d093c9933b047892bf9fd"
+  },
+  {
+    "file": "exam1\\frontend\\src\\index.css",
+    "sha256": "125cc211cfaa3ab05e4d901f71e0e180bd8d4b4e1202f00d5d47a13183931637"
+  },
+  {
+    "file": "exam1\\frontend\\src\\index.js",
+    "sha256": "9d1869227f83c2651ad67c0a9d8029d7a109cd40ce7ae8e7e11bec544f4b32f0"
+  },
+  {
+    "file": "exam1\\frontend\\src\\logo.svg",
+    "sha256": "6000b0e9b0b05b3f112de04f0d039768a1db63588ff9b6ef7099dbd71632f383"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\Admin.js",
+    "sha256": "1fa241cb064f729d583941cc9009129ab13ed2e809877eb07deaa0a0c52474ec"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\Cart.js",
+    "sha256": "0881e0d8d661464fd5d4c4a0473cb4de0d1968274930aa404a3e466f2eff0bed"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\Login.js",
+    "sha256": "83dca59bca98b150e12bcaa72fab810a424f5f7934697b6d780d9ef3ef0b4cc0"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\Order.js",
+    "sha256": "3c7d226db0b24a32017d3eef5368228b4da39971fc8d26758bbf12eb3be5c541"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\ProductList.js",
+    "sha256": "5e2a0c513c3b41b5ca288b89d76046dd3f56b4be966f949308002b057fb50a5e"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\Register.js",
+    "sha256": "6719617b1c23648b312122ff58b3927bfaee02dedb48314729b82e0a654ad8de"
+  },
+  {
+    "file": "exam1\\frontend\\src\\pages\\ShippingPayment.js",
+    "sha256": "82ff69f650caac318b25e0641d35d18d8e215bf4f9c13136f5edfcb6726dc253"
+  },
+  {
+    "file": "exam1\\frontend\\src\\reportWebVitals.js",
+    "sha256": "714851669856152806c289f9aac6240b414bbac50c60ee4f7e6247f31eac0c1c"
+  },
+  {
+    "file": "exam1\\frontend\\src\\services\\adminApi.js",
+    "sha256": "aa71f926828be08c068da745e2d70b199a461edce946074b504e3c12699a9574"
+  },
+  {
+    "file": "exam1\\frontend\\src\\services\\api.js",
+    "sha256": "fe5b2cb5363b0e41c807507363693c08dfe7190986d18d5afc65c910044cece9"
+  },
+  {
+    "file": "exam1\\frontend\\src\\setupTests.js",
+    "sha256": "22583759d0045fdf8d62c9db0aacba9fd8bddde79c671aa08c97dcfd4e930cc6"
+  },
+  {
+    "file": "exam1\\frontend\\tailwind.config.js",
+    "sha256": "958c1a19cadb2302d208a627c07b84078241cd7c3e06bef9e4c2ed049895029b"
+  },
+  {
+    "file": "exam1\\gateway\\package-lock.json",
+    "sha256": "2a1ac986ef0f1466b689d2972cfefa5cec26dd3c1e21621e1cf37c5798b8de05"
+  },
+  {
+    "file": "exam1\\gateway\\package.json",
+    "sha256": "2d4a0c84993e6628ed2d18aa8637b3abd4b1f1331c4e3d41a113531f144af75e"
+  },
+  {
+    "file": "exam1\\gateway\\routes\\auth.js",
+    "sha256": "6d78fe73c38a61de2db651a2869f9c863d8841d8d91a167f4719c74a7825348b"
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notif.js",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notifi.js",
+    "sha256": "08cbec70b027c6717acc6676027ae5a7b7b969e0a946dadc4afb967649030951"
+  },
+  {
+    "file": "exam1\\gateway\\routes\\stock.js",
+    "sha256": "d7ecd7d249cfb979b833b131e60a8226c13c0da86e205cd0eea78f1e2e0ba661"
+  },
+  {
+    "file": "exam1\\gateway\\server.js",
+    "sha256": "9409faef5b0186a0305d5cbda7df04d5a22ce3c36b10aaa1fd5b7a8b6dd79c7e"
+  },
+  {
+    "file": "exam1\\microservices\\auth-gateway\\index.js",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "exam1\\microservices\\auth-gateway\\package-lock.json",
+    "sha256": "3a2fc406bc2c93b48a59a0b4bf23b30fdef299c98ecc09f8e177d4320f5a3556"
+  },
+  {
+    "file": "exam1\\microservices\\auth-gateway\\package.json",
+    "sha256": "cef93d0a8207629b683b211f4986af31d1317ee3a5a5ff96d583d242537a6c83"
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\index.js",
+    "sha256": "0c4d61f8f2d58d96adf88ab0f8a58cfeead96d89bf395aca8eca1457285f95c6"
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\package-lock.json",
+    "sha256": "c81d5bc9a17a3471161f821f984f1c398be1aa5da1e49a414c519e1b2551baec"
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\package.json",
+    "sha256": "3660165b93a934d2b020295b0b2e63a8011d0663d3addcc9ba036a0584b766c1"
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\index.js",
+    "sha256": "0e6050e99f337f19f8192261e1bce9296a321b6b6ab574198bb36ed6c5e0bb07"
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\package-lock.json",
+    "sha256": "f3e18cda88aa086281fc4181ffdbd36b03d205fcc8081cbd7cc350d54475d152"
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\package.json",
+    "sha256": "f5f3e2c265f9ba22c2594a8649150e143267f4c7cb809d94c4970461e9ed8799"
+  },
+  {
+    "file": "exam1\\package-lock.json",
+    "sha256": "64b08a0ff9e0f26a989f571a4de89a6eeea2b22373e41cd9ecbceac7d2b5fb16"
+  },
+  {
+    "file": "exam1\\package.json",
+    "sha256": "ace2554ff75e988ca02c76f26f98e1e884d20f9eb42f2f0fe9eed4a7fd168895"
+  },
+  {
+    "file": "docs/AUDIT_E27_E28.md",
+    "sha256": "b4aa1f895fb6df839f2063962af71359e9404a8187a6993c2bd8c98f7dab1e6e"
+  }
+]

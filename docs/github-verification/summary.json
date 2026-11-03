@@ -1,0 +1,46 @@
+{
+  "executedAtUtc": "2026-11-03T13:26:30.942Z",
+  "recipient": "orders@example.invalid",
+  "results": [
+    {
+      "name": "order-notification-email",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "notifications",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 56,
+      "pass": 56,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "final-business-current",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 25,
+      "pass": 25,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "name": "complementary",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 11,
+      "pass": 11,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  ]
+}

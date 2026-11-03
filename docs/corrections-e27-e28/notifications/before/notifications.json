@@ -1,0 +1,24 @@
+[
+  {
+    "id": "NOTIFICATION_EXPOSURE_AND_ERROR",
+    "outcome": "observed",
+    "detail": {
+      "authenticationMiddleware": false,
+      "mockedSendReached": true,
+      "httpStatus": 500,
+      "errorDetailReturned": true,
+      "realEmailSent": false
+    }
+  },
+  {
+    "id": "NOTIFICATION_ARBITRARY_FILE_CONTENT",
+    "outcome": "observed",
+    "detail": {
+      "status": 200,
+      "fileContentInMessage": true,
+      "transport": "in-memory stream only",
+      "sensitiveFilesRead": false,
+      "realEmailSent": false
+    }
+  }
+]

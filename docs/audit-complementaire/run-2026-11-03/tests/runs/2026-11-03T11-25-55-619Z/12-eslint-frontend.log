@@ -1,0 +1,13 @@
+
+C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\src\App.test.js
+  32:9   error  `login` is not a recommended name for `render` returned value. Instead, you should destructure it, or name it using one of: `view`, or `utils`     testing-library/render-result-naming-convention
+  33:16  error  Avoid using container methods. Prefer using the methods from Testing Library, such as "getByRole()"                                                testing-library/no-container
+  33:26  error  Avoid direct Node access. Prefer using the methods from Testing Library                                                                            testing-library/no-node-access
+  34:9   error  `register` is not a recommended name for `render` returned value. Instead, you should destructure it, or name it using one of: `view`, or `utils`  testing-library/render-result-naming-convention
+  35:19  error  Avoid using container methods. Prefer using the methods from Testing Library, such as "getByRole()"                                                testing-library/no-container
+  35:29  error  Avoid direct Node access. Prefer using the methods from Testing Library                                                                            testing-library/no-node-access
+  43:20  error  Avoid using container methods. Prefer using the methods from Testing Library, such as "getByRole()"                                                testing-library/no-container
+  43:30  error  Avoid direct Node access. Prefer using the methods from Testing Library                                                                            testing-library/no-node-access
+
+✖ 8 problems (8 errors, 0 warnings)
+

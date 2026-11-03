@@ -1,0 +1,842 @@
+[
+  {
+    "file": "docs\\audit-e27-e28\\jest-isolated.log",
+    "sha256": "6f9963901b275aa0a7d27551e919c72a8aaa5b950f25a32608a59f8c87b768e6"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-backend.json",
+    "sha256": "c7fb6a3ea843c072fe75e070e2dacd8854c0e09457b0656491db52793310309c"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-frontend.json",
+    "sha256": "1fef804fd35fcdeb0c1ac2c0c8493102d646448db1da53ca01750928e5b0ba24"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-gateway.json",
+    "sha256": "845e6858b6792337cc172639805dbc66a36ab18c07d1cdddd359b4e48fc9b916"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-microservices-auth-gateway.json",
+    "sha256": "8d102debd1245c733f0e8240537bdee3fdf6f07516d88d6f8baef45bd11f36ae"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-microservices-notifications.json",
+    "sha256": "26a231a678849bc6328e202b7cd0363b321106941f52f308db7179e8f114a37e"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-microservices-stock-management.json",
+    "sha256": "959353a4f83708a4439f62054f49e663a6b6254b34e9d4f0c4b23730aeb3c060"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\npm-root.json",
+    "sha256": "fb75e515875ffd3baa67aafd895b1b752efe82e1f722c5a91c336b73b013ca0c"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\probes.cjs",
+    "sha256": "e76ba3be7210c051534741e2a8acee563d59e138c14579c578635f35c2f3df03"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\probes.json",
+    "sha256": "6d05507f4d7ff64645a3c75942337f83e3cb10f649dfde131fe685a8465d63c7"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\run-ui.cjs",
+    "sha256": "c455332f3a2973275f45fd48e34c8eca06766b539f8880c66cfc2116b57b3f0a"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\syntax.json",
+    "sha256": "1138ba1c23d450e1a80d0cebd926fed3d2f0de989d31e71dcf94bb1dc5794f36"
+  },
+  {
+    "file": "docs\\audit-e27-e28\\ui.test.js",
+    "sha256": "91c5e1084ee436e1d69a46e0476c342a5aabf8c9192027226415391d4788fc8c"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_backend.json",
+    "sha256": "93347b29a55e57de438bc6a52709a793e5aacb461f3a3d6afa284bea90cab8f3"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_backend.txt",
+    "sha256": "bb0cdb78d44845a3d6ef50382c8845f5821c33f6d3dc330470967794fc0d9f0e"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_frontend.json",
+    "sha256": "531b7a755b90aac98094ce63741b085fef309ac0a4515f28493caa9925218a94"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_frontend.txt",
+    "sha256": "acb7a7b0dc1bac02cb258f66ba92d791d92ef41a5e00fda8b0713eeb39e92c3e"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_gateway.json",
+    "sha256": "917fbb84511870f2628bf55c39b5c06a71fd98898d585af8bcb3abe41174179a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_gateway.txt",
+    "sha256": "3d5bff64c9d951d281bc03ebc07e451371c8160008b50a4a3957bec96bf4f5d2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_auth-gateway.json",
+    "sha256": "391cc21798a3fe6ea50533fcdf5f62c2cb567028e19773e50da2941b94bc64fe"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_auth-gateway.txt",
+    "sha256": "3d5bff64c9d951d281bc03ebc07e451371c8160008b50a4a3957bec96bf4f5d2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_notifications.json",
+    "sha256": "1cbcf39ebe8a7fdef66cfebbb1f696d87284540a752656f7aae0cca8adb9c16b"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_notifications.txt",
+    "sha256": "d46b4072034595aac85569f690a201ed83727cfcba6995226442ab0d395937ac"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_stock-management.json",
+    "sha256": "391cc21798a3fe6ea50533fcdf5f62c2cb567028e19773e50da2941b94bc64fe"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\audit_microservices_stock-management.txt",
+    "sha256": "3d5bff64c9d951d281bc03ebc07e451371c8160008b50a4a3957bec96bf4f5d2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\docker_compose_build.log",
+    "sha256": "76d6ee2c56e5c7cd70087675fb749258914df2c091452f2263c6a11001d3a191"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\docker_compose_config.log",
+    "sha256": "b97459c4e216a5ada2dc0f0e89c240f883e6b62663a9ff2d998f91a83538a097"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_backend.log",
+    "sha256": "c215c54b5e5b83a008b4bd7ab875e7c6d61d88b36ff07bb80bdb23039b4803fe"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_frontend.log",
+    "sha256": "fc4b41b133356231d21e1ba687bb90f588291c9ec0f699cb895e8af449dfa7ac"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_gateway.log",
+    "sha256": "e131cdb4f7c8cab17b79c172979fc646bee16ee0bc1cce9ed4c2178ec0838836"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_microservices_auth-gateway.log",
+    "sha256": "b19f446be338a7c5ab1543b020591d50f095af3e92df75a8d00af88463667a7a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_microservices_notifications.log",
+    "sha256": "d302d5d74fb17a92d99c3b844e20a92251e33241bfdd43437cdfeefc9a574d7c"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\install_microservices_stock-management.log",
+    "sha256": "2c2dee19fcdae17874622a9b631612013374ef6906edeacd003a349a7cee710d"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_backend.txt",
+    "sha256": "0707211f08b765a47d2adfd9a7550d710544b5011e1e7ea23061f7e8eaba6e73"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_frontend.txt",
+    "sha256": "2d018144625d22e7a34cc169a71f2b492e6e11a5b3253b2cbd28b5f7740040d0"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_gateway.txt",
+    "sha256": "0cdaf35fcd1ece7205d409a4634a7e2ae0d0c8b1c89a2d36b57abe58aae6f2c5"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_microservices_auth-gateway.txt",
+    "sha256": "03683a6fb8b9204637271a06c1f3e6baa190b39eac6726ec1e3cc4e464fefb84"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_microservices_notifications.txt",
+    "sha256": "d7eacddb965d0692cf651cf21bb7a5a9cb68f05526d52f483b982711e2bb4192"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\ls_microservices_stock-management.txt",
+    "sha256": "4741904fec2b6087db3706173600e676ae6726d351e5cedfc587413633e941c9"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_backend.txt",
+    "sha256": "6c8b01e78ef1e633144058aff3f5affaeaee7c57ad66c2932da9dc51e844eeea"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_frontend.txt",
+    "sha256": "e053c87c7aa0075add20b4d69577cdb7b0feeac2677f2ffd5fb323a5709513fc"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_gateway.txt",
+    "sha256": "68b42bb086078b22cd1378121eaff122b5a52e53c90ccfa3a71080b1f5dd43d1"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_microservices_auth-gateway.txt",
+    "sha256": "59a208089ac6782b3b4537c2446d28394646f6e3c6c968da45b6248b35966dbf"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_microservices_notifications.txt",
+    "sha256": "ae53c0f4ce430de305af757048352a95718933e60037302360b20f521f8fc12d"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\outdated_microservices_stock-management.txt",
+    "sha256": "2ccc4374165298ac91e985c074722554cc6eea676b9d1e3cccee49428e4bd1e6"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_backend.log",
+    "sha256": "58fbc7d84b1c6085d7936cd569deb18bae13d6546b65df53f6f3e8d106d3326a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_frontend.log",
+    "sha256": "4c39a35cc9119ffd26018c25e9e9d4e31bd4dac8d71f4ba24db42856bdd4bc20"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_gateway.log",
+    "sha256": "9172bfbd3bd51525f0ff20cf5b50110d14b3bbcf09976be3550c515384542e39"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_notifications.log",
+    "sha256": "7cdc2a9b59e9523898d1e527986460b8a65cbf70955a3bc64505083fad3d9caf"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\run_stock.log",
+    "sha256": "114fb14e00f26c7b892d49d59d4f22f59695b772b2f12c4b3fd9020c8dd58405"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\start_all_racine.log",
+    "sha256": "3da9cada301dc28230cc2c95e55714b6b45c5435fde785d68efc70d5ae778c0a"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\start_backend_npm.log",
+    "sha256": "eb124c77142747d4f08c3df4d41f261712d2b0e895e905dbad603ede74a04ab5"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\start_backend_sans_mongo.log",
+    "sha256": "ebd3efa8ada5085d6a86a558ac35a062cd1f09ca84041ac33cc6a6cb394f1fdc"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\tests_api.log",
+    "sha256": "9b4e5b7e7e2de2440093d2fdb7b4ea4bd0c1b567dc448513716a548ba68f99f2"
+  },
+  {
+    "file": "docs\\audit-initial\\logs\\tests_ui.log",
+    "sha256": "8d212b2247ea8c1804ee05612d9996141a3efc2928c98a01de370c660f893b45"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U01_accueil_produits.png",
+    "sha256": "63f47464c7eaaa3b7d412caf01760bc745f4f0d7c42bdf925ff441b5cd9583f5"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U03a_panier_initial.png",
+    "sha256": "91f0d581b7e833afcb68c1849430d2587dc943ff6d18624d26fe9b5e379a9798"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U03b_panier_apres_modifs.png",
+    "sha256": "1ad901b5d633be5afa34f341c1579792eabc3ea44d290624eca1f635db6d25db"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U05_inscription_vide.png",
+    "sha256": "fc729c1d4ec38f1710f735be54d738e6b9258f17249802001d58315f77d0e6a7"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U07_connexion_erreur.png",
+    "sha256": "e4212f06873f06c639b0a4fa891ff249fa1b3e1bfb6288308d4ad49348620329"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U08_connecte_navbar.png",
+    "sha256": "33ef6c4379c1eb87e76c53a710608346cdaa20b3383b0d9402fd938596925936"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U09a_livraison_paiement.png",
+    "sha256": "ff5ceac8290e9add3de73e05e5acf1b605672133d2de8f01aaf197e94e2fec8b"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U09b_commande_refusee_listes.png",
+    "sha256": "32e1eea80b163512462a45f45c3053787549dd87157c6d274a914a5a0537c9aa"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U10_commande_confirmee.png",
+    "sha256": "04784b63d672f689532716b7a707c39ec492c3becdf2bee9b8ab7329ec225219"
+  },
+  {
+    "file": "docs\\audit-initial\\screenshots\\U12_admin_role_falsifie.png",
+    "sha256": "b8af5536c6b6be45ef64b7ccf05a6d9613c8a7f0f10a6a67a6efd827184824e8"
+  },
+  {
+    "file": "docs\\AUDIT_E27_E28.md",
+    "sha256": "b4aa1f895fb6df839f2063962af71359e9404a8187a6993c2bd8c98f7dab1e6e"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "abac3fea8111fdf4b3ac8be9f2e1216ed1a506735c8010005f73db6c2d05055e"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "3d5d6d9ab2398293b450e5cd084dcc6ba7ed3e8ede1914b12c795777449a02dd"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\02-prices-P1-01-captures.log",
+    "sha256": "6e07ceb5dcb86148d5678625c10e6181678395e71511a4d87a62b2ed9b6f1c1b"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\02-prices-P1-01.log",
+    "sha256": "d5a3c2f94d84138b0f718090c4dffc2959c791de46cb2e8867dc2df653f5dc5c"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\03-stock-P1-02-captures.log",
+    "sha256": "fdce57231c03084ba0b976fb3c85b4bee7a9635b9ab0925916809c0cc214d6fe"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\03-stock-P1-02.log",
+    "sha256": "06f8bf9ba5475afdeebed7137b537078bad206335e25781676b0990fb92c2c23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\04-nosql-P1-06-captures.log",
+    "sha256": "8c0ca3a9b2fc4b98fed82e7e8abd7f0c3c30ce227db0f8365e6dfdb9b4f74521"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\04-nosql-P1-06.log",
+    "sha256": "bb2a5d0f057209305e687bcbb3d66a32710f664f808fae2867397dc04ab69811"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\05-registration-P1-07-captures.log",
+    "sha256": "20fb33588c2d010cc15f1a5d0dce60924aa735981e44699d25af6456b72d6bb4"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\05-registration-P1-07.log",
+    "sha256": "575f9c2a825ec39cb89a40f51a1af5267b03bca153480f964e3ac597af989d87"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\06-react-regression-captures.log",
+    "sha256": "250839bb8b69b3843dd1b3ceba209a0472889738a5ddff18a9bf3d17f9d7a343"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\06-react-regression.log",
+    "sha256": "ae19a696e0f7f634f0643d131e78266760820f87e5bce0ea1ba361feb9dbce95"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\07-react-build-captures.log",
+    "sha256": "9e25d89c5f1e2f4af80b2b504ee9ce83723207a589d37d82ffa0fd14a262937e"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\07-react-build.log",
+    "sha256": "74928a7d348b593c9a140bee98742b0776c12c064c56d10c27f297c1d11e75f9"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\08-eslint-server-captures.log",
+    "sha256": "015b660f10e5b105b9a134b5609a6753defe42d54102f8263a8b477c5a2036a0"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\08-eslint-server.log",
+    "sha256": "e1597231d5a314e1b1abedbe5fde6c19bf01f56b34ac9549aeba01be2b1eaaa4"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\09-syntax-captures.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\09-syntax.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\anomalies.json",
+    "sha256": "2a08ade48c102f7af5fed2e58f72a94b36bcd0e29e7120930b2ad134522f8ef9"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\eslint-server.json",
+    "sha256": "803c0b25e7200dbf85b3ada124e00557cfea90cfaa92c2f0ceb747b0faf4c379"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P0-01-after.log",
+    "sha256": "b03eb30fa7d22d017640987c7f438126feff9a9c33b9cc059e8286dd6b207ac3"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P0-02-after.log",
+    "sha256": "ede605de316e75700842042cf4f6eb1be7f24e0a95301c04ce83e6d363e1e2bc"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P1-01-after.log",
+    "sha256": "30bc2c4e6091bf71b9ccc198494507061cb4977242f7f1b924bbfcf1f38c4b74"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P1-02-after.log",
+    "sha256": "bb620592f10aa3c671900d18115dafbeedb9e3568836703cac9cae80305b2630"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P1-03-after.log",
+    "sha256": "a9ccf1b012f3e53ffa9bb5a42c6afe1d8272db31d159220c51ad90f7bfa5f8e7"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P1-06-after.log",
+    "sha256": "4061367a4eaf83d18688d6c7ef3d5ee28e11c35bd4f71dd2188feeecf851cbc3"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\P1-07-after.log",
+    "sha256": "fd2c90cd723d943763f512f89f731148082f58d406c49b4774919d25962971f1"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "a14e778b2a5bb2d90be163e8511579b85b19a2b899fd5ff1847e30dde5883890"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "f76d44b29d2fe8762e5172391d444d670a97fd60849a9ee4597d692be02dbf7b"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\02-prices-P1-01-captures.log",
+    "sha256": "2e91a0e14ad6db7a12b169e9560ba77b70acd6dcf5c5a8ae6503b8b7f81bf9aa"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\02-prices-P1-01.log",
+    "sha256": "a8c76e0ebe6caed4e6619eb3f3841daa3b1d7855e7126b1223423f5762030419"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\03-stock-P1-02-captures.log",
+    "sha256": "e382bcf4cba79762eb89801023c87fa574cdf2e9e8196be45a9b003e7dddc808"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\03-stock-P1-02.log",
+    "sha256": "3bed7db496e6bdda99db1b6a8be5f1867d91fdf4f59c2ee12729d5fc774c2e3e"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\04-nosql-P1-06-captures.log",
+    "sha256": "b7cb343e7c137eab6e5827797c652ab4d0d1e6d57598816d18cbdfeaa8ca9ba1"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\04-nosql-P1-06.log",
+    "sha256": "a85bf455ce3db05a89abb5dddef7d3d248c0626327aa742071c21ff8964ba429"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\05-registration-P1-07-captures.log",
+    "sha256": "f104c59c8d2b482224005c7977bec4519fe5f26970df30d331f52f704c76ae1c"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\05-registration-P1-07.log",
+    "sha256": "631bdfbc9ff150500df7724437c5f86881953be1310b49b3177848e87742a8e7"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\06-react-regression-captures.log",
+    "sha256": "814b2cbb09928002d86766fb03cde41e68463a14a34343f32fc0cd1d44d9eae2"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\06-react-regression.log",
+    "sha256": "ba7715db81e560189c8bb4ed7b278a7eef730bcd7964ca48acbd80bb3bd17fae"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-32-57-963Z\\summary.json",
+    "sha256": "75a84ad1365e386e788de692c7f93ad027e503edafe4f788d1da853b3079c4df"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "e5d1141aee319dd82a3cb79cac8609c8fb2d91006697d7bc376be60d83b720cc"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "f6df5276875310a5023772da5449992bc97e02ca3a0dbfd6fdaa59b6ddd0a288"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\02-prices-P1-01-captures.log",
+    "sha256": "f5626b010fb698256ca4dd5124d65786456590cb910de710dae2818e9797be1d"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\02-prices-P1-01.log",
+    "sha256": "20b6daa1b2e3995d0c9a84ea7330495b42ea6ced006639f4bb08a7172d6e8f64"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\03-stock-P1-02-captures.log",
+    "sha256": "4ab1a26c0b9689da627dec83a71ce422c0ded0cdfa1912e12a39d491e60e73fa"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\03-stock-P1-02.log",
+    "sha256": "f556c309415a50915784e3dd44e738019bd14f1ca0c42e6f7161e6397623de2a"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\04-nosql-P1-06-captures.log",
+    "sha256": "f3932913fa0eef943c3f6ef70b62bc954cc2cb6fda58fd8385dc42f271276845"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\04-nosql-P1-06.log",
+    "sha256": "d08703cb9352b79277f6c52025eccb0e3e5cb7fde2e78ce21e697281bc2b6b93"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\05-registration-P1-07-captures.log",
+    "sha256": "09d81c090ff4abded221eb01172acfd2abd939d7531a77d6202b65e4564bd885"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\05-registration-P1-07.log",
+    "sha256": "ae8826355911e52d00e34321f6157789d3a476969507676449c1854fafdcc69a"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\06-react-regression-captures.log",
+    "sha256": "3946e85def3f8bf50609107b1ef0773712d86c29717aeb29b4c3cea8b72df867"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\06-react-regression.log",
+    "sha256": "40ad44b4d375e7abebfcdde02d921d83a29ff8a324e18966b2ad69f77dfc6d7b"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\eslint-server.json",
+    "sha256": "0d8383b3e5262a0c7a52acb52263d0df6267da2c5b894bf2156e19ac13d80472"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-39-13-916Z\\summary.json",
+    "sha256": "55c4fde7c7386e4e6864596b1b4f78ae0749f65d9c2844ac736b983c333060bb"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "476036940adda58c22a79506f75a6384cdb6f504b5a44c1e22e6a385235bb3c6"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "89065161dff4722133f4bca0471888bad5be9a99c5e4532f42888062729d48e3"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\02-prices-P1-01-captures.log",
+    "sha256": "c3c53f9bdccec4f7aa317720801e85ad31d98722c8b5c56f16a2bc16d1319597"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\02-prices-P1-01.log",
+    "sha256": "950dcab97b48fdd971b846ea4b737f4ece50b397e3c4b253077545615d285f72"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\03-stock-P1-02-captures.log",
+    "sha256": "97e0679fd3ea79a52773337dfbc30a41c328bd01b66dfa2e629d18742edf6d34"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\03-stock-P1-02.log",
+    "sha256": "cabea626fa2a77fef562d4f3abe031a5806da101ccb0adc2b13e31637db14608"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\04-nosql-P1-06-captures.log",
+    "sha256": "c8ce4a8bd3ccb9b8150f53adaa7b7271dc94f71c70383ca8e5c4e636d432c0f8"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\04-nosql-P1-06.log",
+    "sha256": "c28baa42cdb14ea3d2e45569ea264d24e804fe313676c24ce32db161c587c9b5"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\05-registration-P1-07-captures.log",
+    "sha256": "51856c4841416bb954834b3d12ea56dabd62fecd91d09637ee0885087451badf"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\05-registration-P1-07.log",
+    "sha256": "42baf3274986b79bf7fce5485374318aae0ef5f0c6c7a04895c120ccae693dd3"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\06-react-regression-captures.log",
+    "sha256": "3946e85def3f8bf50609107b1ef0773712d86c29717aeb29b4c3cea8b72df867"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\06-react-regression.log",
+    "sha256": "60cb607d767863891b10281f884a9bc47b49898277c0709e368c163be5887929"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\eslint-server.json",
+    "sha256": "0d8383b3e5262a0c7a52acb52263d0df6267da2c5b894bf2156e19ac13d80472"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-45-12-107Z\\summary.json",
+    "sha256": "ad1af194ab76610d80adc1da592eede4cebe97bdd39c0362f7723812ea25c8ed"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "c344891f9c18e94d0fe4ec6df48130d70aa1a6f922727ca629004f47a517b884"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "54c2e90e1e9f15a16c77f7bf86d7d67750701cc4f8355ce54c19f18789ace673"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\02-prices-P1-01-captures.log",
+    "sha256": "4a0904f80a1ea907a9a2e399503d1fa75c78ad44478e87ee5c71458c1c566095"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\02-prices-P1-01.log",
+    "sha256": "0200dee44ad45bc236038a9e81e8762289abc25c5bcdc30efa06f2953494910d"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\03-stock-P1-02-captures.log",
+    "sha256": "4a8bad85f83575e420b537b3385834864c2846692ea58606021285fcbac4e2a3"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\03-stock-P1-02.log",
+    "sha256": "5cc48ecdc8ee1dde615d50ca1d86fcb72062c937cb1abd3f6ef6b8823f2930d2"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\04-nosql-P1-06-captures.log",
+    "sha256": "1e648f64fbf4bb7f17499d4d99625aaf329f44ce5f91b958fb1215632f2521ad"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\04-nosql-P1-06.log",
+    "sha256": "9dac9d1f95f6166f0d6a9d98567215888e54f2da1fd00b8c54dc3d7b8df8570c"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\05-registration-P1-07-captures.log",
+    "sha256": "44ac0fe68c51cb3fcae560316a100c3367e9092f5903f1436c43e38b86d99008"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\05-registration-P1-07.log",
+    "sha256": "792cfe6c4479af09d0de62f0cc1654ccd3d426e0d3f2c1d7fa975debda8a9fe5"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\06-react-regression-captures.log",
+    "sha256": "250839bb8b69b3843dd1b3ceba209a0472889738a5ddff18a9bf3d17f9d7a343"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\06-react-regression.log",
+    "sha256": "2db43e6f0c572fddffba10920b9d63ba11d7d5a14ee32c832c88999ce20d39df"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\07-react-build-captures.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\07-react-build.log",
+    "sha256": "b17a6a46f39f845bad57d3e5694badcc7de152775b82b162ad32d038101e5c82"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\08-eslint-server-captures.log",
+    "sha256": "fe3441adb52a4f5cb59b320103d6693c6c6b7384570c3eb7fedbbd4ca4d07ad1"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\08-eslint-server.log",
+    "sha256": "394137b5fa40bde78db847aae68267a075b7f9b06f2bea0c08de56baee6796de"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\09-syntax-captures.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\09-syntax.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\eslint-server.json",
+    "sha256": "0d8383b3e5262a0c7a52acb52263d0df6267da2c5b894bf2156e19ac13d80472"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-48-14-292Z\\summary.json",
+    "sha256": "03e4901621a056736e146f3a66c07047c4bc67a8d31c0224b8abfd1be10d6055"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "5e1d07a8c0e9dbadd47a0d518c8be9b00552b40cae041fbd8f927a70ad077555"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "a89729a88c315dd4f9cc7575cf12d7561c4eb26f498e19f6dd8739ad1e9f3b38"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\02-prices-P1-01-captures.log",
+    "sha256": "6fe4b3352131cbede581edb7582ccc3932f7970f0734a8003a0597663fa7bad4"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\02-prices-P1-01.log",
+    "sha256": "a5be7c83e37e8e7df8623a94faf4ab9499ad46d24202eedb685fd221429ad1f0"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\03-stock-P1-02-captures.log",
+    "sha256": "3fd1ff151db9be5935fd1c273d0ec33d918d8bb928455e1cfd31eb5292ab7de2"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\03-stock-P1-02.log",
+    "sha256": "5a8f19c0240b397ca61b91a768632f43038972c32f2f2c0d9a5b9543a807b085"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\04-nosql-P1-06-captures.log",
+    "sha256": "cf0f85ad91dd36ca2e7b815073198e96dca93968c8b7b2954b99c8ecabd0acae"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\04-nosql-P1-06.log",
+    "sha256": "a40b083ac7d8434002a93d1d166e1be988ffcd96ca9ab0e9c1f233d8e0822309"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\05-registration-P1-07-captures.log",
+    "sha256": "bffaafe3bce72be02de2c6b18dc5a38c01bd2aa1a6acbcd20a62a9f2cc709b69"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\05-registration-P1-07.log",
+    "sha256": "453e5255deafa71ea2661ca2ecb071fe5624726bd56c698152e27bd3a24b1f07"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\06-react-regression-captures.log",
+    "sha256": "250839bb8b69b3843dd1b3ceba209a0472889738a5ddff18a9bf3d17f9d7a343"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\06-react-regression.log",
+    "sha256": "2a3e8f02ecb4bda8587559304d0a8b465be16c736e44fb18f4e9b29b484a589a"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\07-react-build-captures.log",
+    "sha256": "9e25d89c5f1e2f4af80b2b504ee9ce83723207a589d37d82ffa0fd14a262937e"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\07-react-build.log",
+    "sha256": "bc5936a26ab6f80132ee093424c0eecf55b8cf88159b10365e493f67d9612e35"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\08-eslint-server-captures.log",
+    "sha256": "fe3441adb52a4f5cb59b320103d6693c6c6b7384570c3eb7fedbbd4ca4d07ad1"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\08-eslint-server.log",
+    "sha256": "244636270f3b4cd0b1ee2bc2ee5cb5d41ec2999383e86559b2c11e6806a0d016"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\09-syntax-captures.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\09-syntax.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\eslint-server.json",
+    "sha256": "044aac2a35690060b12efa44adf1a2c6c6e5599a28a8f88f980ab3d62b772aca"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-49-48-939Z\\summary.json",
+    "sha256": "83b9baf1ca9c25ccc521f8da29857f4634416630c5f148b4473a25e07f30827d"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\01-notifications-P0-01-P0-02-P1-03-captures.log",
+    "sha256": "bc79d2e584e867ac3639394f7e5ebb222304eccae4b60d5edf44e93fc8b0bb79"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\01-notifications-P0-01-P0-02-P1-03.log",
+    "sha256": "751910198da9503e8f02a7118e84ac93a69193fe6afdc4287cf06429471a40db"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\02-prices-P1-01-captures.log",
+    "sha256": "67dbed4fcb3d2a0b8a492493c95733cdb7a7306c35d3b102c29262b506c19a31"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\02-prices-P1-01.log",
+    "sha256": "3c312705a00ffdfdd093c654ff7f8b4386954f92e3eaadc67a44116dde585245"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\03-stock-P1-02-captures.log",
+    "sha256": "c57e16ac408007d18801b87645d7cafc1bf3f5a5c38c53a1888da6cf13ab1237"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\03-stock-P1-02.log",
+    "sha256": "14eb2f02d7d0de42d5dee1207466a0190b3c53266785ac9bf18989f80aa3d824"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\04-nosql-P1-06-captures.log",
+    "sha256": "7a18078d957ecdaf9308647ed42697e99db5acbfbd2c329875bb4e09caad0ec8"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\04-nosql-P1-06.log",
+    "sha256": "315f050ddcb922bd595817220f3895edc39ca466a6e0d5175bb4a2aaf020c9ba"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\05-registration-P1-07-captures.log",
+    "sha256": "f74f2e2d53ca182917d3b4911da4a34452e1cc46766924e731aedbaf5c43616d"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\05-registration-P1-07.log",
+    "sha256": "3f23e1a813f1a41de4618d4114bc066f8f333b9eafb78cc3922d595e543818c7"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\06-react-regression-captures.log",
+    "sha256": "250839bb8b69b3843dd1b3ceba209a0472889738a5ddff18a9bf3d17f9d7a343"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\06-react-regression.log",
+    "sha256": "b448e54081a4ec6e59f29b6db68fbfadac7e5a9e82ba92c51114825ce1157a0b"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\07-react-build-captures.log",
+    "sha256": "9e25d89c5f1e2f4af80b2b504ee9ce83723207a589d37d82ffa0fd14a262937e"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\07-react-build.log",
+    "sha256": "6fc242beb11877c88e45f42dbafb59d1f088cd5919e6c2d4f277fec6d64aa058"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\08-eslint-server-captures.log",
+    "sha256": "015b660f10e5b105b9a134b5609a6753defe42d54102f8263a8b477c5a2036a0"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\08-eslint-server.log",
+    "sha256": "e1597231d5a314e1b1abedbe5fde6c19bf01f56b34ac9549aeba01be2b1eaaa4"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\09-syntax-captures.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\09-syntax.log",
+    "sha256": "9f9de5062ab6d72749e1a8450e5062a7e50a4833397a28b3c4461db297a8cf23"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\eslint-server.json",
+    "sha256": "803c0b25e7200dbf85b3ada124e00557cfea90cfaa92c2f0ceb747b0faf4c379"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\runs\\2026-11-03T10-50-36-213Z\\summary.json",
+    "sha256": "799bfab7faa1ad8f7fd53d120eeb616f852ee6999ae8b1c8432fcdd5d15d0d50"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\safety.json",
+    "sha256": "658d4e954f282bcadff49c70e03fe344982322aba2cd031a10f7acde2f5be231"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\after\\summary.json",
+    "sha256": "af340153475f50b79c7fa7e08cfda258ae279249f8d56378254a1eaec9779a92"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\before\\manifest.json",
+    "sha256": "9ce2919e8a053705bbe819c1a176df55d18ba6a21e92a95e21115db3a59b729c"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\final\\before\\remaining-probes.json",
+    "sha256": "b78991b6c7c7a1c417b96aeff1cfc35ab546c9d38470f7c5e63870d3dfa1c7ba"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\after\\eslint.json",
+    "sha256": "2fc00af4a5bb89a7344b8093a0931fcbbe4bd0f4af21c3e094892b52580ff861"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\after\\frontend-regression.log",
+    "sha256": "86f85224ed78f74000d025be12dbfb5baf82cc11aaf8403f3fb3711191964e39"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\after\\notifications-api.log",
+    "sha256": "58ad93cbb1adbc638d1500ac60da06b58d5b92b51d9939a13a48c3f5249c5b6c"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\after\\safety.json",
+    "sha256": "8610b273a58f6451838eba025696c95f3904cee28009a17404ecae9cc51f1af9"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\after\\summary.json",
+    "sha256": "006a444f467b1c4820284c5c5ede9be601aaa7aa07c3ef7378bff702e6092c22"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\after\\syntax.json",
+    "sha256": "cd8a6ba214f6858d8dee149221e14ba29ee495d3274b123d6f8069cd91cdf7e4"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\before\\manifest.json",
+    "sha256": "402c19e3086877b55c2063816af4b901f422b2f85c6339e5796b8c5668830ad0"
+  },
+  {
+    "file": "docs\\corrections-e27-e28\\notifications\\before\\notifications.json",
+    "sha256": "e4a274e480ee7258e0d4a6ae2aa1e48b550b8aa7ec0ddb6d274bc8388013a3ac"
+  },
+  {
+    "file": "docs\\CORRECTIONS_E27_E28.md",
+    "sha256": "ca91f78cbed18db196d9ff6f58947aabe6f95f63a4e080913e49b3265412ab6f"
+  },
+  {
+    "file": "docs\\CORRECTIONS_E27_E28_FINAL.md",
+    "sha256": "b97d6155b80215288d9b8c98593115a377fbc27bd323874be478c941d332319d"
+  },
+  {
+    "file": "docs\\exams\\CONSIGNE EXAMEN.pdf",
+    "sha256": "e2827dfb6cd5bf4359555308c47402e60837938d17484cbc9a01f05b2eb19d1c"
+  },
+  {
+    "file": "docs\\exams\\Formulaire examen _ pdf a remplir.pdf",
+    "sha256": "8b875bd7c0fd8eb28392cccbd1664416a2ab3e9855361c373e2f56dec4fcad06"
+  }
+]

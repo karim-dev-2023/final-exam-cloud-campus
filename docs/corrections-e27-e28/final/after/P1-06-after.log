@@ -1,0 +1,7 @@
+P1-06: validated
+Source: 04-nosql-P1-06.log (exit=0)
+Extrait des tests réellement exécutés ; détails dans le log source.
+
+ok 1 - P1-06: NoSQL objects in login fields are rejected before any model query
+ok 2 - P1-06: NoSQL objects in registration fields are rejected without reads or writes
+ok 3 - P1-06: valid legacy credentials and literal operator-like strings remain safe

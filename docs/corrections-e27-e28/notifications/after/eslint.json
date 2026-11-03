@@ -1,0 +1,56 @@
+[
+  {
+    "file": "exam1\\shared\\notificationAuth.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\index.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\gateway\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notifi.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\gateway\\server.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\server.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\services\\notificationService.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  }
+]

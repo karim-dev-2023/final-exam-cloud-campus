@@ -1,0 +1,60 @@
+# Dépendances et sorties générées
+**/node_modules/
+**/build/
+**/dist/
+**/coverage/
+**/.cache/
+**/.parcel-cache/
+**/.next/
+**/.pnp.*
+*.tsbuildinfo
+
+# Configuration locale et secrets (les exemples doivent être sans secrets)
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.ppk
+*.der
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+**/.aws/
+**/.ssh/
+**/.npmrc
+**/.netrc
+**/credentials.json
+**/service-account*.json
+
+# Données locales et configuration de développement
+**/data/db/
+**/data/configdb/
+**/docker-compose.override.yml
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.swp
+*.bak
+*.pid
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Les logs d'examen sont des preuves à contrôler, puis conserver
+!docs/**/*.log
+
+# Outils et sauvegardes locales de préparation Git, jamais publiés
+.git-preparation/

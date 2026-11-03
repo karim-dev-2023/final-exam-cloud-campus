@@ -1,0 +1,7 @@
+NAME                       STATUS                        PORTS
+exam1-backend-1            Up About a minute             0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+exam1-frontend-1           Up About a minute             0.0.0.0:3000->80/tcp, [::]:3000->80/tcp
+exam1-gateway-1            Up About a minute             0.0.0.0:8080->8000/tcp, [::]:8080->8000/tcp
+exam1-mongo-1              Up About a minute (healthy)   0.0.0.0:27018->27017/tcp, [::]:27018->27017/tcp
+exam1-notifications-1      Up About a minute             4002/tcp
+exam1-stock-management-1   Up About a minute             4003/tcp

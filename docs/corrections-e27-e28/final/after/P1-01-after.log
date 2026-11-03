@@ -1,0 +1,8 @@
+P1-01: validated
+Source: 02-prices-P1-01.log (exit=0)
+Extrait des tests réellement exécutés ; détails dans le log source.
+
+ok 1 - P1-01: forged negative prices and totals are replaced by catalogue prices
+ok 2 - P1-01: omitted prices, duplicate lines and cents are calculated on the server
+ok 3 - P1-01: nonexistent products fail without any order or inventory mutation
+ok 4 - P1-01: catalogue price change during reservation aborts and refunds earlier items

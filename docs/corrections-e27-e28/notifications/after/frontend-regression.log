@@ -1,0 +1,115 @@
+  console.error
+    Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 16 |[39m test([32m'Non-regression: products load and an article can be added to the real cart'[39m[33m,[39m [36masync[39m () [33m=>[39m {
+     [90m 17 |[39m   axios[33m.[39m[36mget[39m[33m.[39mmockResolvedValue({ data[33m:[39m [{ _id[33m:[39m [32m'synthetic-product'[39m[33m,[39m name[33m:[39m [32m'Produit factice'[39m[33m,[39m price[33m:[39m [35m20[39m[33m,[39m stock[33m:[39m [35m3[39m }] })[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m   render(wrap([33mReact[39m[33m.[39mcreateElement([33mReact[39m[33m.[39m[33mFragment[39m[33m,[39m [36mnull[39m[33m,[39m [33mReact[39m[33m.[39mcreateElement([33mProducts[39m)[33m,[39m [33mReact[39m[33m.[39mcreateElement([33mCart[39m))))[33m;[39m
+     [90m    |[39m   [31m[1m^[22m[39m
+     [90m 19 |[39m   fireEvent[33m.[39mclick([36mawait[39m screen[33m.[39mfindByText([32m'Ajouter au panier'[39m))[33m;[39m
+     [90m 20 |[39m   expect(screen[33m.[39mgetByRole([32m'spinbutton'[39m)[33m.[39mvalue)[33m.[39mtoBe([32m'1'[39m)[33m;[39m
+     [90m 21 |[39m   expect(screen[33m.[39mgetAllByText([32m'Produit factice'[39m))[33m.[39mtoHaveLength([35m2[39m)[33m;[39m[0m
+
+      at printWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at exam1/frontend/node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (exam1/frontend/node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (exam1/frontend/node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (exam1/tests/ui-notifications.test.js:18:3)
+      at TestScheduler.scheduleTests (exam1/frontend/node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (exam1/frontend/node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (exam1/frontend/node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (exam1/frontend/node_modules/@jest/core/build/cli/index.js:173:3)
+
+  console.error
+    Warning: Each child in a list should have a unique "key" prop.
+    
+    Check the render method of `ProductList`. See https://reactjs.org/link/warning-keys for more information.
+        at li
+        at ProductList (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\src\pages\ProductList.js:7:43)
+        at CartProvider (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\src\context\CartContext.js:55:32)
+        at Router (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\node_modules\react-router\lib\components.tsx:291:13)
+        at MemoryRouter (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\node_modules\react-router\lib\components.tsx:127:3)
+
+    [0m [90m 23 |[39m     [33m<[39m[33mdiv[39m className[33m=[39m[32m"p-8"[39m[33m>[39m
+     [90m 24 |[39m       [33m<[39m[33mh2[39m className[33m=[39m[32m"text-2xl font-bold mb-4"[39m[33m>[39m[33mListe[39m des [33mProduits[39m[33m<[39m[33m/[39m[33mh2[39m[33m>[39m
+    [31m[1m>[22m[39m[90m 25 |[39m       [33m<[39m[33mul[39m className[33m=[39m[32m"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"[39m[33m>[39m
+     [90m    |[39m       [31m[1m^[22m[39m
+     [90m 26 |[39m         {products[33m.[39mmap((product) [33m=>[39m (
+     [90m 27 |[39m           [33m<[39m[33mli[39m key[33m=[39m{product[33m.[39mid} className[33m=[39m[32m"border p-4 rounded shadow"[39m[33m>[39m
+     [90m 28 |[39m             [33m<[39m[33mh3[39m className[33m=[39m[32m"text-lg font-semibold"[39m[33m>[39m{product[33m.[39mname}[33m<[39m[33m/[39m[33mh3[39m[33m>[39m[0m
+
+      at printWarning (exam1/frontend/node_modules/react/cjs/react-jsx-dev-runtime.development.js:87:30)
+      at error (exam1/frontend/node_modules/react/cjs/react-jsx-dev-runtime.development.js:61:7)
+      at validateExplicitKey (exam1/frontend/node_modules/react/cjs/react-jsx-dev-runtime.development.js:1078:5)
+      at validateChildKeys (exam1/frontend/node_modules/react/cjs/react-jsx-dev-runtime.development.js:1105:11)
+      at jsxWithValidation (exam1/frontend/node_modules/react/cjs/react-jsx-dev-runtime.development.js:1277:11)
+      at ProductList (exam1/frontend/src/pages/ProductList.js:25:7)
+      at renderWithHooks (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at updateFunctionComponent (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:19617:20)
+      at beginWork (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:21640:16)
+      at beginWork$1 (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at workLoop (exam1/frontend/node_modules/scheduler/cjs/scheduler.development.js:266:34)
+      at flushWork (exam1/frontend/node_modules/scheduler/cjs/scheduler.development.js:239:14)
+      at performWorkUntilDeadline (exam1/frontend/node_modules/scheduler/cjs/scheduler.development.js:533:21)
+      at Timeout.task [as _onTimeout] (exam1/frontend/node_modules/jsdom/lib/jsdom/browser/Window.js:516:19)
+
+  console.error
+    Warning: An update to MemoryRouter inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at MemoryRouter (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend\node_modules\react-router\lib\components.tsx:127:3)
+
+    [0m [90m 25 |[39m       [36mawait[39m axios[33m.[39mpost([32m'http://localhost:5000/api/auth/register'[39m[33m,[39m formData)[33m;[39m
+     [90m 26 |[39m       alert([32m'Inscription réussie ! Vous pouvez maintenant vous connecter.'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 27 |[39m       navigate([32m'/login'[39m)[33m;[39m
+     [90m    |[39m       [31m[1m^[22m[39m
+     [90m 28 |[39m     } [36mcatch[39m (err) {
+     [90m 29 |[39m       [90m//console.error('Erreur lors de l\'inscription', err);[39m
+     [90m 30 |[39m       [36mif[39m (err[33m.[39mresponse) {[0m
+
+      at printWarning (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at listener (exam1/frontend/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at push (exam1/frontend/node_modules/@remix-run/router/history.ts:285:9)
+      at navigate (exam1/frontend/node_modules/react-router/lib/hooks.tsx:211:7)
+      at handleSubmit (exam1/frontend/src/pages/Register.js:27:7)
+
+PASS ../../../../Documents/Project/final-exam-cloud/exam1/tests/ui-notifications.test.js
+  √ Non-regression: products load and an article can be added to the real cart (121 ms)
+  √ Non-regression: valid registration submits the original HTTP contract (24 ms)
+  √ Non-regression: login stores the returned user identity (70 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        2.263 s
+Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  

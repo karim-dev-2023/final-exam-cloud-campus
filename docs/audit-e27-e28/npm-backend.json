@@ -1,0 +1,414 @@
+{
+  "directory": "backend",
+  "exit": 1,
+  "counts": {
+    "info": 0,
+    "low": 0,
+    "moderate": 2,
+    "high": 5,
+    "critical": 3,
+    "total": 10
+  },
+  "packages": [
+    {
+      "name": "axios",
+      "severity": "high",
+      "isDirect": true,
+      "range": "1.0.0 - 1.19.0",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+          "url": "https://github.com/advisories/GHSA-jr5f-v2jv-69x6",
+          "severity": "high",
+          "range": ">=1.0.0 <1.8.2"
+        },
+        {
+          "title": "Axios is vulnerable to DoS attack through lack of data size check",
+          "url": "https://github.com/advisories/GHSA-4hjh-wcwx-xvwj",
+          "severity": "high",
+          "range": ">=1.0.0 <1.12.0"
+        },
+        {
+          "title": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
+          "url": "https://github.com/advisories/GHSA-3p68-rc4w-qgx5",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.0"
+        },
+        {
+          "title": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
+          "url": "https://github.com/advisories/GHSA-w9j2-pvgh-6h63",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
+          "url": "https://github.com/advisories/GHSA-pmwg-cvhr-8vh7",
+          "severity": "high",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
+          "url": "https://github.com/advisories/GHSA-3w6x-2g7m-8v23",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.2"
+        },
+        {
+          "title": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
+          "url": "https://github.com/advisories/GHSA-xhjh-pmcv-23jw",
+          "severity": "low",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
+          "url": "https://github.com/advisories/GHSA-445q-vr5w-6q77",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: no_proxy bypass via IP alias allows SSRF",
+          "url": "https://github.com/advisories/GHSA-m7pr-hjqh-92cm",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
+          "url": "https://github.com/advisories/GHSA-5c9x-8gcm-mpgx",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: HTTP adapter streamed responses bypass maxContentLength",
+          "url": "https://github.com/advisories/GHSA-vf2m-468p-8v99",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
+          "url": "https://github.com/advisories/GHSA-pf86-5x62-jrwf",
+          "severity": "high",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: Header Injection via Prototype Pollution",
+          "url": "https://github.com/advisories/GHSA-6chq-wfr3-2hj9",
+          "severity": "high",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
+          "url": "https://github.com/advisories/GHSA-xx6v-rp6x-q39c",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
+          "url": "https://github.com/advisories/GHSA-43fc-jf86-j433",
+          "severity": "high",
+          "range": ">=1.0.0 <=1.13.4"
+        },
+        {
+          "title": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking",
+          "url": "https://github.com/advisories/GHSA-q8qp-cvcw-x6jj",
+          "severity": "high",
+          "range": ">=1.0.0 <1.15.2"
+        },
+        {
+          "title": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
+          "url": "https://github.com/advisories/GHSA-fvcv-3m26-pcqx",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.0"
+        },
+        {
+          "title": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
+          "url": "https://github.com/advisories/GHSA-62hf-57xw-28j9",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.15.1"
+        },
+        {
+          "title": "Axios: Regular Expression Denial of Service (ReDoS) via Cookie Name Injection",
+          "url": "https://github.com/advisories/GHSA-hfxv-24rg-xrqf",
+          "severity": "high",
+          "range": ">=1.0.0 <1.16.0"
+        },
+        {
+          "title": "Allocation of Resources Without Limits or Throttling in Axios",
+          "url": "https://github.com/advisories/GHSA-777c-7fjr-54vf",
+          "severity": "high",
+          "range": ">=1.7.0 <1.16.0"
+        },
+        {
+          "title": "Axios: Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter",
+          "url": "https://github.com/advisories/GHSA-p92q-9vqr-4j8v",
+          "severity": "high",
+          "range": ">=1.0.0 <1.16.0"
+        },
+        {
+          "title": "Axios: Proxy-Authorization header leaks to redirect target when proxy is re-evaluated to direct connection",
+          "url": "https://github.com/advisories/GHSA-j5f8-grm9-p9fc",
+          "severity": "high",
+          "range": ">=1.0.0 <1.16.0"
+        },
+        {
+          "title": "axios Vulnerable to Credential Theft and Response Hijacking via Prototype Pollution Gadget in Config Merge",
+          "url": "https://github.com/advisories/GHSA-3g43-6gmg-66jw",
+          "severity": "high",
+          "range": ">=1.0.0 <1.15.2"
+        },
+        {
+          "title": "axios Vulnerable to Full Man-in-the-Middle via Prototype Pollution Gadget in `config.proxy`",
+          "url": "https://github.com/advisories/GHSA-35jp-ww65-95wh",
+          "severity": "high",
+          "range": ">=1.0.0 <1.16.0"
+        },
+        {
+          "title": "axios has DoS & Header Injection via Prototype Pollution Read-Side Gadgets in axios merge functions",
+          "url": "https://github.com/advisories/GHSA-898c-q2cr-xwhg",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.16.0"
+        },
+        {
+          "title": "Axios: Prototype pollution gadgets can alter axios request construction",
+          "url": "https://github.com/advisories/GHSA-mmx7-hfxf-jppx",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.18.0"
+        },
+        {
+          "title": "Axios: Deep formToJSON Key Recursion Can Cause Denial of Service",
+          "url": "https://github.com/advisories/GHSA-pmv8-rq9r-6j72",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.18.0"
+        },
+        {
+          "title": "Axios: Nested axios option objects can consume polluted prototype values",
+          "url": "https://github.com/advisories/GHSA-7q8q-rj6j-mhjq",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.18.0"
+        },
+        {
+          "title": "Axios: Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`",
+          "url": "https://github.com/advisories/GHSA-jqh4-m9w3-8hp9",
+          "severity": "moderate",
+          "range": ">=1.7.0 <1.18.0"
+        },
+        {
+          "title": "Axios: Excessive recursion in formDataToJSON can cause denial of service",
+          "url": "https://github.com/advisories/GHSA-42h9-826w-cgv3",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.18.0"
+        },
+        {
+          "title": "Axios: Prototype pollution gadget in fetch adapter can alter outbound requests",
+          "url": "https://github.com/advisories/GHSA-vh66-26gq-q6x8",
+          "severity": "moderate",
+          "range": ">=1.7.0 <1.20.0"
+        },
+        {
+          "title": "Axios: Prototype-Pollution Gadget in the Default Instance Allows Inherited Object.prototype.method to Override HTTP Method",
+          "url": "https://github.com/advisories/GHSA-9fr6-4gfg-395g",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.20.0"
+        },
+        {
+          "title": "Axios: Header Injection via Inherited headers After Minimal Interceptor",
+          "url": "https://github.com/advisories/GHSA-j8rh-479h-cp32",
+          "severity": "moderate",
+          "range": ">=1.0.0 <1.20.0"
+        }
+      ]
+    },
+    {
+      "name": "body-parser",
+      "severity": "high",
+      "isDirect": false,
+      "range": "<=1.20.8 || 2.0.0-beta.1 - 2.0.2",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
+          "url": "https://github.com/advisories/GHSA-v422-hmwv-36x6",
+          "severity": "low",
+          "range": "<1.20.6"
+        },
+        {
+          "title": "body-parser vulnerable to Denial of Service via trailing bytes after a compressed request body",
+          "url": "https://github.com/advisories/GHSA-27r3-jxmh-p828",
+          "severity": "high",
+          "range": "<1.20.9"
+        },
+        "qs"
+      ]
+    },
+    {
+      "name": "express",
+      "severity": "high",
+      "isDirect": true,
+      "range": "4.0.0-rc1 - 4.22.2 || 5.0.0-alpha.1 - 5.0.1",
+      "fixAvailable": true,
+      "via": [
+        "body-parser",
+        "path-to-regexp",
+        "qs"
+      ]
+    },
+    {
+      "name": "follow-redirects",
+      "severity": "moderate",
+      "isDirect": false,
+      "range": "<=1.15.11",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "follow-redirects leaks Custom Authentication Headers to Cross-Domain Redirect Targets",
+          "url": "https://github.com/advisories/GHSA-r4q5-vmmm-2653",
+          "severity": "moderate",
+          "range": "<=1.15.11"
+        }
+      ]
+    },
+    {
+      "name": "form-data",
+      "severity": "critical",
+      "isDirect": false,
+      "range": "4.0.0 - 4.0.5",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "form-data uses unsafe random function in form-data for choosing boundary",
+          "url": "https://github.com/advisories/GHSA-fjxv-7rqg-78g4",
+          "severity": "critical",
+          "range": ">=4.0.0 <4.0.4"
+        },
+        {
+          "title": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames",
+          "url": "https://github.com/advisories/GHSA-hmw2-7cc7-3qxx",
+          "severity": "high",
+          "range": ">=4.0.0 <4.0.6"
+        }
+      ]
+    },
+    {
+      "name": "jws",
+      "severity": "high",
+      "isDirect": false,
+      "range": "<3.2.3",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "auth0/node-jws Improperly Verifies HMAC Signature",
+          "url": "https://github.com/advisories/GHSA-869p-cjfg-cm3x",
+          "severity": "high",
+          "range": "<3.2.3"
+        }
+      ]
+    },
+    {
+      "name": "mongoose",
+      "severity": "critical",
+      "isDirect": true,
+      "range": "8.0.0-rc0 - 8.24.0",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "Mongoose search injection vulnerability",
+          "url": "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
+          "severity": "high",
+          "range": ">=8.0.0-rc0 <8.8.3"
+        },
+        {
+          "title": "Mongoose search injection vulnerability",
+          "url": "https://github.com/advisories/GHSA-vg7j-7cwx-8wgw",
+          "severity": "critical",
+          "range": ">=8.0.0-rc0 <8.9.5"
+        },
+        {
+          "title": "Mongoose's Improper Sanitization of $nor in sanitizeFilter May Allow NoSQL Injection",
+          "url": "https://github.com/advisories/GHSA-wpg9-53fq-2r8h",
+          "severity": "high",
+          "range": ">=8.0.0 <=8.22.0"
+        },
+        {
+          "title": "Mongoose: Prototype pollution in mongoose update casting via __proto__-prefixed dotted path (Schema._getSchema/path getter)",
+          "url": "https://github.com/advisories/GHSA-664h-wqgq-64gw",
+          "severity": "moderate",
+          "range": ">=8.0.0 <8.24.1"
+        }
+      ]
+    },
+    {
+      "name": "path-to-regexp",
+      "severity": "high",
+      "isDirect": false,
+      "range": "<=0.1.12",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "path-to-regexp contains a ReDoS",
+          "url": "https://github.com/advisories/GHSA-rhx6-c78j-4q9w",
+          "severity": "high",
+          "range": "<0.1.12"
+        },
+        {
+          "title": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters",
+          "url": "https://github.com/advisories/GHSA-37ch-88jc-xwx2",
+          "severity": "high",
+          "range": "<0.1.13"
+        }
+      ]
+    },
+    {
+      "name": "proxy-addr",
+      "severity": "critical",
+      "isDirect": false,
+      "range": "1.1.0 - 2.0.7",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
+          "url": "https://github.com/advisories/GHSA-jqcg-44mw-7w3h",
+          "severity": "critical",
+          "range": ">=1.1.0 <2.0.8"
+        }
+      ]
+    },
+    {
+      "name": "qs",
+      "severity": "moderate",
+      "isDirect": false,
+      "range": "<=6.16.0",
+      "fixAvailable": true,
+      "via": [
+        {
+          "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+          "url": "https://github.com/advisories/GHSA-w7fw-mjwx-w883",
+          "severity": "low",
+          "range": ">=6.7.0 <=6.14.1"
+        },
+        {
+          "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+          "url": "https://github.com/advisories/GHSA-6rw7-vpxm-498p",
+          "severity": "moderate",
+          "range": "<6.14.1"
+        },
+        {
+          "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+          "url": "https://github.com/advisories/GHSA-q8mj-m7cp-5q26",
+          "severity": "moderate",
+          "range": ">=6.11.1 <=6.15.1"
+        },
+        {
+          "title": "qs: Denial of Service via Attacker Controlled isBuffer",
+          "url": "https://github.com/advisories/GHSA-4mjr-xmp4-gh2g",
+          "severity": "moderate",
+          "range": ">=2.2.5 <6.16.0"
+        },
+        {
+          "title": "qs : qs.stringify with arrayFormat 'comma' throws an uncaught TypeError on array elements carrying a non-callable own toString (DoS)",
+          "url": "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw",
+          "severity": "moderate",
+          "range": ">=6.7.0 <=6.16.0"
+        }
+      ]
+    }
+  ]
+}

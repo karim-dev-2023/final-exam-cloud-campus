@@ -1,0 +1,140 @@
+[
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\config\\db.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\middlewares\\authMiddleware.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\middlewares\\loginLimit.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\shared\\httpErrors.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\gateway\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\gateway\\routes\\stock.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\services\\checkoutService.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\validation\\authValidation.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\controllers\\authController.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\controllers\\orderController.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\controllers\\productController.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\models\\CheckoutAttempt.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\models\\Product.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\models\\Order.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\models\\User.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\backend\\server.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\microservices\\stock-management\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\microservices\\stock-management\\index.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\final-business.test.cjs",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\run-complementary.cjs",
+    "errors": 1,
+    "warnings": 0,
+    "messages": [
+      {
+        "ruleId": "no-unused-vars",
+        "severity": 2,
+        "message": "'crypto' is assigned a value but never used.",
+        "line": 5,
+        "column": 7,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 5,
+        "endColumn": 13
+      }
+    ]
+  }
+]

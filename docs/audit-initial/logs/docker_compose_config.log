@@ -1,0 +1,69 @@
+time="2026-11-03T09:45:48+01:00" level=warning msg="C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+name: exam1
+services:
+  backend:
+    build:
+      context: C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend
+      dockerfile: Dockerfile
+    depends_on:
+      mongo:
+        condition: service_started
+        required: true
+    environment:
+      MONGO_URI: mongodb://mongo:27017/mydatabase
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "5000"
+        protocol: tcp
+  frontend:
+    build:
+      context: C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\frontend
+      dockerfile: Dockerfile
+    depends_on:
+      backend:
+        condition: service_started
+        required: true
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 3000
+        published: "3000"
+        protocol: tcp
+  mongo:
+    image: mongo
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 27017
+        published: "27018"
+        protocol: tcp
+  notifications:
+    build:
+      context: C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications
+      dockerfile: Dockerfile
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 3001
+        published: "3001"
+        protocol: tcp
+  stock-management:
+    build:
+      context: C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\stock-management
+      dockerfile: Dockerfile
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 3002
+        published: "3002"
+        protocol: tcp
+networks:
+  default:
+    name: exam1_default

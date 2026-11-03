@@ -1,0 +1,11 @@
+P1-03: validated
+Source: 01-notifications-P0-01-P0-02-P1-03.log (exit=0)
+Extrait des tests réellement exécutés ; détails dans le log source.
+
+ok 2 - P1-03: missing/short service configuration fails closed before startup
+ok 3 - P1-03: service and Gateway reject unauthorized requests without mail generation
+ok 7 - P1-03: authorized notifications work directly, through Gateway and through the real backend client
+ok 8 - P1-03: Gateway does not bypass a different service credential
+ok 10 - P1-03: backend refuses missing configuration without making an HTTP call
+ok 11 - P1-03: backend client bounds time and refuses redirects that could leak its credential
+ok 12 - P1-03: rate limiter rejects excess authorized sends and reopens after its window

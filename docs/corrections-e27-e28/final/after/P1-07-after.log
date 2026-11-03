@@ -1,0 +1,9 @@
+P1-07: validated
+Source: 05-registration-P1-07.log (exit=0)
+Extrait des tests réellement exécutés ; détails dans le log source.
+
+ok 1 - P1-07: invalid email formats never create a user
+ok 2 - P1-07: empty and whitespace-only usernames and weak passwords are rejected
+ok 3 - P1-07: valid normalized registration, bcrypt and JWT work without accepting admin role
+ok 4 - P1-07: duplicate and concurrent registrations return 409 instead of server errors
+ok 5 - P1-07: schema validation independently rejects malformed new users

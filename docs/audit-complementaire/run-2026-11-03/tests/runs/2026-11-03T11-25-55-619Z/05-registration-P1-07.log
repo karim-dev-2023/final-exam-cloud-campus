@@ -1,0 +1,35 @@
+TAP version 13
+# Subtest: P1-07: invalid email formats never create a user
+ok 1 - P1-07: invalid email formats never create a user
+  ---
+  duration_ms: 473.5638
+  ...
+# Subtest: P1-07: empty and whitespace-only usernames and weak passwords are rejected
+ok 2 - P1-07: empty and whitespace-only usernames and weak passwords are rejected
+  ---
+  duration_ms: 166.4232
+  ...
+# Subtest: P1-07: valid normalized registration, bcrypt and JWT work without accepting admin role
+ok 3 - P1-07: valid normalized registration, bcrypt and JWT work without accepting admin role
+  ---
+  duration_ms: 353.5725
+  ...
+# Subtest: P1-07: duplicate and concurrent registrations return 409 instead of server errors
+ok 4 - P1-07: duplicate and concurrent registrations return 409 instead of server errors
+  ---
+  duration_ms: 410.5107
+  ...
+# Subtest: P1-07: schema validation independently rejects malformed new users
+ok 5 - P1-07: schema validation independently rejects malformed new users
+  ---
+  duration_ms: 141.3291
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2645.5258

@@ -1,0 +1,89 @@
+# Contexte de build commun : exam1/ (modules partagés shared/ et backend/ réutilisés)
+# Les secrets restent dans les fichiers .env (exclus des images par .dockerignore)
+# et sont injectés au démarrage. Les URL internes utilisent les noms de services.
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - '27018:27017'
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - '5000:5000'
+    env_file: backend/.env
+    environment:
+      MONGO_URI: mongodb://mongo:27017/exam1Db
+      PORT: '5000'
+      NOTIFICATION_GATEWAY_URL: http://gateway:8000
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: gateway/Dockerfile
+    ports:
+      # Port hôte configurable si 8000 est déjà pris (ex. GATEWAY_HOST_PORT=8080)
+      - '${GATEWAY_HOST_PORT:-8000}:8000'
+    env_file: gateway/.env
+    environment:
+      GATEWAY_PORT: '8000'
+      NOTIFI_SERVICE_URL: http://notifications:4002
+      STOCK_SERVICE_URL: http://stock-management:4003
+    depends_on:
+      - notifications
+      - stock-management
+    restart: unless-stopped
+
+  notifications:
+    build:
+      context: .
+      dockerfile: microservices/notifications/Dockerfile
+    expose:
+      - '4002'
+    env_file: microservices/notifications/.env
+    environment:
+      NOTIFI_PORT: '4002'
+    restart: unless-stopped
+
+  stock-management:
+    build:
+      context: .
+      dockerfile: microservices/stock-management/Dockerfile
+    expose:
+      - '4003'
+    environment:
+      MONGO_URI: mongodb://mongo:27017/exam1Db
+      STOCK_PORT: '4003'
+      NOTIFICATION_SERVICE_TOKEN: ${NOTIFICATION_SERVICE_TOKEN:?NOTIFICATION_SERVICE_TOKEN manquant dans exam1/.env}
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - '3000:80'
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  mongo-data:

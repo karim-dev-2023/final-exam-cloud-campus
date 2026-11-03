@@ -1,0 +1,5 @@
+P0-01: validated
+Source: 01-notifications-P0-01-P0-02-P1-03.log (exit=0)
+Extrait des tests réellement exécutés ; détails dans le log source.
+
+ok 1 - P0-01: real startup does not log credentials; SMTP debugging is disabled

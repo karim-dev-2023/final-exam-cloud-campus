@@ -1,0 +1,265 @@
+
+[B01] Liste publique des produits
+  GET localhost:5000/api/products
+  -> 200  [{"_id":"6ae99f6ba648388f8ea0ba30","name":"Ordinateur Portable","price":1000,"description":"Un ordinateur portable performant pour tous vos besoins.","stock":20,"__v":0,"createdAt":"2026-11-03T08:46:35.979Z","updatedAt":"2026-11-03T08:46:35.979Z"},{"_id":"6ae99f6ba648388f8ea0ba31","name":"Smartphone","price":700,"description":"Un smartphone moderne avec un écran OLED.","stock":50,"__v":0,"createdA
+
+[B02] Inscription valide
+  POST localhost:5000/api/auth/register  body={"username":"audit_user","email":"audit_user@example.test","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 201  {"message":"Utilisateur créé avec succès."}
+
+[B03] Inscription email déjà utilisé
+  POST localhost:5000/api/auth/register  body={"username":"autre","email":"audit_user@example.test","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 400  {"message":"Cet email est déjà utilisé."}
+
+[B04] Inscription username déjà utilisé (email différent)
+  POST localhost:5000/api/auth/register  body={"username":"audit_user","email":"autre@example.test","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 201  {"message":"Utilisateur créé avec succès."}
+
+[B05] Inscription formulaire vide
+  POST localhost:5000/api/auth/register  body={}
+  -> 500  {"message":"Une erreur est survenue."}
+
+[B06] Inscription mot de passe "a" + email invalide
+  POST localhost:5000/api/auth/register  body={"username":"faible","email":"pas-un-email","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 201  {"message":"Utilisateur créé avec succès."}
+
+[B07] Inscription username contenant du HTML/JS
+  POST localhost:5000/api/auth/register  body={"username":"<img src=x onerror=alert('test')>","email":"xss@example.test","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 201  {"message":"Utilisateur créé avec succès."}
+
+[B08] Inscription en tentant de forcer role=admin
+  POST localhost:5000/api/auth/register  body={"username":"wannabe","email":"wannabe@example.test","password":"[MOT_DE_PASSE_TEST_MASQUE]","role":"admin"}
+  -> 201  {"message":"Utilisateur créé avec succès."}
+  rôle stocké pour wannabe : { role: 'user' }
+
+[B09] Inscription compte admin de test
+  POST localhost:5000/api/auth/register  body={"username":"audit_admin","email":"audit_admin@example.test","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 201  {"message":"Utilisateur créé avec succès."}
+  promotion admin (mongosh, base jetable) : 1
+
+[B10] Connexion valide (user)
+  POST localhost:5000/api/auth/login  body={"username":"audit_user","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 200  {"token":"eyJ…<JWT masqué>","role":"user","username":"audit_user"}
+  payload JWT décodé (sans secret) : {"userId":"<id>","role":"user","iat":1793695711,"exp":1793699311} durée = 60 min
+
+[B11] Connexion valide (admin)
+  POST localhost:5000/api/auth/login  body={"username":"audit_admin","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 200  {"token":"eyJ…<JWT masqué>","role":"admin","username":"audit_admin"}
+
+[B12] Connexion mauvais mot de passe
+  POST localhost:5000/api/auth/login  body={"username":"audit_user","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 400  {"message":"Mot de passe incorrect"}
+
+[B13] Connexion utilisateur inexistant
+  POST localhost:5000/api/auth/login  body={"username":"nexistepas","password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 400  {"message":"Utilisateur non trouvé"}
+
+[B14] Connexion formulaire vide
+  POST localhost:5000/api/auth/login  body={}
+  -> 400  {"message":"Utilisateur non trouvé"}
+
+[B15] Injection NoSQL: username {"$ne":null}
+  POST localhost:5000/api/auth/login  body={"username":{"$ne":null},"password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 400  {"message":"Mot de passe incorrect"}
+
+[B16] Injection NoSQL: username {"$regex":"^audit_a"}
+  POST localhost:5000/api/auth/login  body={"username":{"$regex":"^audit_a"},"password":"[MOT_DE_PASSE_TEST_MASQUE]"}
+  -> 400  {"message":"Mot de passe incorrect"}
+
+[B17] Mot de passe de type objet
+  POST localhost:5000/api/auth/login  body={"username":"audit_user","password":{"$ne":null}}
+  -> 500  {"message":"Erreur serveur"}
+
+[B18] Force brute: 30 tentatives rapides -> codes: 400 (aucun 429 = pas de limitation)
+
+[B19] GET /orders sans token
+  GET localhost:5000/api/orders
+  -> 401  Unauthorized
+
+[B20] GET /orders avec token user
+  GET localhost:5000/api/orders
+  -> 403  {"message":"Accès interdit"}
+
+[B21] GET /orders avec token invalide
+  GET localhost:5000/api/orders
+  -> 403  {"error":true,"message":"Token invalide upd"}
+
+[B22] GET /orders avec JWT alg=none role=admin (falsifié)
+  GET localhost:5000/api/orders
+  -> 403  {"error":true,"message":"Token invalide upd"}
+
+[B23] Header Authorization sans "Bearer"
+  GET localhost:5000/api/orders
+  -> 200  []
+
+[B24] Commande normale (user)
+  POST localhost:5000/api/orders  body={"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":1000}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+  -> 201  {"message":"Commande créée avec succès","order":{"userId":"6ae99fdde47b39dc36674c7d","items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":1000,"_id":"6ae99fe2e47b39dc36674cb9"}],"total":1000,"status":"En attente","shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo","_id":"6ae99
+
+[B25] Commande avec PRIX MANIPULÉ (1€ au lieu de 1000€)
+  POST localhost:5000/api/orders  body={"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":2,"price":1}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+  -> 201  {"message":"Commande créée avec succès","order":{"userId":"6ae99fdde47b39dc36674c7d","items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":2,"price":1,"_id":"6ae99fe2e47b39dc36674cbc"}],"total":2,"status":"En attente","shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo","_id":"6ae99fe2e47
+
+[B26] Commande avec prix NÉGATIF
+  POST localhost:5000/api/orders  body={"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":-500}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+  -> 201  {"message":"Commande créée avec succès","order":{"userId":"6ae99fdde47b39dc36674c7d","items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":-500,"_id":"6ae99fe3e47b39dc36674cbf"}],"total":-500,"status":"En attente","shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo","_id":"6ae99
+
+[B27] Commande quantité 100000 (> stock 20)
+  POST localhost:5000/api/orders  body={"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":100000,"price":1000}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+  -> 201  {"message":"Commande créée avec succès","order":{"userId":"6ae99fdde47b39dc36674c7d","items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":100000,"price":1000,"_id":"6ae99fe3e47b39dc36674cc2"}],"total":100000000,"status":"En attente","shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo","_
+
+[B28] Commande productId invalide
+  POST localhost:5000/api/orders  body={"items":[{"productId":"abc","quantity":1,"price":10}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"paymentMethod":"PayPal","shippingMethod":"colissimo"}
+  -> 500  {"message":"Une erreur est survenue lors de la création de la commande."}
+
+[B29] Commande sans shippingMethod/paymentMethod
+  POST localhost:5000/api/orders  body={"items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":1,"price":1000}],"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"}}
+  -> 500  {"message":"Une erreur est survenue lors de la création de la commande."}
+
+[B30] Commande panier vide
+  POST localhost:5000/api/orders  body={"items":[]}
+  -> 400  {"message":"Le corps de la requête doit contenir un tableau d'objets { productId, quantity }."}
+
+[B31] Commande sans token
+  POST localhost:5000/api/orders  body={"items":[]}
+  -> 401  Unauthorized
+  stock Ordinateur après commandes : { stock: 20 } (initial 20)
+
+[B32] DELETE commande avec token USER (route censée admin)
+  DELETE localhost:5000/api/orders/6ae99fe2e47b39dc36674cb8
+  -> TIMEOUT (6s, aucune réponse)  
+
+[B33] PUT /orders/:id/validate (admin)
+  PUT localhost:5000/api/orders/6ae99fe2e47b39dc36674cb8/validate  body={}
+  -> 200  {"message":"Commande undefined validée avec succès."}
+  statut réel en base après "validation" : { status: 'En attente' }
+
+[B34] PUT /orders/:id/status statut hors enum "PIRATÉ" (admin)
+  PUT localhost:5000/api/orders/6ae99fe2e47b39dc36674cbb/status  body={"status":"PIRATÉ"}
+  -> 200  {"message":"Statut mis à jour avec succès","order":{"shippingAddress":{"street":"1 rue du Test","city":"Testville","postalCode":"75000","country":"France"},"_id":"6ae99fe2e47b39dc36674cbb","userId":"6ae99fdde47b39dc36674c7d","items":[{"productId":"6ae99f6ba648388f8ea0ba30","quantity":2,"price":1,"_id":"6ae99fe2e47b39dc36674cbc"}],"total":2,"status":"PIRATÉ","paymentMethod":"PayPal","shippingMethod
+  statut réel en base : { status: 'PIRATÉ' }
+
+[B35] PUT /orders/:id/status id invalide
+  PUT localhost:5000/api/orders/abc/status  body={"status":"Expédiée"}
+  -> 500  {"message":"Erreur serveur."}
+
+[B36] PUT /orders/:id/status (user non admin)
+  PUT localhost:5000/api/orders/6ae99fe2e47b39dc36674cb8/status  body={"status":"Expédiée"}
+  -> 403  {"message":"Accès interdit"}
+
+[B37] Stock = "abc" (admin)
+  PUT localhost:5000/api/products/6ae99f6ba648388f8ea0ba33/stock  body={"stock":"abc"}
+  -> 500  {"message":"Erreur serveur."}
+
+[B38] Stock = -5 (admin)
+  PUT localhost:5000/api/products/6ae99f6ba648388f8ea0ba33/stock  body={"stock":-5}
+  -> 400  {"message":"Le stock ne peut pas être négatif."}
+
+[B39] Stock absent (admin)
+  PUT localhost:5000/api/products/6ae99f6ba648388f8ea0ba33/stock  body={}
+  -> 500  {"message":"Erreur serveur."}
+
+[B40] Stock = 2.5 (décimal, admin)
+  PUT localhost:5000/api/products/6ae99f6ba648388f8ea0ba33/stock  body={"stock":2.5}
+  -> 200  {"message":"Stock mis à jour avec succès.","product":{"_id":"6ae99f6ba648388f8ea0ba33","name":"Tablette","price":400,"description":"Une tablette légère et puissante.","stock":2.5,"__v":0,"createdAt":"2026-11-03T08:46:35.979Z","updatedAt":"2026-11-03T08:48:42.673Z"}}
+
+[B41] Stock (user non admin)
+  PUT localhost:5000/api/products/6ae99f6ba648388f8ea0ba33/stock  body={"stock":99}
+  -> 403  {"message":"Accès interdit"}
+
+[B42] Remise du stock à 25 (admin)
+  PUT localhost:5000/api/products/6ae99f6ba648388f8ea0ba33/stock  body={"stock":25}
+  -> 200  {"message":"Stock mis à jour avec succès.","product":{"_id":"6ae99f6ba648388f8ea0ba33","name":"Tablette","price":400,"description":"Une tablette légère et puissante.","stock":25,"__v":0,"createdAt":"2026-11-03T08:46:35.979Z","updatedAt":"2026-11-03T08:48:42.690Z"}}
+
+[B43] Routes admin (/api/admin/orders) montées ?
+  GET localhost:5000/api/admin/orders
+  -> 404  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /api/admin/orders</pre>
+</body>
+</html>
+
+
+[B44] JSON malformé
+  POST localhost:5000/api/auth/login  raw={"username": 
+  -> 400  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Unexpected end of JSON input<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\backend\node_modules\body-parser\lib\types\json.js:92:19)<br> &nbsp; &nbsp;at C:\Users\mrkar\Documents\Project\final-exa
+
+[B45] Route inconnue
+  GET localhost:5000/api/inexistant
+  -> 404  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /api/inexistant</pre>
+</body>
+</html>
+
+
+[B46] CORS preflight depuis origine malveillante
+  OPTIONS localhost:5000/api/orders
+  -> 204  
+  Access-Control-Allow-Origin = * | X-Powered-By = Express
+
+[B47] En-têtes de sécurité (GET /products)
+  GET localhost:5000/api/products
+  -> 200  [{"_id":"6ae99f6ba648388f8ea0ba30","name":"Ordinateur Portable","price":1000,"description":"Un ordinateur portable performant pour tous vos besoins.","stock":20,"__v":0,"createdAt":"2026-11-03T08:46:35.979Z","updatedAt":"2026-11-03T08:46:35.979Z"},{"_id":"6ae99f6ba648388f8ea0ba31","name":"Smartphone","price":700,"description":"Un smartphone moderne avec un écran OLED.","stock":50,"__v":0,"createdA
+  x-powered-by: Express | CSP: absent | HSTS: absent | X-Frame-Options: absent
+
+[G01] Gateway /notify sans authentification (destinataire fictif)
+  POST localhost:8000/notify  body={"to":"destinataire@example.invalid","subject":"test audit","text":"test"}
+  -> 500  {"message":"Erreur lors de l'envoi de l'email.","error":{"code":"EAUTH","response":"535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48fbba47a32sm612232f8f.1 - gsmtp","responseCode":535,"command":"AUTH PLAIN"}}
+
+[G02] Gateway /update-stock
+  POST localhost:8000/update-stock  body={"productId":"6ae99f6ba648388f8ea0ba30","quantity":3}
+  -> 200  Stock mis à jour pour le produit de ID : 6ae99f6ba648388f8ea0ba30
+  stock Ordinateur après /update-stock : { stock: 20 }
+
+[G03] Accès DIRECT au microservice stock (contournement gateway)
+  POST localhost:4003/update-stock  body={"productId":"x","quantity":1}
+  -> 200  Stock mis à jour pour le produit de ID : x
+
+[G04] Gateway /auth (proxy auth commenté)
+  GET localhost:8000/auth
+  -> 404  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /auth</pre>
+</body>
+</html>
+
+
+[G05] Gateway /update-stock body invalide
+  POST localhost:8000/update-stock  raw={oops
+  -> 400  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>SyntaxError: Expected property name or &#39;}&#39; in JSON at position 1 (line 1 column 2)<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\gateway\node_modules\body-parser\lib\types\json.js:92:19)<br> &nbsp; &n
+
+[G06] Port 3001 (adminController / docker-compose)
+  POST localhost:3001/notify  body={}
+  -> ERREUR fetch failed  
+
+Commandes en base : 4

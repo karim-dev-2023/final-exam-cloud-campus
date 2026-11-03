@@ -1,0 +1,17 @@
+# Secrets : injectés par docker-compose (env_file), jamais copiés dans les images
+**/.env
+**/.env.*
+
+# Dépendances installées sur l'hôte (Windows) : réinstallées dans l'image
+**/node_modules
+
+# Git, builds et fichiers inutiles
+**/.git
+**/.gitignore
+frontend/build
+tests
+**/*.log
+**/npm-debug.log*
+**/Dockerfile
+.dockerignore
+docker-compose.yml

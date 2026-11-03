@@ -1,0 +1,174 @@
+[
+  {
+    "file": "exam1\\backend\\app.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\config\\db.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\adminController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\authController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\orderController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\controllers\\productController.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\middlewares\\authMiddleware.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\middlewares\\loginLimit.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\CheckoutAttempt.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\Order.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\Product.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\models\\User.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\adminRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\authRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\orderRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\routes\\productRoutes.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\seeder.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\server.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\services\\checkoutService.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\services\\notificationService.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\backend\\validation\\authValidation.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\app.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\auth.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notif.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\notifi.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\routes\\stock.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\gateway\\server.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\auth-gateway\\index.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\app.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\notifications\\index.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\app.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\index.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\shared\\httpErrors.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\shared\\notificationAuth.js",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\complementary.test.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\dependencies-complementary.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\final-business-current.test.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\final-business.test.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\notifications.test.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\run-complementary.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\run-final-e27-e28.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\run-notifications.cjs",
+    "exit": 0
+  },
+  {
+    "file": "exam1\\tests\\verify-complementary.cjs",
+    "exit": 0
+  }
+]

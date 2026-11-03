@@ -1,0 +1,6 @@
+
+> start:all
+> npm-run-all --parallel start:notifications start:stock-management start:gateway start:backend start:frontend
+
+'npm-run-all' n'est pas reconnu en tant que commande interne
+ou externe, un programme ex‚cutable ou un fichier de commandes.

@@ -1,0 +1,9 @@
+Package       Current  Wanted  Latest  Location                   Depended by
+axios           1.7.7  1.21.0  1.21.0  node_modules/axios         backend
+bcryptjs        2.4.3   2.4.3   3.0.3  node_modules/bcryptjs      backend
+cors            2.8.5   2.8.6   2.8.6  node_modules/cors          backend
+debug           4.3.7   4.4.3   4.4.3  node_modules/debug         backend
+dotenv         16.4.5  16.6.1  18.0.9  node_modules/dotenv        backend
+express        4.21.1  4.22.3   5.3.0  node_modules/express       backend
+jsonwebtoken    9.0.2   9.0.3   9.0.3  node_modules/jsonwebtoken  backend
+mongoose        8.8.1  8.24.8  9.11.4  node_modules/mongoose      backend

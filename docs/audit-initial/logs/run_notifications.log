@@ -1,0 +1,121 @@
+rocess.env.EMAIL_USER is audit-fake@example.invalid process.env.EMAIL_APPLICATION_PASSWORD is FAUX-MOT-DE-PASSE-AUDIT
+Service de notification en écoute sur le port 4002
+to is adresse-masquee-1@example.invalid subject is Nouvelle Commande Créée text is Une commande a été créée avec succès pour les produits suivants : 
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1
+Erreur lors de l'envoi de l'email Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e71a4d4f9sm24211856f8f.2 - gsmtp
+    at SMTPConnection._formatError (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:807:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:1586:34)
+    at SMTPConnection.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:991:20)
+    at SMTPConnection._onData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:772:14)
+    at SMTPConnection._onSocketData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e71a4d4f9sm24211856f8f.2 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+to is adresse-masquee-1@example.invalid subject is Nouvelle Commande Créée text is Une commande a été créée avec succès pour les produits suivants : 
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 2
+Erreur lors de l'envoi de l'email Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e71b8bd8esm23941255f8f.42 - gsmtp
+    at SMTPConnection._formatError (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:807:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:1586:34)
+    at SMTPConnection.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:991:20)
+    at SMTPConnection._onData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:772:14)
+    at SMTPConnection._onSocketData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e71b8bd8esm23941255f8f.42 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+to is adresse-masquee-1@example.invalid subject is Nouvelle Commande Créée text is Une commande a été créée avec succès pour les produits suivants : 
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1
+Erreur lors de l'envoi de l'email Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e71b964desm23583371f8f.46 - gsmtp
+    at SMTPConnection._formatError (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:807:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:1586:34)
+    at SMTPConnection.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:991:20)
+    at SMTPConnection._onData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:772:14)
+    at SMTPConnection._onSocketData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e71b964desm23583371f8f.46 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+to is adresse-masquee-1@example.invalid subject is Nouvelle Commande Créée text is Une commande a été créée avec succès pour les produits suivants : 
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 100000
+Erreur lors de l'envoi de l'email Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4b2a9fafe08sm65723175e9.3 - gsmtp
+    at SMTPConnection._formatError (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:807:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:1586:34)
+    at SMTPConnection.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:991:20)
+    at SMTPConnection._onData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:772:14)
+    at SMTPConnection._onSocketData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4b2a9fafe08sm65723175e9.3 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+to is destinataire@example.invalid subject is test audit text is test
+Erreur lors de l'envoi de l'email Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48fbba47a32sm612232f8f.1 - gsmtp
+    at SMTPConnection._formatError (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:807:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:1586:34)
+    at SMTPConnection.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:991:20)
+    at SMTPConnection._onData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:772:14)
+    at SMTPConnection._onSocketData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48fbba47a32sm612232f8f.1 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+to is adresse-masquee-1@example.invalid subject is Nouvelle Commande Créée text is Une commande a été créée avec succès pour les produits suivants : 
+Produit ID : 6ae99f6ba648388f8ea0ba30, Quantité : 1
+Erreur lors de l'envoi de l'email Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e88876946sm4972993f8f.5 - gsmtp
+    at SMTPConnection._formatError (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:807:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:1586:34)
+    at SMTPConnection.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:554:26)
+    at SMTPConnection._processResponse (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:991:20)
+    at SMTPConnection._onData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:772:14)
+    at SMTPConnection._onSocketData (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications\node_modules\nodemailer\lib\smtp-connection\index.js:195:44)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-48e88876946sm4972993f8f.5 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}

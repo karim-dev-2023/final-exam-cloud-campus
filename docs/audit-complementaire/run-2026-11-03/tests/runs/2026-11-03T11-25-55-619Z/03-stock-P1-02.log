@@ -1,0 +1,75 @@
+TAP version 13
+# Subtest: P1-02: invalid quantities are rejected before reservations
+ok 1 - P1-02: invalid quantities are rejected before reservations
+  ---
+  duration_ms: 559.0986
+  ...
+# Subtest: P1-02: ten concurrent purchases of the last unit produce exactly one order
+ok 2 - P1-02: ten concurrent purchases of the last unit produce exactly one order
+  ---
+  duration_ms: 461.412
+  ...
+# Subtest: P1-02: unavailable second item compensates the first reservation exactly once
+ok 3 - P1-02: unavailable second item compensates the first reservation exactly once
+  ---
+  duration_ms: 305.8115
+  ...
+# Subtest: P1-02: database error during reservation compensates earlier writes
+ok 4 - P1-02: database error during reservation compensates earlier writes
+  ---
+  duration_ms: 223.2405
+  ...
+# Subtest: P1-02: failed compensation is durable and concurrent recovery never refunds twice
+ok 5 - P1-02: failed compensation is durable and concurrent recovery never refunds twice
+  ---
+  duration_ms: 380.0139
+  ...
+# Subtest: P1-02: committed checkout survives order-write outage and is materialized once
+ok 6 - P1-02: committed checkout survives order-write outage and is materialized once
+  ---
+  duration_ms: 396.5795
+  ...
+# Subtest: P1-02: ambiguous commit acknowledgement does not refund a committed purchase
+ok 7 - P1-02: ambiguous commit acknowledgement does not refund a committed purchase
+  ---
+  duration_ms: 299.3635
+  ...
+# Subtest: P1-02: expired abandoned reservation is recovered and fencing markers are cleaned
+ok 8 - P1-02: expired abandoned reservation is recovered and fencing markers are cleaned
+  ---
+  duration_ms: 509.0634
+  ...
+# Subtest: P1-02: compensation fences a late reservation even for an initially unreserved item
+ok 9 - P1-02: compensation fences a late reservation even for an initially unreserved item
+  ---
+  duration_ms: 236.6586
+  ...
+# Subtest: P1-02: concurrent retries with one idempotency key cannot duplicate inventory or order
+ok 10 - P1-02: concurrent retries with one idempotency key cannot duplicate inventory or order
+  ---
+  duration_ms: 350.483
+  ...
+# Subtest: P1-02: stock microservice authenticates, validates and reserves real inventory idempotently
+ok 11 - P1-02: stock microservice authenticates, validates and reserves real inventory idempotently
+  ---
+  duration_ms: 371.0545
+  ...
+# Subtest: P1-02: startup recovery automatically materializes a committed journal without double decrement
+ok 12 - P1-02: startup recovery automatically materializes a committed journal without double decrement
+  ---
+  duration_ms: 267.4667
+  ...
+# Subtest: P1-02: admin stock validation preserves zero and rejects fractional inventory
+ok 13 - P1-02: admin stock validation preserves zero and rejects fractional inventory
+  ---
+  duration_ms: 447.8008
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6299.1102

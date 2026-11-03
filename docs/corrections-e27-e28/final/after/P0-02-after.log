@@ -1,0 +1,7 @@
+P0-02: validated
+Source: 01-notifications-P0-01-P0-02-P1-03.log (exit=0)
+Extrait des tests réellement exécutés ; détails dans le log source.
+
+ok 4 - P0-02: authorized malicious payloads are rejected before Nodemailer, directly and through Gateway
+ok 5 - P0-02: malformed JSON and oversized request have controlled HTTP errors
+ok 6 - P0-02: actual Nodemailer refuses file and URL access even if validation is bypassed

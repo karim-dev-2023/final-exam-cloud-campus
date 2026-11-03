@@ -1,0 +1,292 @@
+TAP version 13
+# Subtest: P0-01: real startup does not log credentials; SMTP debugging is disabled
+ok 1 - P0-01: real startup does not log credentials; SMTP debugging is disabled
+  ---
+  duration_ms: 5.6068
+  ...
+# Subtest: P1-03: missing/short service configuration fails closed before startup
+ok 2 - P1-03: missing/short service configuration fails closed before startup
+  ---
+  duration_ms: 0.755
+  ...
+# Subtest: P1-03: service and Gateway reject unauthorized requests without mail generation
+    # Subtest: direct: missing -> 401
+    ok 1 - direct: missing -> 401
+      ---
+      duration_ms: 25.3098
+      ...
+    # Subtest: direct: wrong service token -> 401
+    ok 2 - direct: wrong service token -> 401
+      ---
+      duration_ms: 4.7535
+      ...
+    # Subtest: direct: user JWT -> 401
+    ok 3 - direct: user JWT -> 401
+      ---
+      duration_ms: 2.6982
+      ...
+    # Subtest: direct: wrong scheme -> 401
+    ok 4 - direct: wrong scheme -> 401
+      ---
+      duration_ms: 2.637
+      ...
+    # Subtest: gateway: missing -> 401
+    ok 5 - gateway: missing -> 401
+      ---
+      duration_ms: 8.1149
+      ...
+    # Subtest: gateway: wrong service token -> 401
+    ok 6 - gateway: wrong service token -> 401
+      ---
+      duration_ms: 7.0805
+      ...
+    # Subtest: gateway: user JWT -> 401
+    ok 7 - gateway: user JWT -> 401
+      ---
+      duration_ms: 4.9623
+      ...
+    # Subtest: gateway: wrong scheme -> 401
+    ok 8 - gateway: wrong scheme -> 401
+      ---
+      duration_ms: 4.046
+      ...
+    1..8
+ok 3 - P1-03: service and Gateway reject unauthorized requests without mail generation
+  ---
+  duration_ms: 61.3108
+  ...
+# Subtest: P0-02: authorized malicious payloads are rejected before Nodemailer, directly and through Gateway
+    # Subtest: direct: local path -> 400
+    ok 1 - direct: local path -> 400
+      ---
+      duration_ms: 53.2713
+      ...
+    # Subtest: direct: remote path -> 400
+    ok 2 - direct: remote path -> 400
+      ---
+      duration_ms: 3.9567
+      ...
+    # Subtest: direct: array text -> 400
+    ok 3 - direct: array text -> 400
+      ---
+      duration_ms: 1.964
+      ...
+    # Subtest: direct: null text -> 400
+    ok 4 - direct: null text -> 400
+      ---
+      duration_ms: 1.6079
+      ...
+    # Subtest: direct: missing text -> 400
+    ok 5 - direct: missing text -> 400
+      ---
+      duration_ms: 3.7545
+      ...
+    # Subtest: direct: subject object -> 400
+    ok 6 - direct: subject object -> 400
+      ---
+      duration_ms: 1.8366
+      ...
+    # Subtest: direct: recipient object -> 400
+    ok 7 - direct: recipient object -> 400
+      ---
+      duration_ms: 1.4355
+      ...
+    # Subtest: direct: invalid recipient -> 400
+    ok 8 - direct: invalid recipient -> 400
+      ---
+      duration_ms: 1.4385
+      ...
+    # Subtest: direct: header injection -> 400
+    ok 9 - direct: header injection -> 400
+      ---
+      duration_ms: 1.7663
+      ...
+    # Subtest: direct: unknown attachment -> 400
+    ok 10 - direct: unknown attachment -> 400
+      ---
+      duration_ms: 4.2751
+      ...
+    # Subtest: direct: raw message -> 400
+    ok 11 - direct: raw message -> 400
+      ---
+      duration_ms: 3.6249
+      ...
+    # Subtest: direct: disable override -> 400
+    ok 12 - direct: disable override -> 400
+      ---
+      duration_ms: 1.7002
+      ...
+    # Subtest: direct: long subject -> 400
+    ok 13 - direct: long subject -> 400
+      ---
+      duration_ms: 1.5545
+      ...
+    # Subtest: direct: long text -> 400
+    ok 14 - direct: long text -> 400
+      ---
+      duration_ms: 1.9224
+      ...
+    # Subtest: direct: too many recipients -> 400
+    ok 15 - direct: too many recipients -> 400
+      ---
+      duration_ms: 2.0289
+      ...
+    # Subtest: direct: empty body -> 400
+    ok 16 - direct: empty body -> 400
+      ---
+      duration_ms: 1.3833
+      ...
+    # Subtest: direct: array body -> 400
+    ok 17 - direct: array body -> 400
+      ---
+      duration_ms: 1.286
+      ...
+    # Subtest: gateway: local path -> 400
+    ok 18 - gateway: local path -> 400
+      ---
+      duration_ms: 14.5633
+      ...
+    # Subtest: gateway: remote path -> 400
+    ok 19 - gateway: remote path -> 400
+      ---
+      duration_ms: 8.8312
+      ...
+    # Subtest: gateway: array text -> 400
+    ok 20 - gateway: array text -> 400
+      ---
+      duration_ms: 13.3434
+      ...
+    # Subtest: gateway: null text -> 400
+    ok 21 - gateway: null text -> 400
+      ---
+      duration_ms: 11.9044
+      ...
+    # Subtest: gateway: missing text -> 400
+    ok 22 - gateway: missing text -> 400
+      ---
+      duration_ms: 9.2554
+      ...
+    # Subtest: gateway: subject object -> 400
+    ok 23 - gateway: subject object -> 400
+      ---
+      duration_ms: 5.9187
+      ...
+    # Subtest: gateway: recipient object -> 400
+    ok 24 - gateway: recipient object -> 400
+      ---
+      duration_ms: 6.1026
+      ...
+    # Subtest: gateway: invalid recipient -> 400
+    ok 25 - gateway: invalid recipient -> 400
+      ---
+      duration_ms: 5.976
+      ...
+    # Subtest: gateway: header injection -> 400
+    ok 26 - gateway: header injection -> 400
+      ---
+      duration_ms: 5.7181
+      ...
+    # Subtest: gateway: unknown attachment -> 400
+    ok 27 - gateway: unknown attachment -> 400
+      ---
+      duration_ms: 7.2732
+      ...
+    # Subtest: gateway: raw message -> 400
+    ok 28 - gateway: raw message -> 400
+      ---
+      duration_ms: 6.598
+      ...
+    # Subtest: gateway: disable override -> 400
+    ok 29 - gateway: disable override -> 400
+      ---
+      duration_ms: 6.4778
+      ...
+    # Subtest: gateway: long subject -> 400
+    ok 30 - gateway: long subject -> 400
+      ---
+      duration_ms: 6.6205
+      ...
+    # Subtest: gateway: long text -> 400
+    ok 31 - gateway: long text -> 400
+      ---
+      duration_ms: 7.1639
+      ...
+    # Subtest: gateway: too many recipients -> 400
+    ok 32 - gateway: too many recipients -> 400
+      ---
+      duration_ms: 7.3036
+      ...
+    # Subtest: gateway: empty body -> 400
+    ok 33 - gateway: empty body -> 400
+      ---
+      duration_ms: 6.4744
+      ...
+    # Subtest: gateway: array body -> 400
+    ok 34 - gateway: array body -> 400
+      ---
+      duration_ms: 8.7577
+      ...
+    1..34
+ok 4 - P0-02: authorized malicious payloads are rejected before Nodemailer, directly and through Gateway
+  ---
+  duration_ms: 232.8428
+  ...
+# Subtest: P0-02: malformed JSON and oversized request have controlled HTTP errors
+ok 5 - P0-02: malformed JSON and oversized request have controlled HTTP errors
+  ---
+  duration_ms: 25.6597
+  ...
+# Subtest: P0-02: actual Nodemailer refuses file and URL access even if validation is bypassed
+ok 6 - P0-02: actual Nodemailer refuses file and URL access even if validation is bypassed
+  ---
+  duration_ms: 13.8059
+  ...
+# Subtest: P1-03: authorized notifications work directly, through Gateway and through the real backend client
+ok 7 - P1-03: authorized notifications work directly, through Gateway and through the real backend client
+  ---
+  duration_ms: 33.273
+  ...
+# Subtest: P1-03: Gateway does not bypass a different service credential
+ok 8 - P1-03: Gateway does not bypass a different service credential
+  ---
+  duration_ms: 9.6154
+  ...
+# Subtest: Gateway: unavailable notifications return a generic 502 without credential disclosure
+ok 9 - Gateway: unavailable notifications return a generic 502 without credential disclosure
+  ---
+  duration_ms: 8.5835
+  ...
+# Subtest: P1-03: backend refuses missing configuration without making an HTTP call
+ok 10 - P1-03: backend refuses missing configuration without making an HTTP call
+  ---
+  duration_ms: 0.3703
+  ...
+# Subtest: P1-03: backend client bounds time and refuses redirects that could leak its credential
+ok 11 - P1-03: backend client bounds time and refuses redirects that could leak its credential
+  ---
+  duration_ms: 13.6145
+  ...
+# Subtest: P1-03: rate limiter rejects excess authorized sends and reopens after its window
+ok 12 - P1-03: rate limiter rejects excess authorized sends and reopens after its window
+  ---
+  duration_ms: 20.9312
+  ...
+# Subtest: Notifications: SMTP failure is controlled without leaking secret/body/error details
+ok 13 - Notifications: SMTP failure is controlled without leaking secret/body/error details
+  ---
+  duration_ms: 6.2395
+  ...
+# Subtest: Gateway: stock proxy contract is preserved
+ok 14 - Gateway: stock proxy contract is preserved
+  ---
+  duration_ms: 34.2023
+  ...
+1..14
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1491.4194

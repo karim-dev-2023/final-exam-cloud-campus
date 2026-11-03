@@ -1,0 +1,148 @@
+### Frontend / (nginx)
+HTTP 200
+
+### Frontend route SPA /admin (fallback index.html)
+HTTP 200
+
+### Backend GET /api/products
+[]
+HTTP 200
+
+### CORS preflight depuis http://localhost:3000
+HTTP/1.1 204 No Content
+Access-Control-Allow-Origin: http://localhost:3000
+
+### CORS origine non autorisee (http://evil.example)
+0
+
+### Gateway POST /notify sans jeton (hote:8080)
+{"message":"Authentification interservices requise."}
+HTTP 401
+
+### Gateway POST /update-stock sans jeton
+{"message":"Authentification interservices requise."}
+HTTP 401
+
+### Notifications/stock non publies sur l hote (4002/4003)
+HTTP 000
+HTTP 000
+
+### backend -> gateway:8000/notify avec jeton, payload invalide (attendu 400 de notifications, aucun email envoye)
+HTTP 400 {"message":"Champs to, subject et text invalides."}
+
+### backend -> gateway:8000/update-stock avec jeton, produit inexistant (attendu erreur metier de stock-management via Mongo)
+HTTP 400 {"message":"Réservation invalide."}
+
+### gateway -> notifications:4002 direct sans jeton (attendu 401)
+HTTP 401 {"message":"Authentification interservices requise."}
+
+### gateway -> stock-management:4003 direct sans jeton (attendu 401)
+HTTP 401 {"message":"Authentification interservices requise."}
+
+### Variables internes resolues (noms de services, sans secrets)
+[backend]
+PORT=5000
+NOTIFICATION_GATEWAY_URL=http://gateway:8000
+MONGO_URI=mongodb://mongo:27017/exam1Db
+NOTIFICATION_SERVICE_TOKEN=present
+[gateway]
+GATEWAY_PORT=8000
+NOTIFI_SERVICE_URL=http://notifications:4002
+STOCK_SERVICE_URL=http://stock-management:4003
+NOTIFICATION_SERVICE_TOKEN=present
+[stock-management]
+STOCK_PORT=4003
+MONGO_URI=mongodb://mongo:27017/exam1Db
+NOTIFICATION_SERVICE_TOKEN=present
+[notifications]
+NOTIFI_PORT=4002
+NOTIFICATION_SERVICE_TOKEN=present
+
+### Inscription synthetique (Origin frontend) -> backend -> Mongo Docker
+{"message":"Utilisateur créé avec succès."}
+HTTP 201
+
+### Connexion -> JWT recu (valeur masquee)
+ECHEC: pas de JWT
+
+### GET /api/auth/me avec JWT
+{"message":"Authentification requise."}
+HTTP 401
+
+### GET /api/orders sans JWT (attendu 401)
+{"message":"Authentification requise."}
+HTTP 401
+
+### Bundle frontend pointe vers le backend localhost:5000
+/usr/share/nginx/html/static/js/main.759c9a8e.js
+
+(Note : l'essai precedent envoyait 'email' au lieu de 'username' a /login — erreur du script de test, pas de l'application. Nouvel essai ci-dessous.)
+
+### Inscription synthetique dockerverif11037
+{"message":"Utilisateur créé avec succès."}
+HTTP 201
+
+### Connexion (username) -> HTTP 200, JWT masque
+JWT recu, longueur 195
+
+### GET /api/auth/me avec JWT
+{"userId":"6ae9dc299ce15195f2a9d1bd","role":"user"}
+HTTP 200
+
+### GET /api/orders avec JWT utilisateur ordinaire
+HTTP 403
+
+### Fichiers .env presents dans les images (attendu : aucun)
+exam1-backend : 0 fichier(s) .env
+exam1-gateway : 0 fichier(s) .env
+exam1-notifications : 0 fichier(s) .env
+exam1-stock-management : 0 fichier(s) .env
+exam1-frontend : 0 fichier(s) .env
+
+### Variables figees dans les images (Config.Env, attendu : aucun secret)
+exam1-backend : PATH,NODE_VERSION,YARN_VERSION,NODE_ENV
+exam1-gateway : PATH,NODE_VERSION,YARN_VERSION,NODE_ENV
+exam1-notifications : PATH,NODE_VERSION,YARN_VERSION,NODE_ENV
+exam1-stock-management : PATH,NODE_VERSION,YARN_VERSION,NODE_ENV
+exam1-frontend : PATH,NGINX_VERSION,PKG_RELEASE,DYNPKG_RELEASE,NJS_VERSION,NJS_RELEASE
+
+### Noms de secrets dans l historique des couches (attendu : 0)
+exam1-backend : 0
+exam1-gateway : 0
+exam1-notifications : 0
+exam1-stock-management : 0
+exam1-frontend : 0
+
+### Valeur du jeton interservices dans build.log / logs (comparaison locale, attendu : 0)
+build.log : 0
+logs.log : 0
+ps.log : 0
+tests.log : 0
+up.log : 0
+
+### node_modules hote absents (installation Linux dans l image)
+backend
+shared
+app.js
+config
+controllers
+middlewares
+models
+node_modules
+package-lock.json
+package.json
+routes
+seeder.js
+server.js
+services
+validation
+node
+
+### Conteneur existant exam1-mongo preserve (hors projet Compose)
+exam1-mongo mongo:7 Up 4 hours 0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp projet=[]
+
+### Volumes de exam1-mongo inchanges
+/data/configdb -> 4f572edc21ce8ee9b24bb99f45569408a06d143d10076055aec28153cf369fe0
+/data/db -> eb0cc43ea72e9c6b5fc3567f2e8af24dc41c95d17835ffb1dd71fb8a4d56fe13
+
+

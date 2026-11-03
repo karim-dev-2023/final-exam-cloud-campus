@@ -1,0 +1,248 @@
+[
+  {
+    "id": "ORDER_CLIENT_PRICE_AND_STOCK",
+    "outcome": "observed",
+    "detail": {
+      "status": 201,
+      "acceptedPrice": -1,
+      "acceptedQuantity": 999999,
+      "total": -999999,
+      "stockCalls": 0,
+      "catalogueLookups": 0,
+      "persistence": "mock only"
+    }
+  },
+  {
+    "id": "ORDER_INVALID_INPUT_HTTP",
+    "outcome": "observed",
+    "detail": {
+      "status": 500,
+      "expected": 400
+    }
+  },
+  {
+    "id": "ORDER_FRACTIONAL_QUANTITY",
+    "outcome": "observed",
+    "detail": "Model accepts quantity 1.5"
+  },
+  {
+    "id": "ORDER_DELETE_AND_VALIDATE",
+    "outcome": "observed",
+    "detail": {
+      "deleteResponded": false,
+      "validateStatus": 200,
+      "validateUsesUndefinedId": true,
+      "databaseWrites": 0
+    }
+  },
+  {
+    "id": "ORDER_STATUS_WITHOUT_VALIDATORS",
+    "outcome": "observed",
+    "detail": {
+      "status": 200,
+      "acceptedStatus": "arbitrary-status",
+      "runValidators": false,
+      "persistence": "mock only"
+    }
+  },
+  {
+    "id": "AUTH_NOSQL_FILTER",
+    "outcome": "observed",
+    "detail": {
+      "operatorReachedModel": true,
+      "status": 400,
+      "authenticationBypassProven": false
+    }
+  },
+  {
+    "id": "LOGIN_VALID_AND_INVALID_PASSWORD",
+    "outcome": "observed",
+    "detail": {
+      "correctPassword": 200,
+      "wrongPassword": 400,
+      "missingPassword": 500,
+      "tokenLifetimeSeconds": 3600,
+      "databaseAccess": false
+    }
+  },
+  {
+    "id": "REGISTER_WEAK_FIELDS",
+    "outcome": "observed",
+    "detail": "Model accepts whitespace username, invalid email and one-character password"
+  },
+  {
+    "id": "REGISTER_EMPTY_AND_DUPLICATE_HTTP",
+    "outcome": "observed",
+    "detail": {
+      "emptyBody": 500,
+      "duplicateUsername": 500,
+      "persistence": "mock only"
+    }
+  },
+  {
+    "id": "STOCK_FRACTION_AND_TYPE_HTTP",
+    "outcome": "observed",
+    "detail": {
+      "fractionalStock": 200,
+      "invalidType": 500,
+      "persistence": "mock only"
+    }
+  },
+  {
+    "id": "READ_CONTROLLERS_UNHANDLED_DB_REJECTION",
+    "outcome": "observed",
+    "detail": {
+      "productReadRejects": true,
+      "orderReadRejects": true,
+      "errorResponseSent": false,
+      "runningServicesAffected": false
+    }
+  },
+  {
+    "id": "JWT_AND_ADMIN_CONTROLS",
+    "outcome": "observed",
+    "detail": {
+      "missing": 401,
+      "invalid": 403,
+      "expired": 403,
+      "forgedAdmin": 403,
+      "validAccepted": true,
+      "regularUserAdmin": 403,
+      "realSecretsUsed": false
+    }
+  },
+  {
+    "id": "DELETE_ROUTE_MISSING_ADMIN",
+    "outcome": "observed",
+    "detail": {
+      "route": "/:id",
+      "authenticated": true,
+      "adminRequired": false,
+      "deletionImplemented": false
+    }
+  },
+  {
+    "id": "NOTIFICATION_EXPOSURE_AND_ERROR",
+    "outcome": "observed",
+    "detail": {
+      "authenticationMiddleware": false,
+      "mockedSendReached": true,
+      "httpStatus": 500,
+      "errorDetailReturned": true,
+      "realEmailSent": false
+    }
+  },
+  {
+    "id": "NOTIFICATION_ARBITRARY_FILE_CONTENT",
+    "outcome": "observed",
+    "detail": {
+      "status": 200,
+      "fileContentInMessage": true,
+      "transport": "in-memory stream only",
+      "sensitiveFilesRead": false,
+      "realEmailSent": false
+    }
+  },
+  {
+    "id": "STOCK_SERVICE_FALSE_SUCCESS",
+    "outcome": "observed",
+    "detail": {
+      "status": 200,
+      "invalidInputAccepted": true,
+      "databaseAccess": false,
+      "authentication": false
+    }
+  },
+  {
+    "id": "CART_REDUCER_MUTATION_AND_STOCK",
+    "outcome": "observed",
+    "detail": {
+      "previousStateMutated": true,
+      "quantity": 2,
+      "availableStock": 1
+    }
+  },
+  {
+    "id": "SHIPPING_AND_PAYMENT_INITIAL_STATE",
+    "outcome": "observed",
+    "detail": "Both controlled selects start with null, no placeholder and no initial dispatch; order requires non-null methods"
+  },
+  {
+    "id": "LIVE_PRODUCTS",
+    "outcome": "observed",
+    "detail": {
+      "status": 200,
+      "cors": "*",
+      "allow": null,
+      "count": 5,
+      "allHaveMongoId": true,
+      "anyHaveId": false
+    }
+  },
+  {
+    "id": "LIVE_ORDERS_UNAUTHENTICATED",
+    "outcome": "observed",
+    "detail": {
+      "status": 401,
+      "cors": "*",
+      "allow": null
+    }
+  },
+  {
+    "id": "LIVE_INVALID_TOKEN",
+    "outcome": "observed",
+    "detail": {
+      "status": 403,
+      "cors": "*",
+      "allow": null
+    }
+  },
+  {
+    "id": "LIVE_UNKNOWN_ROUTE",
+    "outcome": "observed",
+    "detail": {
+      "status": 404,
+      "cors": "*",
+      "allow": null
+    }
+  },
+  {
+    "id": "LIVE_MALFORMED_JSON",
+    "outcome": "observed",
+    "detail": {
+      "status": 400,
+      "cors": "*",
+      "allow": null,
+      "contentType": "text/html; charset=utf-8",
+      "exposesStack": true,
+      "exposesAbsolutePath": true
+    }
+  },
+  {
+    "id": "LIVE_CORS",
+    "outcome": "observed",
+    "detail": {
+      "status": 204,
+      "cors": "*",
+      "allow": null
+    }
+  },
+  {
+    "id": "LIVE_NOTIFY_PREFLIGHT",
+    "outcome": "observed",
+    "detail": {
+      "status": 200,
+      "cors": null,
+      "allow": "POST"
+    }
+  },
+  {
+    "id": "LIVE_AUTH_GATEWAY",
+    "outcome": "observed",
+    "detail": {
+      "status": 404,
+      "cors": null,
+      "allow": null
+    }
+  }
+]

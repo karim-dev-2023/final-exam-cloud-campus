@@ -1,0 +1,138 @@
+TAP version 13
+# Subtest: P1-02: invalid quantities are rejected before reservations
+ok 1 - P1-02: invalid quantities are rejected before reservations
+  ---
+  duration_ms: 398.4707
+  ...
+# Subtest: P1-02: ten concurrent purchases of the last unit produce exactly one order
+not ok 2 - P1-02: ten concurrent purchases of the last unit produce exactly one order
+  ---
+  duration_ms: 309.5494
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\final-business.test.cjs:113:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\final-business.test.cjs:116:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: P1-02: unavailable second item compensates the first reservation exactly once
+ok 3 - P1-02: unavailable second item compensates the first reservation exactly once
+  ---
+  duration_ms: 169.9702
+  ...
+# Subtest: P1-02: database error during reservation compensates earlier writes
+ok 4 - P1-02: database error during reservation compensates earlier writes
+  ---
+  duration_ms: 151.6024
+  ...
+# Subtest: P1-02: failed compensation is durable and concurrent recovery never refunds twice
+ok 5 - P1-02: failed compensation is durable and concurrent recovery never refunds twice
+  ---
+  duration_ms: 172.7933
+  ...
+# Subtest: P1-02: committed checkout survives order-write outage and is materialized once
+not ok 6 - P1-02: committed checkout survives order-write outage and is materialized once
+  ---
+  duration_ms: 174.7917
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\final-business.test.cjs:157:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\final-business.test.cjs:168:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: P1-02: ambiguous commit acknowledgement does not refund a committed purchase
+not ok 7 - P1-02: ambiguous commit acknowledgement does not refund a committed purchase
+  ---
+  duration_ms: 129.2391
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\final-business.test.cjs:174:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    503 !== 201
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 201
+  actual: 503
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\final-business.test.cjs:185:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: P1-02: expired abandoned reservation is recovered and fencing markers are cleaned
+ok 8 - P1-02: expired abandoned reservation is recovered and fencing markers are cleaned
+  ---
+  duration_ms: 380.4984
+  ...
+# Subtest: P1-02: compensation fences a late reservation even for an initially unreserved item
+ok 9 - P1-02: compensation fences a late reservation even for an initially unreserved item
+  ---
+  duration_ms: 200.8206
+  ...
+# Subtest: P1-02: concurrent retries with one idempotency key cannot duplicate inventory or order
+not ok 10 - P1-02: concurrent retries with one idempotency key cannot duplicate inventory or order
+  ---
+  duration_ms: 335.9888
+  location: 'C:\\Users\\mrkar\\Documents\\Project\\final-exam-cloud\\exam1\\tests\\final-business.test.cjs:206:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(results.every(r => [200, 201, 409].includes(r.status)))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\tests\final-business.test.cjs:209:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:980:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: P1-02: stock microservice authenticates, validates and reserves real inventory idempotently
+ok 11 - P1-02: stock microservice authenticates, validates and reserves real inventory idempotently
+  ---
+  duration_ms: 292.5925
+  ...
+# Subtest: P1-02: admin stock validation preserves zero and rejects fractional inventory
+ok 12 - P1-02: admin stock validation preserves zero and rejects fractional inventory
+  ---
+  duration_ms: 422.2641
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 8
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4321.6145

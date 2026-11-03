@@ -1,0 +1,39 @@
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  77.07 kB  react-build\static\js\main.02cb10af.js
+  2.83 kB   react-build\static\css\main.d8b37c20.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ..\..\..\..\..\AppData\Local\Temp\e27-final-run-AUaQRn\react-build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ..\..\..\..\..\AppData\Local\Temp\e27-final-run-AUaQRn\react-build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+Browserslist: browsers data (caniuse-lite) is 25 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Browserslist: browsers data (caniuse-lite) is 25 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme

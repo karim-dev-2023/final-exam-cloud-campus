@@ -1,0 +1,21 @@
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  91.72 kB  react-build\static\js\main.123904b7.js
+  2.75 kB   react-build\static\css\main.826b08a0.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ..\..\..\..\..\AppData\Local\Temp\e27-final-run-PjvxOL\react-build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ..\..\..\..\..\AppData\Local\Temp\e27-final-run-PjvxOL\react-build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+

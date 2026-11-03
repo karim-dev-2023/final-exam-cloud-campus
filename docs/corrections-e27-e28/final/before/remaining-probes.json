@@ -1,0 +1,43 @@
+[
+  {
+    "id": "ORDER_CLIENT_PRICE_AND_STOCK",
+    "outcome": "observed",
+    "detail": {
+      "status": 201,
+      "acceptedPrice": -1,
+      "acceptedQuantity": 999999,
+      "total": -999999,
+      "stockCalls": 0,
+      "catalogueLookups": 0,
+      "persistence": "mock only"
+    }
+  },
+  {
+    "id": "ORDER_FRACTIONAL_QUANTITY",
+    "outcome": "observed",
+    "detail": "Model accepts quantity 1.5"
+  },
+  {
+    "id": "AUTH_NOSQL_FILTER",
+    "outcome": "observed",
+    "detail": {
+      "operatorReachedModel": true,
+      "status": 400,
+      "authenticationBypassProven": false
+    }
+  },
+  {
+    "id": "REGISTER_WEAK_FIELDS",
+    "outcome": "observed",
+    "detail": "Model accepts whitespace username, invalid email and one-character password"
+  },
+  {
+    "id": "REGISTER_EMPTY_AND_DUPLICATE_HTTP",
+    "outcome": "observed",
+    "detail": {
+      "emptyBody": 500,
+      "duplicateUsername": 500,
+      "persistence": "mock only"
+    }
+  }
+]

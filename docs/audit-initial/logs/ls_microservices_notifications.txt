@@ -1,0 +1,6 @@
+notifications@1.0.0 C:\Users\mrkar\Documents\Project\final-exam-cloud\exam1\microservices\notifications
++-- body-parser@1.20.3
++-- dotenv@16.4.5
++-- express@4.21.1
+`-- nodemailer@6.9.16
+

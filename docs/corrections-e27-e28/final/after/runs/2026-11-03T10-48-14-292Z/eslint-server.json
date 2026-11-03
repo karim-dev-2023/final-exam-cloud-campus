@@ -1,0 +1,110 @@
+[
+  {
+    "file": "exam1\\backend\\controllers\\authController.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\controllers\\productController.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\models\\CheckoutAttempt.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\models\\Order.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\models\\Product.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\models\\User.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\services\\checkoutService.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\backend\\validation\\authValidation.js",
+    "errors": 1,
+    "warnings": 0,
+    "messages": [
+      {
+        "ruleId": "no-useless-escape",
+        "severity": 2,
+        "message": "Unnecessary escape character: \\[.",
+        "line": 1,
+        "column": 39,
+        "nodeType": "Literal",
+        "messageId": "unnecessaryEscape",
+        "endLine": 1,
+        "endColumn": 40,
+        "suggestions": [
+          {
+            "messageId": "removeEscape",
+            "fix": {
+              "range": [
+                38,
+                39
+              ],
+              "text": ""
+            },
+            "desc": "Remove the `\\`. This maintains the current functionality."
+          },
+          {
+            "messageId": "escapeBackslash",
+            "fix": {
+              "range": [
+                38,
+                38
+              ],
+              "text": "\\"
+            },
+            "desc": "Replace the `\\` with `\\\\` to include the actual backslash character."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\app.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\microservices\\stock-management\\index.js",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\tests\\final-business.test.cjs",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "file": "exam1\\tests\\run-final-e27-e28.cjs",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  }
+]

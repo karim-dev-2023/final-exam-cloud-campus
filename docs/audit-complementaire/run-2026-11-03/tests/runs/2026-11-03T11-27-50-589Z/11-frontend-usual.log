@@ -1,0 +1,108 @@
+  console.error
+    Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 16 |[39m test([32m'application loads its catalogue using the real route and provider'[39m[33m,[39m [36masync[39m () [33m=>[39m {
+     [90m 17 |[39m   axios[33m.[39m[36mget[39m[33m.[39mmockResolvedValue({ data[33m:[39m [{_id[33m:[39m[32m'product'[39m[33m,[39mname[33m:[39m[32m'Produit factice'[39m[33m,[39mprice[33m:[39m[35m20[39m[33m,[39mstock[33m:[39m[35m2[39m}] })[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m   render([33m<[39m[33mCartProvider[39m[33m>[39m[33m<[39m[33mApp[39m [33m/[39m[33m>[39m[33m<[39m[33m/[39m[33mCartProvider[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 19 |[39m   expect([36mawait[39m screen[33m.[39mfindByText([32m'Produit factice'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 20 |[39m   fireEvent[33m.[39mclick(screen[33m.[39mgetByText([32m'Ajouter au panier'[39m))[33m;[39m
+     [90m 21 |[39m   expect(screen[33m.[39mgetByText([32m'Liste des Produits'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.js:18:9)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  console.warn
+    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m 16 |[39m test([32m'application loads its catalogue using the real route and provider'[39m[33m,[39m [36masync[39m () [33m=>[39m {
+     [90m 17 |[39m   axios[33m.[39m[36mget[39m[33m.[39mmockResolvedValue({ data[33m:[39m [{_id[33m:[39m[32m'product'[39m[33m,[39mname[33m:[39m[32m'Produit factice'[39m[33m,[39mprice[33m:[39m[35m20[39m[33m,[39mstock[33m:[39m[35m2[39m}] })[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m   render([33m<[39m[33mCartProvider[39m[33m>[39m[33m<[39m[33mApp[39m [33m/[39m[33m>[39m[33m<[39m[33m/[39m[33mCartProvider[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 19 |[39m   expect([36mawait[39m screen[33m.[39mfindByText([32m'Produit factice'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 20 |[39m   fireEvent[33m.[39mclick(screen[33m.[39mgetByText([32m'Ajouter au panier'[39m))[33m;[39m
+     [90m 21 |[39m   expect(screen[33m.[39mgetByText([32m'Liste des Produits'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at Object.logV6DeprecationWarnings [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router-dom/index.tsx:721:11
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.js:18:9)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  console.warn
+    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m 23 |[39m [36mfunction[39m [33mMethods[39m() {[36mconst[39m state[33m=[39museCart()[33m;[39m[36mreturn[39m [33m<[39m[33moutput[39m[33m>[39m{state[33m.[39mshippingMethod [33m+[39m [32m' / '[39m [33m+[39m state[33m.[39mpaymentMethod}[33m<[39m[33m/[39m[33moutput[39m[33m>[39m[33m;[39m}
+     [90m 24 |[39m test([32m'delivery and payment defaults match context; other options remain selectable'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m   render(wrap([33m<[39m[33m>[39m[33m<[39m[33mShipping[39m[35m/><Payment/[39m[33m>[39m[33m<[39m[33mMethods[39m[35m/></[39m[33m>[39m))[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 26 |[39m   expect(screen[33m.[39mgetByText([32m'colissimo / Carte bancaire'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 27 |[39m   fireEvent[33m.[39mchange(screen[33m.[39mgetByLabelText([32m'Méthode de livraison:'[39m)[33m,[39m{target[33m:[39m{value[33m:[39m[32m'chronopost'[39m}})[33m;[39m
+     [90m 28 |[39m   fireEvent[33m.[39mchange(screen[33m.[39mgetByLabelText([32m'Mode de paiement:'[39m)[33m,[39m{target[33m:[39m{value[33m:[39m[32m'PayPal'[39m}})[33m;[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.js:25:9)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+PASS src/App.test.js
+  √ application loads its catalogue using the real route and provider (258 ms)
+  √ delivery and payment defaults match context; other options remain selectable (39 ms)
+  √ empty login and registration forms fail browser validation (95 ms)
+  √ login failure shows a public message without storing identity (76 ms)
+  √ forged local admin role never reveals admin children after server rejection (17 ms)
+  √ server confirmed admin can access the interface (14 ms)
+  √ admin validation and terminal deletion follow the server result (48 ms)
+  √ admin loading failures are handled visibly (23 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6.348 s
+Ran all test suites.
