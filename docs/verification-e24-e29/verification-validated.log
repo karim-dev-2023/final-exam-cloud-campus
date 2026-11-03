@@ -1,0 +1,648 @@
+
+Verification: order-notification-email.test.cjs
+TAP version 13
+# Subtest: Order notification uses the configured recipient and preserves the order response
+ok 1 - Order notification uses the configured recipient and preserves the order response
+  ---
+  duration_ms: 0.9026
+  ...
+# Subtest: Idempotent replay returns 200 without sending another notification
+ok 2 - Idempotent replay returns 200 without sending another notification
+  ---
+  duration_ms: 0.1428
+  ...
+# Subtest: A missing recipient and notification failure do not roll back the created order
+ok 3 - A missing recipient and notification failure do not roll back the created order
+  ---
+  duration_ms: 0.1842
+  ...
+# Subtest: Checkout errors retain their status and never trigger a notification
+ok 4 - Checkout errors retain their status and never trigger a notification
+  ---
+  duration_ms: 0.8242
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.0791
+
+Verification: notifications.test.cjs
+TAP version 13
+# Subtest: P0-01: real startup does not log credentials; SMTP debugging is disabled
+ok 1 - P0-01: real startup does not log credentials; SMTP debugging is disabled
+  ---
+  duration_ms: 8.8732
+  ...
+# Subtest: P1-03: missing/short service configuration fails closed before startup
+ok 2 - P1-03: missing/short service configuration fails closed before startup
+  ---
+  duration_ms: 1.08
+  ...
+# Subtest: P1-03: service and Gateway reject unauthorized requests without mail generation
+    # Subtest: direct: missing -> 401
+    ok 1 - direct: missing -> 401
+      ---
+      duration_ms: 33.6962
+      ...
+    # Subtest: direct: wrong service token -> 401
+    ok 2 - direct: wrong service token -> 401
+      ---
+      duration_ms: 5.7731
+      ...
+    # Subtest: direct: user JWT -> 401
+    ok 3 - direct: user JWT -> 401
+      ---
+      duration_ms: 3.104
+      ...
+    # Subtest: direct: wrong scheme -> 401
+    ok 4 - direct: wrong scheme -> 401
+      ---
+      duration_ms: 3.8013
+      ...
+# {"timestamp":"2026-11-03T14:53:00.058Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":401,"durationMs":1}
+    # Subtest: gateway: missing -> 401
+    ok 5 - gateway: missing -> 401
+      ---
+      duration_ms: 5.999
+      ...
+# {"timestamp":"2026-11-03T14:53:00.063Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":401,"durationMs":0}
+    # Subtest: gateway: wrong service token -> 401
+    ok 6 - gateway: wrong service token -> 401
+      ---
+      duration_ms: 4.3605
+      ...
+# {"timestamp":"2026-11-03T14:53:00.066Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":401,"durationMs":1}
+    # Subtest: gateway: user JWT -> 401
+    ok 7 - gateway: user JWT -> 401
+      ---
+      duration_ms: 4.1572
+      ...
+# {"timestamp":"2026-11-03T14:53:00.071Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":401,"durationMs":1}
+    # Subtest: gateway: wrong scheme -> 401
+    ok 8 - gateway: wrong scheme -> 401
+      ---
+      duration_ms: 4.0935
+      ...
+    1..8
+ok 3 - P1-03: service and Gateway reject unauthorized requests without mail generation
+  ---
+  duration_ms: 66.6382
+  ...
+# Subtest: P0-02: authorized malicious payloads are rejected before Nodemailer, directly and through Gateway
+    # Subtest: direct: local path -> 400
+    ok 1 - direct: local path -> 400
+      ---
+      duration_ms: 26.5481
+      ...
+    # Subtest: direct: remote path -> 400
+    ok 2 - direct: remote path -> 400
+      ---
+      duration_ms: 5.1886
+      ...
+    # Subtest: direct: array text -> 400
+    ok 3 - direct: array text -> 400
+      ---
+      duration_ms: 2.2661
+      ...
+    # Subtest: direct: null text -> 400
+    ok 4 - direct: null text -> 400
+      ---
+      duration_ms: 2.1133
+      ...
+    # Subtest: direct: missing text -> 400
+    ok 5 - direct: missing text -> 400
+      ---
+      duration_ms: 2.4034
+      ...
+    # Subtest: direct: subject object -> 400
+    ok 6 - direct: subject object -> 400
+      ---
+      duration_ms: 2.6676
+      ...
+    # Subtest: direct: recipient object -> 400
+    ok 7 - direct: recipient object -> 400
+      ---
+      duration_ms: 1.8813
+      ...
+    # Subtest: direct: invalid recipient -> 400
+    ok 8 - direct: invalid recipient -> 400
+      ---
+      duration_ms: 1.6512
+      ...
+    # Subtest: direct: header injection -> 400
+    ok 9 - direct: header injection -> 400
+      ---
+      duration_ms: 2.6881
+      ...
+    # Subtest: direct: unknown attachment -> 400
+    ok 10 - direct: unknown attachment -> 400
+      ---
+      duration_ms: 4.5691
+      ...
+    # Subtest: direct: raw message -> 400
+    ok 11 - direct: raw message -> 400
+      ---
+      duration_ms: 2.714
+      ...
+    # Subtest: direct: disable override -> 400
+    ok 12 - direct: disable override -> 400
+      ---
+      duration_ms: 1.6438
+      ...
+    # Subtest: direct: long subject -> 400
+    ok 13 - direct: long subject -> 400
+      ---
+      duration_ms: 4.0549
+      ...
+    # Subtest: direct: long text -> 400
+    ok 14 - direct: long text -> 400
+      ---
+      duration_ms: 3.2645
+      ...
+    # Subtest: direct: too many recipients -> 400
+    ok 15 - direct: too many recipients -> 400
+      ---
+      duration_ms: 2.1666
+      ...
+    # Subtest: direct: empty body -> 400
+    ok 16 - direct: empty body -> 400
+      ---
+      duration_ms: 1.5469
+      ...
+    # Subtest: direct: array body -> 400
+    ok 17 - direct: array body -> 400
+      ---
+      duration_ms: 1.6013
+      ...
+# {"timestamp":"2026-11-03T14:53:00.153Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":7}
+    # Subtest: gateway: local path -> 400
+    ok 18 - gateway: local path -> 400
+      ---
+      duration_ms: 11.0877
+      ...
+# {"timestamp":"2026-11-03T14:53:00.160Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":3}
+    # Subtest: gateway: remote path -> 400
+    ok 19 - gateway: remote path -> 400
+      ---
+      duration_ms: 5.5899
+      ...
+# {"timestamp":"2026-11-03T14:53:00.172Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":8}
+    # Subtest: gateway: array text -> 400
+    ok 20 - gateway: array text -> 400
+      ---
+      duration_ms: 13.2994
+      ...
+# {"timestamp":"2026-11-03T14:53:00.180Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: null text -> 400
+    ok 21 - gateway: null text -> 400
+      ---
+      duration_ms: 6.2529
+      ...
+# {"timestamp":"2026-11-03T14:53:00.187Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: missing text -> 400
+    ok 22 - gateway: missing text -> 400
+      ---
+      duration_ms: 6.3367
+      ...
+# {"timestamp":"2026-11-03T14:53:00.192Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: subject object -> 400
+    ok 23 - gateway: subject object -> 400
+      ---
+      duration_ms: 5.0562
+      ...
+# {"timestamp":"2026-11-03T14:53:00.198Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: recipient object -> 400
+    ok 24 - gateway: recipient object -> 400
+      ---
+      duration_ms: 5.4528
+      ...
+# {"timestamp":"2026-11-03T14:53:00.203Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":3}
+    # Subtest: gateway: invalid recipient -> 400
+    ok 25 - gateway: invalid recipient -> 400
+      ---
+      duration_ms: 5.4173
+      ...
+# {"timestamp":"2026-11-03T14:53:00.210Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":3}
+    # Subtest: gateway: header injection -> 400
+    ok 26 - gateway: header injection -> 400
+      ---
+      duration_ms: 6.4409
+      ...
+# {"timestamp":"2026-11-03T14:53:00.215Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":3}
+    # Subtest: gateway: unknown attachment -> 400
+    ok 27 - gateway: unknown attachment -> 400
+      ---
+      duration_ms: 5.3458
+      ...
+# {"timestamp":"2026-11-03T14:53:00.220Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: raw message -> 400
+    ok 28 - gateway: raw message -> 400
+      ---
+      duration_ms: 5.0287
+      ...
+# {"timestamp":"2026-11-03T14:53:00.225Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: disable override -> 400
+    ok 29 - gateway: disable override -> 400
+      ---
+      duration_ms: 4.868
+      ...
+# {"timestamp":"2026-11-03T14:53:00.230Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: long subject -> 400
+    ok 30 - gateway: long subject -> 400
+      ---
+      duration_ms: 4.3866
+      ...
+# {"timestamp":"2026-11-03T14:53:00.235Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: long text -> 400
+    ok 31 - gateway: long text -> 400
+      ---
+      duration_ms: 4.7262
+      ...
+# {"timestamp":"2026-11-03T14:53:00.240Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+    # Subtest: gateway: too many recipients -> 400
+    ok 32 - gateway: too many recipients -> 400
+      ---
+      duration_ms: 5.3081
+      ...
+# {"timestamp":"2026-11-03T14:53:00.246Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":3}
+    # Subtest: gateway: empty body -> 400
+    ok 33 - gateway: empty body -> 400
+      ---
+      duration_ms: 6.0141
+      ...
+# {"timestamp":"2026-11-03T14:53:00.253Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":4}
+    # Subtest: gateway: array body -> 400
+    ok 34 - gateway: array body -> 400
+      ---
+      duration_ms: 7.3067
+      ...
+    1..34
+ok 4 - P0-02: authorized malicious payloads are rejected before Nodemailer, directly and through Gateway
+  ---
+  duration_ms: 182.156
+  ...
+# {"timestamp":"2026-11-03T14:53:00.266Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":400,"durationMs":2}
+# {"timestamp":"2026-11-03T14:53:00.272Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":413,"durationMs":3}
+# Subtest: P0-02: malformed JSON and oversized request have controlled HTTP errors
+ok 5 - P0-02: malformed JSON and oversized request have controlled HTTP errors
+  ---
+  duration_ms: 18.4064
+  ...
+# Subtest: P0-02: actual Nodemailer refuses file and URL access even if validation is bypassed
+ok 6 - P0-02: actual Nodemailer refuses file and URL access even if validation is bypassed
+  ---
+  duration_ms: 12.9388
+  ...
+# {"timestamp":"2026-11-03T14:53:00.297Z","level":"info","event":"http_response","service":"gateway","method":"POST","status":200,"durationMs":5}
+# {"timestamp":"2026-11-03T14:53:00.307Z","level":"info","event":"http_response","service":"gateway","method":"POST","status":200,"durationMs":3}
+# Subtest: P1-03: authorized notifications work directly, through Gateway and through the real backend client
+ok 7 - P1-03: authorized notifications work directly, through Gateway and through the real backend client
+  ---
+  duration_ms: 21.8215
+  ...
+# {"timestamp":"2026-11-03T14:53:00.318Z","level":"warn","event":"http_response","service":"gateway","method":"POST","status":401,"durationMs":3}
+# Subtest: P1-03: Gateway does not bypass a different service credential
+ok 8 - P1-03: Gateway does not bypass a different service credential
+  ---
+  duration_ms: 9.348
+  ...
+# {"timestamp":"2026-11-03T14:53:00.324Z","level":"error","event":"http_response","service":"gateway","method":"POST","status":502,"durationMs":2}
+# Subtest: Gateway: unavailable notifications return a generic 502 without credential disclosure
+ok 9 - Gateway: unavailable notifications return a generic 502 without credential disclosure
+  ---
+  duration_ms: 6.616
+  ...
+# Subtest: P1-03: backend refuses missing configuration without making an HTTP call
+ok 10 - P1-03: backend refuses missing configuration without making an HTTP call
+  ---
+  duration_ms: 0.2659
+  ...
+# Subtest: P1-03: backend client bounds time and refuses redirects that could leak its credential
+ok 11 - P1-03: backend client bounds time and refuses redirects that could leak its credential
+  ---
+  duration_ms: 8.7937
+  ...
+# Subtest: P1-03: rate limiter rejects excess authorized sends and reopens after its window
+ok 12 - P1-03: rate limiter rejects excess authorized sends and reopens after its window
+  ---
+  duration_ms: 16.5065
+  ...
+# Subtest: Notifications: SMTP failure is controlled without leaking secret/body/error details
+ok 13 - Notifications: SMTP failure is controlled without leaking secret/body/error details
+  ---
+  duration_ms: 4.9513
+  ...
+# {"timestamp":"2026-11-03T14:53:00.384Z","level":"info","event":"http_response","service":"gateway","method":"POST","status":200,"durationMs":26}
+# Subtest: Gateway: stock proxy contract is preserved
+ok 14 - Gateway: stock proxy contract is preserved
+  ---
+  duration_ms: 30.4809
+  ...
+1..14
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1177.2849
+
+Verification: final-business-current.test.cjs
+TAP version 13
+# Subtest: P1-01: forged negative prices and totals are replaced by catalogue prices
+ok 1 - P1-01: forged negative prices and totals are replaced by catalogue prices
+  ---
+  duration_ms: 611.1684
+  ...
+# Subtest: P1-01: omitted prices, duplicate lines and cents are calculated on the server
+ok 2 - P1-01: omitted prices, duplicate lines and cents are calculated on the server
+  ---
+  duration_ms: 222.7933
+  ...
+# Subtest: P1-01: nonexistent products fail without any order or inventory mutation
+ok 3 - P1-01: nonexistent products fail without any order or inventory mutation
+  ---
+  duration_ms: 155.661
+  ...
+# Subtest: P1-01: catalogue price change during reservation aborts and refunds earlier items
+ok 4 - P1-01: catalogue price change during reservation aborts and refunds earlier items
+  ---
+  duration_ms: 212.9189
+  ...
+# Subtest: P1-02: invalid quantities are rejected before reservations
+ok 5 - P1-02: invalid quantities are rejected before reservations
+  ---
+  duration_ms: 164.4962
+  ...
+# Subtest: P1-02: ten concurrent purchases of the last unit produce exactly one order
+ok 6 - P1-02: ten concurrent purchases of the last unit produce exactly one order
+  ---
+  duration_ms: 341.2675
+  ...
+# Subtest: P1-02: unavailable second item compensates the first reservation exactly once
+ok 7 - P1-02: unavailable second item compensates the first reservation exactly once
+  ---
+  duration_ms: 269.2817
+  ...
+# Subtest: P1-02: database error during reservation compensates earlier writes
+ok 8 - P1-02: database error during reservation compensates earlier writes
+  ---
+  duration_ms: 261.756
+  ...
+# Subtest: P1-02: failed compensation is durable and concurrent recovery never refunds twice
+ok 9 - P1-02: failed compensation is durable and concurrent recovery never refunds twice
+  ---
+  duration_ms: 279.4882
+  ...
+# Subtest: P1-02: committed checkout survives order-write outage and is materialized once
+ok 10 - P1-02: committed checkout survives order-write outage and is materialized once
+  ---
+  duration_ms: 326.1235
+  ...
+# Subtest: P1-02: ambiguous commit acknowledgement does not refund a committed purchase
+ok 11 - P1-02: ambiguous commit acknowledgement does not refund a committed purchase
+  ---
+  duration_ms: 253.5795
+  ...
+# Subtest: P1-02: expired abandoned reservation is recovered and fencing markers are cleaned
+ok 12 - P1-02: expired abandoned reservation is recovered and fencing markers are cleaned
+  ---
+  duration_ms: 442.9974
+  ...
+# Subtest: P1-02: compensation fences a late reservation even for an initially unreserved item
+ok 13 - P1-02: compensation fences a late reservation even for an initially unreserved item
+  ---
+  duration_ms: 244.0295
+  ...
+# Subtest: P1-02: concurrent retries with one idempotency key cannot duplicate inventory or order
+ok 14 - P1-02: concurrent retries with one idempotency key cannot duplicate inventory or order
+  ---
+  duration_ms: 318.4887
+  ...
+# Subtest: P1-02: stock microservice authenticates, validates and reserves real inventory idempotently
+ok 15 - P1-02: stock microservice authenticates, validates and reserves real inventory idempotently
+  ---
+  duration_ms: 325.8098
+  ...
+# Subtest: P1-02: startup recovery automatically materializes a committed journal without double decrement
+ok 16 - P1-02: startup recovery automatically materializes a committed journal without double decrement
+  ---
+  duration_ms: 246.5086
+  ...
+# Subtest: P1-02: admin stock validation preserves zero and rejects fractional inventory
+ok 17 - P1-02: admin stock validation preserves zero and rejects fractional inventory
+  ---
+  duration_ms: 433.8483
+  ...
+# Subtest: P1-06: NoSQL objects in login fields are rejected before any model query
+ok 18 - P1-06: NoSQL objects in login fields are rejected before any model query
+  ---
+  duration_ms: 232.0015
+  ...
+# Subtest: P1-06: NoSQL objects in registration fields are rejected without reads or writes
+ok 19 - P1-06: NoSQL objects in registration fields are rejected without reads or writes
+  ---
+  duration_ms: 232.7244
+  ...
+# Subtest: P1-06: valid legacy credentials and literal operator-like strings remain safe
+ok 20 - P1-06: valid legacy credentials and literal operator-like strings remain safe
+  ---
+  duration_ms: 525.0347
+  ...
+# Subtest: P1-07: invalid email formats never create a user
+ok 21 - P1-07: invalid email formats never create a user
+  ---
+  duration_ms: 240.8736
+  ...
+# Subtest: P1-07: empty and whitespace-only usernames and weak passwords are rejected
+ok 22 - P1-07: empty and whitespace-only usernames and weak passwords are rejected
+  ---
+  duration_ms: 237.8068
+  ...
+# Subtest: P1-07: valid normalized registration, bcrypt and JWT work without accepting admin role
+ok 23 - P1-07: valid normalized registration, bcrypt and JWT work without accepting admin role
+  ---
+  duration_ms: 528.3653
+  ...
+# Subtest: P1-07: duplicate and concurrent registrations return 409 instead of server errors
+ok 24 - P1-07: duplicate and concurrent registrations return 409 instead of server errors
+  ---
+  duration_ms: 624.7314
+  ...
+# Subtest: P1-07: schema validation independently rejects malformed new users
+ok 25 - P1-07: schema validation independently rejects malformed new users
+  ---
+  duration_ms: 208.7596
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9393.1263
+
+Verification: complementary.test.cjs
+TAP version 13
+# Subtest: Complement: DELETE requires admin and terminal orders are archived, never resurrected by replay
+ok 1 - Complement: DELETE requires admin and terminal orders are archived, never resurrected by replay
+  ---
+  duration_ms: 493.0635
+  ...
+# Subtest: Complement: validation persists URL id; invalid ids and missing orders never report success
+ok 2 - Complement: validation persists URL id; invalid ids and missing orders never report success
+  ---
+  duration_ms: 165.8769
+  ...
+# Subtest: Complement: enum, forward transitions and terminal states are enforced atomically
+ok 3 - Complement: enum, forward transitions and terminal states are enforced atomically
+  ---
+  duration_ms: 189.5304
+  ...
+# Subtest: Complement: database read and update failures return sanitized JSON and process stays alive
+ok 4 - Complement: database read and update failures return sanitized JSON and process stays alive
+  ---
+  duration_ms: 132.8976
+  ...
+# Subtest: Complement: malformed and oversized JSON never expose Express stacks
+ok 5 - Complement: malformed and oversized JSON never expose Express stacks
+  ---
+  duration_ms: 125.2186
+  ...
+# Subtest: Complement: CORS allows the local frontend and never grants unknown origins
+ok 6 - Complement: CORS allows the local frontend and never grants unknown origins
+  ---
+  duration_ms: 134.7514
+  ...
+# Subtest: Complement: JWT signature, expiration, algorithm, claims and admin authorization
+ok 7 - Complement: JWT signature, expiration, algorithm, claims and admin authorization
+  ---
+  duration_ms: 133.2514
+  ...
+# Subtest: Complement: source/account rate limits return 429 and recover after expiry
+ok 8 - Complement: source/account rate limits return 429 and recover after expiry
+  ---
+  duration_ms: 141.2087
+  ...
+# Subtest: Complement: stock validates ids, integer boundaries and returns proper client errors
+ok 9 - Complement: stock validates ids, integer boundaries and returns proper client errors
+  ---
+  duration_ms: 165.4075
+  ...
+# Subtest: Complement: notification timeout bounds an unresponsive transport
+ok 10 - Complement: notification timeout bounds an unresponsive transport
+  ---
+  duration_ms: 10220.3448
+  ...
+# Subtest: Complement: synthetic passwords and JWT never appear in authentication logs
+ok 11 - Complement: synthetic passwords and JWT never appear in authentication logs
+  ---
+  duration_ms: 333.6963
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13588.4126
+
+Verification: observability.test.cjs
+TAP version 13
+# Subtest: backend: health is public, minimal and independent of external services
+ok 1 - backend: health is public, minimal and independent of external services
+  ---
+  duration_ms: 136.0643
+  ...
+# Subtest: gateway: health is public, minimal and independent of external services
+ok 2 - gateway: health is public, minimal and independent of external services
+  ---
+  duration_ms: 9.2118
+  ...
+# Subtest: stock-management: health is public, minimal and independent of external services
+ok 3 - stock-management: health is public, minimal and independent of external services
+  ---
+  duration_ms: 14.7436
+  ...
+# Subtest: notifications: health is public, minimal and independent of external services
+ok 4 - notifications: health is public, minimal and independent of external services
+  ---
+  duration_ms: 8.9209
+  ...
+# Subtest: readiness reflects dependency state and safely handles a failed check
+ok 5 - readiness reflects dependency state and safely handles a failed check
+  ---
+  duration_ms: 9.5663
+  ...
+# Subtest: logs capture status and duration without URL, credentials or body; probes are quiet
+ok 6 - logs capture status and duration without URL, credentials or body; probes are quiet
+  ---
+  duration_ms: 26.0378
+  ...
+# Subtest: logger failures preserve the response and malformed JSON keeps its status
+ok 7 - logger failures preserve the response and malformed JSON keeps its status
+  ---
+  duration_ms: 7.4954
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1415.112
+
+Verification: React regressions
+PASS ../../../../Documents/Project/final-exam-cloud/exam1/tests/ui-notifications.test.js
+PASS ../../../../Documents/Project/final-exam-cloud/exam1/tests/ui-final-e27-e28.test.js
+
+Test Suites: 2 passed, 2 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        4.175 s
+
+Verification: Frontend tests
+PASS src/pages/Order.test.js
+PASS src/App.test.js
+PASS src/services/apiConfig.test.js
+PASS src/services/api.test.js
+
+Test Suites: 4 passed, 4 total
+Tests:       25 passed, 25 total
+Snapshots:   0 total
+Time:        4.494 s, estimated 5 s
+
+Verification: Frontend build
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  91.81 kB  build\static\js\main.21fbeb99.js
+  2.75 kB   build\static\css\main.826b08a0.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ..\..\..\..\..\AppData\Local\Temp\cloud-ci-romRrI\build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ..\..\..\..\..\AppData\Local\Temp\cloud-ci-romRrI\build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+

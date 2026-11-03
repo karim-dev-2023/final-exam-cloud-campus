@@ -1,0 +1,44 @@
+name: CI - tests et build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      mongo:
+        image: mongo:7
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --quiet --eval 'db.adminCommand({ping:1}).ok'"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+      - name: Installer les dependances verrouillees
+        shell: bash
+        run: |
+          set -euo pipefail
+          for directory in exam1 exam1/backend exam1/gateway exam1/microservices/notifications exam1/microservices/stock-management exam1/frontend; do
+            npm ci --prefix "$directory" --no-audit --no-fund
+          done
+      - name: Verifier les fichiers sensibles suivis
+        run: node scripts/check-secrets.cjs
+      - name: Tests Node, React et compilation (aucun deploiement)
+        run: node scripts/verify-ci.cjs

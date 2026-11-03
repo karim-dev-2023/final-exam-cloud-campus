@@ -2,10 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const { httpErrors } = require('../shared/httpErrors');
 const { loginLimit } = require('./middlewares/loginLimit');
+const { observe } = require('../shared/observability');
 
 function createBackendApp({ env = process.env, authLimit = {} } = {}) {
   const app = express();
   app.disable('x-powered-by');
+  observe(app, { service: 'backend', ready: () => require('mongoose').connection.readyState === 1 });
   const origins = (env.CORS_ORIGINS || 'http://localhost:3000,http://127.0.0.1:3000').split(',').map(x => x.trim()).filter(Boolean);
   app.use(cors({ origin: (origin, done) => done(null, !origin || origins.includes(origin)) }));
   app.use(express.json({ limit: '32kb' }));

@@ -8,7 +8,8 @@ Le frontend utilise Create React App. `src/services/apiConfig.js` centralise
 `REACT_APP_API_URL`, qui désigne l'origine du backend **sans `/api`**.
 Le suffixe `/api` est ajouté une seule fois et les barres finales sont retirées.
 
-Le fichier public `.env.production` contient uniquement :
+Le fichier local `.env.production`, ignoré par Git, contient uniquement cette
+configuration publique (sa copie locale est conservée après retrait du suivi) :
 
 ```dotenv
 REACT_APP_API_URL=https://cloud-campus-backend-rd4h.onrender.com
@@ -19,6 +20,11 @@ modification, reconstruire puis transférer le nouveau build. Vérifier qu'aucun
 variable du terminal ni aucun `.env.local` ou `.env.production.local` ne remplace
 cette valeur. Le `.env` à la racine de `exam1` ne doit pas être copié dans le
 frontend. Ne jamais préfixer un secret serveur avec `REACT_APP_`.
+
+Sur un clone neuf, définir explicitement `REACT_APP_API_URL` dans le terminal
+avant `npm run build`, ou recréer ce fichier local. La CI fournit directement
+l'URL publique ; elle ne dépend pas du fichier ignoré. Le build Docker local
+utilise un argument public du même nom, avec `http://localhost:5000` par défaut.
 
 Pour le développement local, copier `.env.example` vers `.env.local` si besoin.
 Sans configuration, le mode développement conserve `http://localhost:5000`.

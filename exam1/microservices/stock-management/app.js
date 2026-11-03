@@ -1,9 +1,11 @@
 const express = require('express');
 const { notificationAuth } = require('../../shared/notificationAuth');
 const { reserveCheckoutItem, CheckoutError } = require('../../backend/services/checkoutService');
+const { observe } = require('../../shared/observability');
 
 function createStockApp(env = process.env) {
   const app = express();
+  observe(app, { service: 'stock-management', ready: () => require('../../backend/models/Product').db.readyState === 1 });
   app.use(notificationAuth(env));
   app.use(express.json({ limit: '16kb' }));
   app.post('/update-stock', async (req, res) => {

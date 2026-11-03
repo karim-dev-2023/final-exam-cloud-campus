@@ -1,5 +1,6 @@
 const express = require('express');
 const { notificationAuth } = require('../../shared/notificationAuth');
+const { observe } = require('../../shared/observability');
 
 const LIMITS = Object.freeze({ subject: 200, text: 10000, recipients: 10 });
 const addressPattern = /^[^\s@<>,;]+@[a-zA-Z0-9](?:[a-zA-Z0-9.-]*[a-zA-Z0-9])?\.[a-zA-Z]{2,63}$/;
@@ -24,6 +25,7 @@ function createNotificationApp({ env = process.env, transporter, logger = consol
   if (!transporter || typeof transporter.sendMail !== 'function') throw new Error('Transport de notification requis.');
   const app = express();
   app.disable('x-powered-by');
+  observe(app, { service: 'notifications', logger });
   let startedAt = now();
   let attempts = 0;
   // One service identity, one bounded counter; denied calls do not consume quota.
